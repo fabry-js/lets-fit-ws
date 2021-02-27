@@ -1,0 +1,32 @@
+.presentation {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+  animation: drop 1.5s ease;
+}
+.introduction {
+  flex: 1;
+
+}
+.intro-text h1{
+  font-size: 44px;
+  background: linear-gradient(to right, #5E7255, #659A4B);
+  font-weight: bolder;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+  margin-top: 5px;
+  font-size: 22px;
+  color: #3C4A35;
+}
+.cover {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
