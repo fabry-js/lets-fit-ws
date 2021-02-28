@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 import { Button, Text } from '@chakra-ui/react';
 
 interface MenuItemProps {
@@ -10,7 +10,7 @@ interface MenuItemProps {
 
 const MenuItem = ({ children, isLast, to, ...rest }: MenuItemProps) => {
   return (
-    <Link href={to}>
+    <Link to={to}>
       <Button variant="outline">
         <Text display="flex" {...rest}>
           {children}

@@ -3,7 +3,7 @@ import React from 'react';
 const OrdiniRecenti = () => {
   return(
     <div>
-      <p>Yo!</p>
+      <p>OrdiniRecenti</p>
     </div>
   );
 }

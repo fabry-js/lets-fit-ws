@@ -11,15 +11,14 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { Link } from 'wouter';
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import TopNavBar from '../../components/nav-bar/TopNavBar';
 import { _auth } from '../../utils/firebase';
-import { useLocation } from 'wouter';
 const Registrazione = () => {
   const [showPasswordText, setShowPasswordText] = useState<boolean>(false);
-  const [, setLocation] = useLocation();
+  const history = useHistory();
   const toast = useToast();
   const showAccountCreatedToast = () =>
     toast({
@@ -44,7 +43,7 @@ const Registrazione = () => {
       .then((user) => {
         showAccountCreatedToast();
         user.user?.sendEmailVerification();
-        setLocation('/');
+        history.push('/');
       })
       .catch(() => showAccountCouldNotBeCreatedToast());
   };

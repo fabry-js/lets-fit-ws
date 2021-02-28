@@ -1,20 +1,19 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, Spacer } from "@chakra-ui/react";
 import React from "react";
 import TopNavBar from "../components/nav-bar/TopNavBar";
-import NavigationDrawer from "./shop-components/NavigationDrawer";
+import OrdineCorrente from "./shop-components/carrello/OrdineCorrente";
+import NavigationAndShopWrapper from "./shop-components/NavigationAndShopWrapper";
 const Shop = () => {
   return (
     <>
       <TopNavBar />
-      <SimpleGrid p="4" columns={3} spacing={10}>
-        <Box height="80px" p="10">
-          <NavigationDrawer />
+      <SimpleGrid p="4" columns={3} spacing={1}>
+        <Box height="40px" p="10">
+          <NavigationAndShopWrapper />
         </Box>
-        <Box bg="grey" height="80px">
-          {/**Qui ci va la main section */}
-        </Box>
-        <Box bg="grey" height="80px">
-          {/**Qui va il cart */}
+        <Spacer />
+        <Box height="40px">
+          <OrdineCorrente />
         </Box>
       </SimpleGrid>
     </>

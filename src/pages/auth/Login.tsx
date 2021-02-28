@@ -11,16 +11,15 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { Link } from 'wouter';
+import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 import TopNavBar from '../../components/nav-bar/TopNavBar';
 import { executeLogin } from '../../utils/firebase';
-import { useLocation } from 'wouter';
 const Login = () => {
   const [showPasswordText, setShowPasswordText] = useState<boolean>(false);
-  const [, setLocation] = useLocation();
   const toast = useToast();
+  const history = useHistory();
   const showLoggedSuccessfullyToast = () =>
     toast({
       title: 'Login Eseguito, Yee! 🐬',
@@ -41,7 +40,7 @@ const Login = () => {
     await executeLogin(data.email, data.password)
       .then(() => {
         showLoggedSuccessfullyToast();
-        setLocation('/');
+        history.push('/');
       })
       .catch(() => showCouldNotBeLoggedInToast());
   };
