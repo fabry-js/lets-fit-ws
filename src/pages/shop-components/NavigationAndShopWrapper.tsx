@@ -5,7 +5,7 @@ import { BsClockHistory } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
 import { Switch, Route, Link } from "react-router-dom";
 import Impostazioni from "./Impostazioni";
-import RestaurantsList from "./main-section/RestaurantsList";
+import RestaurantProcessRoutes from "./main-section/restaurant-components/RestaurantProcessRoutes";
 import OrdiniRecenti from "./OrdiniRecenti";
 
 const NavigationAndShopWrapper = () => {
@@ -37,7 +37,7 @@ const NavigationAndShopWrapper = () => {
             </Link>
           </ListItem>
         </List>
-        <RestaurantsList />
+        <RestaurantProcessRoutes />
       </SimpleGrid>
       <Switch>
         <Route path="/shop/ordinirecenti" component={OrdiniRecenti} />
