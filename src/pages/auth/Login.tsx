@@ -9,30 +9,30 @@ import {
   Stack,
   Text,
   useToast,
-} from '@chakra-ui/react';
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
-import TopNavBar from '../../components/nav-bar/TopNavBar';
-import { executeLogin } from '../../utils/firebase';
+} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import TopNavBar from "../../components/nav-bar/TopNavBar";
+import { executeLogin } from "../../utils/firebase";
 const Login = () => {
   const [showPasswordText, setShowPasswordText] = useState<boolean>(false);
   const toast = useToast();
   const history = useHistory();
   const showLoggedSuccessfullyToast = () =>
     toast({
-      title: 'Login Eseguito, Yee! 🐬',
-      description: 'Ma è potentissimo!!',
-      status: 'success',
+      title: "Login Eseguito, Yee! 🐬",
+      description: "Ma è potentissimo!!",
+      status: "success",
       duration: 9000,
       isClosable: true,
     });
   const showCouldNotBeLoggedInToast = () =>
     toast({
-      title: 'Oh no no, password o username errati!😢',
-      description: 'Mannaggia, puoi riprovare per favore? Graziee!',
-      status: 'error',
+      title: "Oh no no, password o username errati!😢",
+      description: "Mannaggia, puoi riprovare per favore? Graziee!",
+      status: "error",
       duration: 9000,
       isClosable: true,
     });
@@ -40,7 +40,7 @@ const Login = () => {
     await executeLogin(data.email, data.password)
       .then(() => {
         showLoggedSuccessfullyToast();
-        history.push('/');
+        history.push("/");
       })
       .catch(() => showCouldNotBeLoggedInToast());
   };
@@ -67,7 +67,7 @@ const Login = () => {
             />
             <InputGroup>
               <Input
-                type={showPasswordText ? 'text' : 'password'}
+                type={showPasswordText ? "text" : "password"}
                 border="2px"
                 mt="1"
                 borderColor="green.500"

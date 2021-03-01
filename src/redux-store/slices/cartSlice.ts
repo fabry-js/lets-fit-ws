@@ -43,15 +43,15 @@ export default slice.reducer;
 
 export const getCurrentCartItems = createSelector(
   (state: any) => state.cart.currentOrder,
-  (items: any[]) => items.map(item => item)
-)
+  (items: any[]) => items.map((item) => item)
+);
 
 export const getCurrentTotal = createSelector(
   (state: any) => state.cart.totale,
   (totale: number) => totale
-)
+);
 
 export const getCurrentOrderRestaurantName = createSelector(
   (state: any) => state.cart.currentOrderRestaurantName,
   (currentName: string) => currentName
-)
+);

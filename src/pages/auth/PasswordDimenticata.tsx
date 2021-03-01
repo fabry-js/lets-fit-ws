@@ -7,26 +7,26 @@ import {
   Stack,
   Text,
   useToast,
-} from '@chakra-ui/react';
-import React from 'react';
-import { _auth } from '../../utils/firebase';
-import TopNavBar from '../../components/nav-bar/TopNavBar';
-import { useForm } from 'react-hook-form';
+} from "@chakra-ui/react";
+import React from "react";
+import { _auth } from "../../utils/firebase";
+import TopNavBar from "../../components/nav-bar/TopNavBar";
+import { useForm } from "react-hook-form";
 
 const PasswordDimenticata = () => {
   const showPasswordResetEmailSentToast = () =>
     toast({
-      title: 'E-Mail inviata con successo!💪',
-      description: 'Adesso tocca a te!',
-      status: 'success',
+      title: "E-Mail inviata con successo!💪",
+      description: "Adesso tocca a te!",
+      status: "success",
       duration: 9000,
       isClosable: true,
     });
   const showPasswordResetEmailErrorToast = () =>
     toast({
       title: "Oh no, c'è stato un problema!😢",
-      description: 'Eh no, i nostri server non riconoscono questa e-mail!',
-      status: 'error',
+      description: "Eh no, i nostri server non riconoscono questa e-mail!",
+      status: "error",
       duration: 9000,
       isClosable: true,
     });

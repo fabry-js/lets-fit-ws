@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Logo from './navbar-components/Logo';
-import MenuLinks from './navbar-components/MenuLinks';
-import MenuToggle from './navbar-components/MenuToggle';
-import NavBarContainer from './navbar-components/NavBarContainer';
+import React, { useState } from "react";
+import Logo from "./navbar-components/Logo";
+import MenuLinks from "./navbar-components/MenuLinks";
+import MenuToggle from "./navbar-components/MenuToggle";
+import NavBarContainer from "./navbar-components/NavBarContainer";
 
 const TopNavBar = (props: any) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -13,7 +13,7 @@ const TopNavBar = (props: any) => {
     <NavBarContainer {...props}>
       <Logo
         w="100px"
-        color={['black', 'black', 'primary.500', 'primary.500']}
+        color={["black", "black", "primary.500", "primary.500"]}
       />
       <MenuToggle isOpen={isOpen} toggle={toggle} />
       <MenuLinks isOpen={isOpen} />

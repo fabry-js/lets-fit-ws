@@ -1,6 +1,6 @@
-import React from 'react';
-import { Box } from '@chakra-ui/react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import React from "react";
+import { Box } from "@chakra-ui/react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 interface MenuToggleProps {
   toggle: () => any;
   isOpen: boolean;
@@ -8,7 +8,7 @@ interface MenuToggleProps {
 
 const MenuToggle = ({ toggle, isOpen }: MenuToggleProps) => {
   return (
-    <Box display={{ base: 'block', md: 'none' }} onClick={toggle}>
+    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
       {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
     </Box>
   );

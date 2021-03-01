@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
-import { Container, Button } from '@chakra-ui/react';
-import { AiOutlineArrowDown } from 'react-icons/ai';
-import './main-inital-about.css';
+import React, { useRef } from "react";
+import { Container, Button } from "@chakra-ui/react";
+import { AiOutlineArrowDown } from "react-icons/ai";
+import "./main-inital-about.css";
 
 const MainInitialAbout = () => {
   const scrollToNextSection = () =>
-    nextSection.current?.scrollIntoView({ behavior: 'smooth' });
+    nextSection.current?.scrollIntoView({ behavior: "smooth" });
 
   const nextSection = useRef<null | HTMLDivElement>(null);
 

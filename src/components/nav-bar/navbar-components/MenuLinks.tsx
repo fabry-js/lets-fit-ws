@@ -1,21 +1,21 @@
-import React, { useContext } from 'react';
-import { Stack, Box } from '@chakra-ui/react';
-import MenuItem from './MenuItem';
-import { AiOutlineShopping, AiOutlineHome } from 'react-icons/ai';
-import { FiUserPlus, FiEdit } from 'react-icons/fi';
-import { UserContext } from '../../../contextes/AuthProvider';
+import React, { useContext } from "react";
+import { Stack, Box } from "@chakra-ui/react";
+import MenuItem from "./MenuItem";
+import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
+import { FiUserPlus, FiEdit } from "react-icons/fi";
+import { UserContext } from "../../../contextes/AuthProvider";
 const MenuLinks = ({ isOpen }: any) => {
   const { actualUser } = useContext(UserContext);
   return (
     <Box
-      display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
-      flexBasis={{ base: '100%', md: 'auto' }}
+      display={{ base: isOpen ? "block" : "none", md: "block" }}
+      flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
         spacing={8}
         align="center"
-        justify={['center', 'space-between', 'flex-end', 'flex-end']}
-        direction={['column', 'row', 'row', 'row']}
+        justify={["center", "space-between", "flex-end", "flex-end"]}
+        direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const OrdiniRecenti = () => {
-  return(
+  return (
     <div>
       <p>OrdiniRecenti</p>
     </div>
   );
-}
+};
 
 export default OrdiniRecenti;

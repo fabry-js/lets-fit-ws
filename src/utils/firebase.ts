@@ -1,4 +1,7 @@
-import firebase from 'firebase';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+// https://stackoverflow.com/questions/48592656/firebase-auth-is-not-a-function
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -13,6 +16,7 @@ const firebaseConfig = {
 if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
 
 export const _auth = firebase.auth();
+
 export const _firestore = firebase.firestore();
 
 export const executeLogin = async (email: string, password: string) => {

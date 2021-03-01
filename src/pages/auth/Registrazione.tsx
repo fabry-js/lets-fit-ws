@@ -9,30 +9,30 @@ import {
   Stack,
   Text,
   useToast,
-} from '@chakra-ui/react';
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
-import TopNavBar from '../../components/nav-bar/TopNavBar';
-import { _auth } from '../../utils/firebase';
+} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import TopNavBar from "../../components/nav-bar/TopNavBar";
+import { _auth } from "../../utils/firebase";
 const Registrazione = () => {
   const [showPasswordText, setShowPasswordText] = useState<boolean>(false);
   const history = useHistory();
   const toast = useToast();
   const showAccountCreatedToast = () =>
     toast({
-      title: 'Account Creato con successo, si festeggia!🎉',
-      description: 'Controlla la tua E-Mail per la verifica!',
-      status: 'success',
+      title: "Account Creato con successo, si festeggia!🎉",
+      description: "Controlla la tua E-Mail per la verifica!",
+      status: "success",
       duration: 9000,
       isClosable: true,
     });
   const showAccountCouldNotBeCreatedToast = () =>
     toast({
       title: "Non ci voleva, non è stato possibile creare l'account!😢",
-      description: 'Forse hai già usato questa email',
-      status: 'error',
+      description: "Forse hai già usato questa email",
+      status: "error",
       duration: 9000,
       isClosable: true,
     });
@@ -43,7 +43,7 @@ const Registrazione = () => {
       .then((user) => {
         showAccountCreatedToast();
         user.user?.sendEmailVerification();
-        history.push('/');
+        history.push("/");
       })
       .catch(() => showAccountCouldNotBeCreatedToast());
   };
@@ -70,7 +70,7 @@ const Registrazione = () => {
             />
             <InputGroup>
               <Input
-                type={showPasswordText ? 'text' : 'password'}
+                type={showPasswordText ? "text" : "password"}
                 border="2px"
                 mt="1"
                 borderColor="green.500"
