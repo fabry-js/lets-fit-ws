@@ -5,7 +5,7 @@ interface MacronutModel {
   proteine: number
 }
 
-export interface PlateModel {
+export interface IngredientModel {
   macronut: MacronutModel
   name: string
   phase: string

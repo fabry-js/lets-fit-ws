@@ -9,15 +9,12 @@ const slice = createSlice({
   },
   reducers: {
     addItemToCart: (items: any, action) => {
-      const { name, amount, quantity } = action.payload;
+      const { name, price, quantity } = action.payload;
       items.currentOrder.push({
         name,
-        amount,
+        price,
         quantity,
       });
-    },
-    getCartItems: (items: any) => {
-      return items.currentOrder;
     },
     removeLastItemFromCart: (items: any) => items.currentOrder.pop(),
     updateCurrentTotal: (items: any, action) => {
@@ -31,7 +28,6 @@ const slice = createSlice({
 
 export const {
   addItemToCart,
-  getCartItems,
   removeLastItemFromCart,
   updateCurentOrderRestaurantName,
   updateCurrentTotal,

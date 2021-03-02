@@ -1,13 +1,12 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { PlateModel } from "../../models";
+import { IngredientModel } from "../../models";
 
 const slice = createSlice({
   name: "ingredients",
   initialState: [],
   reducers: {
     addIngredient: (ingredients: any, action) => {
-      const payload: PlateModel = action.payload;
-
+      const payload: IngredientModel = action.payload;
       const {
         name,
         macronut,
@@ -25,10 +24,14 @@ const slice = createSlice({
         vegetarian,
       });
     },
+    removeAllIngredients: (ingredients: any) => {
+      // Bonk
+      ingredients.length = 0;
+    }
   },
 });
 
-export const { addIngredient } = slice.actions;
+export const { addIngredient, removeAllIngredients } = slice.actions;
 
 export default slice.reducer;
 

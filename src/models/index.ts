@@ -1,1 +1,1 @@
-export * from "./plateModel";
+export * from "./ingredientModel";

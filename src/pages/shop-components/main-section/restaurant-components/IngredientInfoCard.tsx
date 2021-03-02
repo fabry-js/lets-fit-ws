@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Badge, Box, Heading, Text } from '@chakra-ui/react';
 
 interface IngredientInfoCardProps {
   name: string;
@@ -23,9 +23,8 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
         €{price}
       </Text>
       <Text m="5" fontSize="smaller">
-        {/**
-         * Chip in base al vegan
-         */}
+        {vegan ? <Badge ml="1" colorScheme="green" p="0.5" variant="subtle">Vegan</Badge> : ""}
+        {vegetarian ? <Badge ml="1" colorScheme="green" p="0.5" variant="subtle">Vegetariano</Badge> : ""}
       </Text>
     </Box>
   );

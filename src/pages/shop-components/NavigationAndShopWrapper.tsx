@@ -1,42 +1,16 @@
-import { Button, List, ListItem, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
-import { AiOutlineSearch } from "react-icons/ai";
-import { BsClockHistory } from "react-icons/bs";
-import { FiSettings } from "react-icons/fi";
-import { Switch, Route, Link } from "react-router-dom";
+import { SimpleGrid } from "@chakra-ui/react";
+import { Switch, Route } from "react-router-dom";
 import Impostazioni from "./Impostazioni";
-import RestaurantProcessRoutes from "./main-section/restaurant-components/RestaurantProcessRoutes";
+import RestaurantProcessRoutes from "./main-section/routers/RestaurantProcessRoutes";
 import OrdiniRecenti from "./OrdiniRecenti";
+import NavigationSidebar from "./NavigationSidebar";
 
 const NavigationAndShopWrapper = () => {
   return (
     <>
       <SimpleGrid p="4" columns={2} spacing={1}>
-        <List spacing={4}>
-          <ListItem>
-            <Link to="/shop">
-              <Button variant="outline">
-                <AiOutlineSearch />
-                Ordina
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link to="/shop/ordinirecenti">
-              <Button variant="outline">
-                <BsClockHistory /> Ordini Recenti
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link to="/shop/impostazioni">
-              <Button variant="outline">
-                <FiSettings />
-                Impostazioni
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
+        <NavigationSidebar />
         <RestaurantProcessRoutes />
       </SimpleGrid>
       <Switch>

@@ -5,7 +5,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import RestaurantCard from "./restaurant-components/RestaurantCard";
 import { connect, useDispatch } from "react-redux";
 import { addIngredient } from "../../../redux-store/slices/ingredientsSlice";
-import { PlateModel } from "../../../models";
+import { IngredientModel } from "../../../models";
 import { useHistory } from "react-router-dom";
 
 const mapDispatch = { addIngredient };
@@ -28,7 +28,7 @@ const RestaurantsList = () => {
                     restaurantName={name}
                     orario={hourtime}
                     buttonFunction={() => {
-                      plates.map((plate: PlateModel) => {
+                      plates.map((plate: IngredientModel) => {
                         const {
                           name,
                           macronut,

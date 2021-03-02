@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { Stack, Box } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
-import { FiUserPlus, FiEdit } from "react-icons/fi";
+import { FiUserPlus, FiEdit, FiShoppingCart } from "react-icons/fi";
 import { UserContext } from "../../../contextes/AuthProvider";
+import { useRouteMatch } from "react-router";
 const MenuLinks = ({ isOpen }: any) => {
   const { actualUser } = useContext(UserContext);
+  const { url } = useRouteMatch();
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -24,6 +26,13 @@ const MenuLinks = ({ isOpen }: any) => {
         <MenuItem to="/blog">
           <FiEdit /> Blog
         </MenuItem>
+        {url === "/shop" ? (
+          <MenuItem to="/shop/cart">
+            <FiShoppingCart /> Carrello
+          </MenuItem>
+        ) : (
+          ""
+        )}
         {actualUser && actualUser.emailVerified === true ? (
           <MenuItem to="/shop">
             <AiOutlineShopping /> Shop
