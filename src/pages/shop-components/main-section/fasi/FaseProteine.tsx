@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const FaseProteine = () => {
-  return(
+  return (
     <div>
       <p>Fase Proteine.</p>
     </div>
   );
-}
+};
 
 export default FaseProteine;

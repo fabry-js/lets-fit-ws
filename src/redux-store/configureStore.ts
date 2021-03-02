@@ -4,5 +4,5 @@ import ingredientsReducer from "./slices/ingredientsSlice";
 
 export default combineReducers({
   cart: cartReducer,
-  ingredients: ingredientsReducer
+  ingredients: ingredientsReducer,
 });

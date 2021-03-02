@@ -59,24 +59,24 @@ const FaseCarboidrati = () => {
                 <Switch
                   isChecked={isSwitchOn[index].value}
                   size="lg"
-                  onChange={() => onSwitchToggle(!isSwitchOn[index].value, ingredient, index)}
+                  onChange={() =>
+                    onSwitchToggle(!isSwitchOn[index].value, ingredient, index)
+                  }
                 />
               </Box>
             );
           }
         )}
-        {
-          checkedIngredientsObj &&
-            checkedIngredientsObj.map((ingredient: IngredientModel) => {
-              const { name, price } = ingredient;
-              dispatch(
-                addItemToCart({
-                  name,
-                  price
-                })
-              )
+      {checkedIngredientsObj &&
+        checkedIngredientsObj.map((ingredient: IngredientModel) => {
+          const { name, price } = ingredient;
+          dispatch(
+            addItemToCart({
+              name,
+              price,
             })
-        }
+          );
+        })}
     </div>
   );
 };

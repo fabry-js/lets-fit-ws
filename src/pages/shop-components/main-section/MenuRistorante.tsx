@@ -31,9 +31,9 @@ const MenuRistorante = () => {
             />
           );
         })}
-        <Link to="/shop/fase-carboidrati">
-          <Button>Nuovo Ordine</Button>
-        </Link>
+      <Link to="/shop/fase-carboidrati">
+        <Button>Nuovo Ordine</Button>
+      </Link>
     </div>
   );
 };

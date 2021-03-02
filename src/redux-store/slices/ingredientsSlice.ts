@@ -7,14 +7,7 @@ const slice = createSlice({
   reducers: {
     addIngredient: (ingredients: any, action) => {
       const payload: IngredientModel = action.payload;
-      const {
-        name,
-        macronut,
-        phase,
-        price,
-        vegan,
-        vegetarian,
-      } = payload;
+      const { name, macronut, phase, price, vegan, vegetarian } = payload;
       ingredients.push({
         name,
         macronut,
@@ -27,7 +20,7 @@ const slice = createSlice({
     removeAllIngredients: (ingredients: any) => {
       // Bonk
       ingredients.length = 0;
-    }
+    },
   },
 });
 

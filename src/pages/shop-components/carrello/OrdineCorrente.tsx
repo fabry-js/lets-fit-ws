@@ -14,7 +14,7 @@ const OrdineCorrente = () => {
 
   useEffect(() => {
     setCurrentCartItems(cartItems);
-  },[cartItems]);
+  }, [cartItems]);
 
   const dispatch = useDispatch();
 
@@ -23,17 +23,21 @@ const OrdineCorrente = () => {
       <p>Ordine Corrente:</p>
       {currentCartItems &&
         currentCartItems.map((cartItem, id) => {
-        const { name, price } = cartItem;
-        return (
-          <RiepilogoIngredientCard
-            key={id}
-            ingredientName={name}
-            price={price}
-          />
-        );
-      })}
-      {currentCartItems?.length !== 0 && <Button onClick={() => dispatch(removeLastItemFromCart())}>Rimuovi ultimo elemento</Button>}
-      {totale ? <Text>Subtotale: €{totale}</Text>: ""}
+          const { name, price } = cartItem;
+          return (
+            <RiepilogoIngredientCard
+              key={id}
+              ingredientName={name}
+              price={price}
+            />
+          );
+        })}
+      {currentCartItems?.length !== 0 && (
+        <Button onClick={() => dispatch(removeLastItemFromCart())}>
+          Rimuovi ultimo elemento
+        </Button>
+      )}
+      {totale ? <Text>Subtotale: €{totale}</Text> : ""}
     </div>
   );
 };
