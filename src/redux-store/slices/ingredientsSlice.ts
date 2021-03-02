@@ -1,5 +1,5 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { IngredientModel } from "../../models";
+import { IngredientModel } from "../../models/IngredientModel";
 
 const slice = createSlice({
   name: "ingredients",

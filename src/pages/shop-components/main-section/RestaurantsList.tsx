@@ -5,7 +5,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import RestaurantCard from "./restaurant-components/RestaurantCard";
 import { connect, useDispatch } from "react-redux";
 import { addIngredient } from "../../../redux-store/slices/ingredientsSlice";
-import { IngredientModel } from "../../../models";
+import { IngredientModel } from "../../../models/IngredientModel";
 import { useHistory } from "react-router-dom";
 
 const mapDispatch = { addIngredient };
