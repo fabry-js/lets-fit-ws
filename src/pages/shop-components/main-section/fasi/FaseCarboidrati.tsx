@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Switch, Text } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { IngredientModel } from "../../../../models";
+import { IngredientModel } from "../../../../models/IngredientModel";
 import { getCurrentIngredients } from "../../../../redux-store/slices/ingredientsSlice";
 import IngredientCard from "./fasi-components/IngredientCard";
 import TopHeaderCard from "./fasi-components/TopHeaderCard";
@@ -68,7 +68,7 @@ const FaseCarboidrati = () => {
           }
         )}
       {checkedIngredientsObj &&
-        checkedIngredientsObj.map((ingredient: IngredientModel) => {
+        checkedIngredientsObj.forEach((ingredient: IngredientModel) => {
           const { name, price } = ingredient;
           dispatch(
             addItemToCart({
