@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Switch, Text } from "@chakra-ui/react";
+import { Box, Button, Switch, Text, useToast } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { IngredientModel } from "../../../../models/IngredientModel";
 import { getCurrentIngredients } from "../../../../redux-store/slices/ingredientsSlice";
@@ -10,6 +10,7 @@ import { addItemToCart } from "../../../../redux-store/slices/cartSlice";
 const FaseCarboidrati = () => {
   const ingredients = useSelector(getCurrentIngredients);
   const dispatch = useDispatch();
+  const toast = useToast();
 
   const filteredByPhaseIngredients = ingredients.filter(
     (ingredient) => ingredient.phase === "carboidrati"
@@ -37,6 +38,27 @@ const FaseCarboidrati = () => {
   const checkedIngredientsObj = isSwitchOn.filter(
     (ingredient: any) => ingredient.value === true
   );
+
+  const addCheckedIngredientsToCart = () => {
+    toast({
+      title: "Aggiunto tutto al carrello!🛒",
+      description: "Vai nella sezione 'Carrello' per un riepilogo",
+      status: "success",
+      duration: 4000,
+      isClosable: true,
+    });
+    checkedIngredientsObj &&
+      checkedIngredientsObj.forEach((ingredient: IngredientModel) => {
+        const { name, price } = ingredient;
+        dispatch(
+          addItemToCart({
+            name,
+            price,
+          })
+        );
+      });
+  };
+
   return (
     <div>
       <Text fontSize="2xl">Carboidrati</Text>
@@ -67,16 +89,12 @@ const FaseCarboidrati = () => {
             );
           }
         )}
-      {checkedIngredientsObj &&
-        checkedIngredientsObj.forEach((ingredient: IngredientModel) => {
-          const { name, price } = ingredient;
-          dispatch(
-            addItemToCart({
-              name,
-              price,
-            })
-          );
-        })}
+      <Button
+        disabled={checkedIngredientsObj.length === 0}
+        onClick={() => addCheckedIngredientsToCart()}
+      >
+        Aggiungi al carrello
+      </Button>
     </div>
   );
 };

@@ -3,10 +3,11 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import {
   getCurrentCartItems,
   getCurrentTotal,
-  removeLastItemFromCart,
+  removeItemByName,
 } from "../../../redux-store/slices/cartSlice";
-import { Button, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import RiepilogoIngredientCard from "../main-section/fasi/fasi-components/RiepilogoIngredientCard";
+
 const OrdineCorrente = () => {
   const cartItems = useSelector(getCurrentCartItems);
   const totale = useSelector(getCurrentTotal);
@@ -25,18 +26,16 @@ const OrdineCorrente = () => {
         currentCartItems.map((cartItem, id) => {
           const { name, price } = cartItem;
           return (
-            <RiepilogoIngredientCard
-              key={id}
-              ingredientName={name}
-              price={price}
-            />
+            <>
+              <RiepilogoIngredientCard
+                key={id}
+                ingredientName={name}
+                price={price}
+                onClick={() => dispatch(removeItemByName(name))}
+              />
+            </>
           );
         })}
-      {currentCartItems?.length !== 0 && (
-        <Button onClick={() => dispatch(removeLastItemFromCart())}>
-          Rimuovi ultimo elemento
-        </Button>
-      )}
       {totale ? <Text>Subtotale: €{totale}</Text> : ""}
     </div>
   );
