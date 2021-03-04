@@ -84,28 +84,7 @@ const MainInitialAbout = () => {
           </p>
         </div>
       </section>
-      <section className="presentation">
-        <div className="introduction">
-          <div className="intro-text">
-            <h1>Analisi</h1>
-          </div>
-        </div>
-        <div className="cover">
-          <p>
-            Esistono fondamentalmente 4 categorie di persone: - chi si reca al
-            bar più vicino per consumare il classico panino o tramezzino, il
-            trancio di pizza, la porzione di lasagna o l’insalata pronta; - chi
-            porta da casa i cibi preparati la sera precedente; - chi salta la
-            pausa e sostituisce ad un pasto completo uno snack perché non ha né
-            voglia di preparare il pranzo il giorno prima né voglia di andare al
-            bar; - chi ha la possibilità di recarsi a casa per preparare un
-            pasto da consumare in fretta, per poi correre nuovamente sul posto
-            di lavoro. Il comune denominatore tra queste categorie è: mangiare
-            male.
-          </p>
-        </div>
-      </section>
-
+     
       {/* <Container ref={nextSection} mt="190">
 
 <Text fontSize="p">
