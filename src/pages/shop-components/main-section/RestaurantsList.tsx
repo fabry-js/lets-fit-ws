@@ -7,6 +7,7 @@ import { connect, useDispatch } from "react-redux";
 import { addIngredient } from "../../../redux-store/slices/ingredientsSlice";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { useHistory } from "react-router-dom";
+import { updateCurentOrderRestaurantName } from "../../../redux-store/slices/cartSlice";
 
 const mapDispatch = { addIngredient };
 
@@ -17,15 +18,16 @@ const RestaurantsList = () => {
   const history = useHistory();
   return (
     <div>
-      <List spacing={10}>
+      <List spacing={5}>
         {classicoRestaurants &&
           classicoRestaurants.map((ristoranti: any, _id) => {
             return ristoranti.restaurants.map((ristorante: any, id: number) => {
               const { name, hourtime, address, plates } = ristorante;
+              let restaurantName = name;
               return (
                 <ListItem key={id}>
                   <RestaurantCard
-                    restaurantName={name}
+                    restaurantName={restaurantName}
                     orario={hourtime}
                     buttonFunction={() => {
                       plates.map((plate: IngredientModel) => {
@@ -39,6 +41,12 @@ const RestaurantsList = () => {
                         } = plate;
                         // Navigazione ai Piatti Disponibili
                         history.push("/shop/menu-ristorante");
+                        // Aggiunge il nome del ristorante dell'ordine corrente
+                        dispatch(
+                          updateCurentOrderRestaurantName({
+                            restaurantName,
+                          })
+                        );
                         // Aggiunge ingredienti
                         return dispatch(
                           addIngredient({

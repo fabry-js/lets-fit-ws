@@ -84,7 +84,7 @@ const MainInitialAbout = () => {
           </p>
         </div>
       </section>
-     
+
       {/* <Container ref={nextSection} mt="190">
 
 <Text fontSize="p">

@@ -17,14 +17,10 @@ const slice = createSlice({
         vegetarian,
       });
     },
-    removeAllIngredients: (ingredients: any) => {
-      // Bonk
-      ingredients.length = 0;
-    },
   },
 });
 
-export const { addIngredient, removeAllIngredients } = slice.actions;
+export const { addIngredient } = slice.actions;
 
 export default slice.reducer;
 

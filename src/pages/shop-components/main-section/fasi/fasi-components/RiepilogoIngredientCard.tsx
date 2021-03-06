@@ -11,7 +11,7 @@ interface RiepilogoIngredientCardProps {
 const RiepilogoIngredientCard: React.FC<RiepilogoIngredientCardProps> = ({
   ingredientName,
   price,
-  onClick
+  onClick,
 }) => {
   return (
     <Box
