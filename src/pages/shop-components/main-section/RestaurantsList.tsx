@@ -1,10 +1,10 @@
+import React, { useEffect } from "react";
 import { List, ListItem } from "@chakra-ui/react";
-import React from "react";
 import { _firestore } from "../../../utils/firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import RestaurantCard from "./restaurant-components/RestaurantCard";
 import { connect, useDispatch } from "react-redux";
-import { addIngredient } from "../../../redux-store/slices/ingredientsSlice";
+import { addIngredient, removeAllIngredients } from "../../../redux-store/slices/ingredientsSlice";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { useHistory } from "react-router-dom";
 import { updateCurentOrderRestaurantName } from "../../../redux-store/slices/cartSlice";
@@ -16,6 +16,13 @@ const RestaurantsList = () => {
   const [classicoRestaurants] = useCollectionData(classicoRestaurantsRef);
   const dispatch = useDispatch();
   const history = useHistory();
+  /**
+   * Remover degli ingredienti per Redux
+  */
+   useEffect(() => {
+    dispatch(removeAllIngredients())
+  })
+
   return (
     <div>
       <List spacing={5}>

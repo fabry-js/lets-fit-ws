@@ -151,19 +151,19 @@ const FaseCarboidrati = () => {
                       <List>
                         <ListItem>
                           <Text fontSize="h1"></Text>Calorie:{" "}
-                          {(calorie * sliderNumericValue) / 100} kCal
+                          {((calorie * sliderNumericValue) / 100).toFixed(1)} kCal
                         </ListItem>
                         <ListItem>
                           <Text fontSize="p"></Text>Carboidrati:{" "}
-                          {(carboidrati * sliderNumericValue) / 100}g
+                          {((carboidrati * sliderNumericValue) / 100).toFixed(1)}g
                         </ListItem>
                         <ListItem>
                           <Text fontSize="p"></Text>Proteine:{" "}
-                          {(proteine * sliderNumericValue) / 100}g
+                          {((proteine * sliderNumericValue) / 100).toFixed(1)}g
                         </ListItem>
                         <ListItem>
                           <Text fontSize="p"></Text>Grassi:{" "}
-                          {(grassi * sliderNumericValue) / 100}g
+                          {((grassi * sliderNumericValue) / 100).toFixed(1)}g
                         </ListItem>
                       </List>
                     </PopoverBody>
