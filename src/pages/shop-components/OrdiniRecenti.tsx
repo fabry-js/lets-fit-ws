@@ -26,7 +26,7 @@ const OrdiniRecenti: React.FC<OrdiniRecentiProps> = ({isOpen, onClose}) => {
   const filteredRecentOrders = orders?.filter((order: any) => order.user === _auth.currentUser?.email)
 
   return (
-    <Modal size="full" onClose={onClose} isOpen={isOpen}>
+    <Modal size="full" onClose={onClose} isOpen={isOpen} scrollBehavior="inside">
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Ordini Recenti per l'account: {_auth.currentUser?.email}</ModalHeader>

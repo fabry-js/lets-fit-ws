@@ -22,7 +22,6 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { IngredientModel } from "../../../../models/IngredientModel";
 import { getCurrentIngredients } from "../../../../redux-store/slices/ingredientsSlice";
-import IngredientCard from "./fasi-components/IngredientCard";
 import TopHeaderCard from "./fasi-components/TopHeaderCard";
 import {
   addItemToCart,
@@ -94,7 +93,7 @@ const FaseCarboidrati = () => {
               quantity: sliderQuantityValue[index].value,
             })
           );
-          dispatch(
+          return dispatch(
             updateCurrentTotal({
               totale,
             })

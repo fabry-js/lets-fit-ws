@@ -1,6 +1,5 @@
-import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 interface CheckoutRiepilogoCardProps {
   ingredientName: string;

@@ -46,7 +46,6 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
               {allIngredients &&
                 allIngredients.map((ingredient, index) => {
                   const { name, price } = ingredient;
-                  console.log(ingredient)
                   return (
                     <React.Fragment key={index}>
                       <ListItem>{name}</ListItem>
