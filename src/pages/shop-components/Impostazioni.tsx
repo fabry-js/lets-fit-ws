@@ -19,14 +19,19 @@ interface ImpostazioniProps {
   onClose(): void;
 }
 
-const Impostazioni: React.FC<ImpostazioniProps>= ({isOpen, onClose}) => {
+const Impostazioni: React.FC<ImpostazioniProps> = ({ isOpen, onClose }) => {
   const history = useHistory();
 
   const handleLogout = () => {
     _auth.signOut().then(() => history.push("/"));
   };
   return (
-    <Modal size="full" onClose={onClose} isOpen={isOpen} scrollBehavior="inside">
+    <Modal
+      size="full"
+      onClose={onClose}
+      isOpen={isOpen}
+      scrollBehavior="inside"
+    >
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Impostazioni</ModalHeader>
@@ -34,7 +39,9 @@ const Impostazioni: React.FC<ImpostazioniProps>= ({isOpen, onClose}) => {
         <ModalBody>
           <List>
             <ListItem>
-              <Button variant="outline" onClick={handleLogout}>Log out</Button>
+              <Button variant="outline" onClick={handleLogout}>
+                Log out
+              </Button>
             </ListItem>
           </List>
         </ModalBody>

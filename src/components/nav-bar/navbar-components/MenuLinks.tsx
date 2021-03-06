@@ -12,49 +12,46 @@ const MenuLinks = ({ isOpened }: any) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-    <Box
-      display={{ base: isOpened ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
-    >
-      <Stack
-        spacing={8}
-        align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
-        pt={[4, 4, 0, 0]}
-        ml="850"
+      <Box
+        display={{ base: isOpened ? "block" : "none", md: "block" }}
+        flexBasis={{ base: "100%", md: "auto" }}
       >
-        <MenuItem to="/">
-          <AiOutlineHome /> Home
-        </MenuItem>
-        <MenuItem to="/blog">
-          <FiEdit /> Blog
-        </MenuItem>
-        {url === "/shop" ? (
-          <Button variant="outline" onClick={onOpen}>
-            <Text display="flex">
-              <FiShoppingCart /> Carrello
-            </Text>
-          </Button>
-        ) : (
-          ""
-        )}
-        {actualUser && actualUser.emailVerified === true ? (
-          <MenuItem to="/shop">
-            <AiOutlineShopping /> Shop
+        <Stack
+          spacing={8}
+          align="center"
+          justify={["center", "space-between", "flex-end", "flex-end"]}
+          direction={["column", "row", "row", "row"]}
+          pt={[4, 4, 0, 0]}
+          ml="850"
+        >
+          <MenuItem to="/">
+            <AiOutlineHome /> Home
           </MenuItem>
-        ) : (
-          <MenuItem to="/registrazione">
-            <FiUserPlus />
-            Registrati
+          <MenuItem to="/blog">
+            <FiEdit /> Blog
           </MenuItem>
-        )}
-      </Stack>
-    </Box>
-    <Carrello
-      onDrawerClose={onClose}
-      isDrawerOpen={isOpen}
-    />
+          {url === "/shop" ? (
+            <Button variant="outline" onClick={onOpen}>
+              <Text display="flex">
+                <FiShoppingCart /> Carrello
+              </Text>
+            </Button>
+          ) : (
+            ""
+          )}
+          {actualUser && actualUser.emailVerified === true ? (
+            <MenuItem to="/shop">
+              <AiOutlineShopping /> Shop
+            </MenuItem>
+          ) : (
+            <MenuItem to="/registrazione">
+              <FiUserPlus />
+              Registrati
+            </MenuItem>
+          )}
+        </Stack>
+      </Box>
+      <Carrello onDrawerClose={onClose} isDrawerOpen={isOpen} />
     </>
   );
 };

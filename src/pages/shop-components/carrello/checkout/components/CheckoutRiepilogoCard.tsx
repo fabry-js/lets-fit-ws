@@ -1,13 +1,16 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
-import React from 'react';
+import { Box, Heading, Text } from "@chakra-ui/react";
+import React from "react";
 
 interface CheckoutRiepilogoCardProps {
   ingredientName: string;
   price?: number;
 }
 
-const CheckoutRiepilogoCard: React.FC<CheckoutRiepilogoCardProps> = ({ingredientName, price}) => {
-  return(
+const CheckoutRiepilogoCard: React.FC<CheckoutRiepilogoCardProps> = ({
+  ingredientName,
+  price,
+}) => {
+  return (
     <Box
       p="2"
       mt="2"
@@ -20,6 +23,6 @@ const CheckoutRiepilogoCard: React.FC<CheckoutRiepilogoCardProps> = ({ingredient
       {price ? <Text>€{price}</Text> : ""}
     </Box>
   );
-}
+};
 
 export default CheckoutRiepilogoCard;

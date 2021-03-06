@@ -53,8 +53,8 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
                     </React.Fragment>
                   );
                 })}
-                <ListItem>Metodo di Pagamento: {method}</ListItem>
-                <ListItem>Totale: €{totale}</ListItem>
+              <ListItem>Metodo di Pagamento: {method}</ListItem>
+              <ListItem>Totale: €{totale}</ListItem>
             </List>
           </AccordionPanel>
         </AccordionItem>

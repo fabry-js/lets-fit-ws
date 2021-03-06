@@ -15,7 +15,7 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Text,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import RiepilogoIngredientCard from "../main-section/fasi/fasi-components/RiepilogoIngredientCard";
 import Checkout from "./checkout/Checkout";
@@ -30,7 +30,7 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
   const totale = useSelector(getCurrentTotal);
 
   const [currentCartItems, setCurrentCartItems] = useState<any[]>();
-  const {isOpen, onOpen, onClose} = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     setCurrentCartItems(cartItems);
@@ -65,17 +65,18 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
             </DrawerBody>
 
             <DrawerFooter>
-              <Button disabled={cartItems.length === 0} variant="solid" onClick={onOpen}>
+              <Button
+                disabled={cartItems.length === 0}
+                variant="solid"
+                onClick={onOpen}
+              >
                 Procedi al checkout
               </Button>
             </DrawerFooter>
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
-      <Checkout
-        isOpen={isOpen}
-        onClose={onClose}
-      />
+      <Checkout isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };

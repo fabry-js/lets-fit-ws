@@ -13,12 +13,15 @@ const slice = createSlice({
       items.currentOrder.push({
         name,
         price,
-        quantity
+        quantity,
       });
     },
     removeItemByName: (items: any, action) => {
-      let toRemoveElementIndex = items.currentOrder.indexOf(action.payload.name);
-      toRemoveElementIndex && items.currentOrder.splice(toRemoveElementIndex, 1);
+      let toRemoveElementIndex = items.currentOrder.indexOf(
+        action.payload.name
+      );
+      toRemoveElementIndex &&
+        items.currentOrder.splice(toRemoveElementIndex, 1);
     },
     updateCurrentTotal: (items: any, action) => {
       items.totale += action.payload.totale;

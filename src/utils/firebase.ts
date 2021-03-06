@@ -43,15 +43,15 @@ interface Order {
 export const sendOrder = async (order: Order) => {
   const ordersCollectionRef = _firestore.collection("/orders");
   return new Promise<boolean>((resolve, reject) => {
-    try{
+    try {
       ordersCollectionRef
         .add(order)
-        .then(_data => resolve(true))
-        .catch(_err => {
+        .then((_data) => resolve(true))
+        .catch((_err) => {
           reject(false);
-        })
-    } catch (error){
+        });
+    } catch (error) {
       reject(false);
     }
-  })
-}
+  });
+};

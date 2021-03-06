@@ -117,7 +117,12 @@ const FaseCarboidrati = () => {
         filteredByPhaseIngredients.map(
           (ingredient: IngredientModel, index: number) => {
             const { name, price } = ingredient;
-            const { calorie, carboidrati, grassi, proteine } = ingredient.macronut;
+            const {
+              calorie,
+              carboidrati,
+              grassi,
+              proteine,
+            } = ingredient.macronut;
             let sliderNumericValue: number = sliderQuantityValue[index].value;
             let switchActivatedValue: boolean = isSwitchOn[index].value;
             return (
@@ -132,18 +137,34 @@ const FaseCarboidrati = () => {
               >
                 <Popover>
                   <PopoverTrigger>
-                    <Button variant="ghost">{name} | €{price}</Button>
+                    <Button variant="ghost">
+                      {name} | €{price}
+                    </Button>
                   </PopoverTrigger>
                   <PopoverContent>
                     <PopoverArrow />
                     <PopoverCloseButton />
-                    <PopoverHeader>Macronutrienti per {sliderNumericValue}g</PopoverHeader>
+                    <PopoverHeader>
+                      Macronutrienti per {sliderNumericValue}g
+                    </PopoverHeader>
                     <PopoverBody>
                       <List>
-                        <ListItem><Text fontSize="h1"></Text>Calorie: {(calorie * sliderNumericValue) / 100} kCal</ListItem>
-                        <ListItem><Text fontSize="p"></Text>Carboidrati: {(carboidrati * sliderNumericValue) / 100}g</ListItem>
-                        <ListItem><Text fontSize="p"></Text>Proteine: {(proteine * sliderNumericValue) / 100}g</ListItem>
-                        <ListItem><Text fontSize="p"></Text>Grassi: {(grassi * sliderNumericValue) / 100}g</ListItem>
+                        <ListItem>
+                          <Text fontSize="h1"></Text>Calorie:{" "}
+                          {(calorie * sliderNumericValue) / 100} kCal
+                        </ListItem>
+                        <ListItem>
+                          <Text fontSize="p"></Text>Carboidrati:{" "}
+                          {(carboidrati * sliderNumericValue) / 100}g
+                        </ListItem>
+                        <ListItem>
+                          <Text fontSize="p"></Text>Proteine:{" "}
+                          {(proteine * sliderNumericValue) / 100}g
+                        </ListItem>
+                        <ListItem>
+                          <Text fontSize="p"></Text>Grassi:{" "}
+                          {(grassi * sliderNumericValue) / 100}g
+                        </ListItem>
                       </List>
                     </PopoverBody>
                   </PopoverContent>

@@ -44,7 +44,7 @@ const RestaurantsList = () => {
                         // Aggiunge il nome del ristorante dell'ordine corrente
                         dispatch(
                           updateCurentOrderRestaurantName({
-                            restaurantName
+                            restaurantName,
                           })
                         );
                         // Aggiunge ingredienti

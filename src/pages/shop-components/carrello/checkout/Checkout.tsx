@@ -45,7 +45,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
       restaurantName,
       user: _auth.currentUser?.email,
       totale,
-      createdAt: timestamp
+      createdAt: timestamp,
     })
       .then((_res) => {
         history.push("/");
