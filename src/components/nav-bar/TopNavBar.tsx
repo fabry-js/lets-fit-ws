@@ -16,7 +16,7 @@ const TopNavBar = (props: any) => {
         color={["black", "black", "primary.500", "primary.500"]}
       />
       <MenuToggle isOpen={isOpen} toggle={toggle} />
-      <MenuLinks isOpen={isOpen} />
+      <MenuLinks isOpened={isOpen} />
     </NavBarContainer>
   );
 };

@@ -13,7 +13,7 @@ const slice = createSlice({
       items.currentOrder.push({
         name,
         price,
-        quantity,
+        quantity
       });
     },
     removeItemByName: (items: any, action) => {

@@ -1,12 +1,15 @@
-import { List, ListItem, Button } from "@chakra-ui/react";
 import React from "react";
+import { List, ListItem, Button, useDisclosure } from "@chakra-ui/react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsClockHistory } from "react-icons/bs";
 import { FiSettings } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import OrdiniRecenti from "./OrdiniRecenti";
 
 const NavigationSidebar = () => {
+  const { isOpen, onClose, onOpen } = useDisclosure();
   return (
+    <>
     <List spacing={4}>
       <ListItem>
         <Link to="/shop">
@@ -17,11 +20,9 @@ const NavigationSidebar = () => {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to="/shop/ordinirecenti">
-          <Button variant="outline">
-            <BsClockHistory /> Ordini Recenti
-          </Button>
-        </Link>
+        <Button onClick={onOpen} variant="outline">
+          <BsClockHistory /> Ordini Recenti
+        </Button>
       </ListItem>
       <ListItem>
         <Link to="/shop/impostazioni">
@@ -32,6 +33,11 @@ const NavigationSidebar = () => {
         </Link>
       </ListItem>
     </List>
+    <OrdiniRecenti
+      isOpen={isOpen}
+      onClose={onClose}
+    />
+    </>
   );
 };
 

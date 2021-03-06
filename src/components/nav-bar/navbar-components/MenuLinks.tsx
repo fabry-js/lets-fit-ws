@@ -1,16 +1,19 @@
 import React, { useContext } from "react";
-import { Stack, Box } from "@chakra-ui/react";
+import { Stack, Box, Text, Button, useDisclosure } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
 import { FiUserPlus, FiEdit, FiShoppingCart } from "react-icons/fi";
 import { UserContext } from "../../../contextes/AuthProvider";
 import { useRouteMatch } from "react-router";
-const MenuLinks = ({ isOpen }: any) => {
+import Carrello from "../../../pages/shop-components/carrello/Carrello";
+const MenuLinks = ({ isOpened }: any) => {
   const { actualUser } = useContext(UserContext);
   const { url } = useRouteMatch();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
+    <>
     <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
+      display={{ base: isOpened ? "block" : "none", md: "block" }}
       flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
@@ -19,6 +22,7 @@ const MenuLinks = ({ isOpen }: any) => {
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
+        ml="850"
       >
         <MenuItem to="/">
           <AiOutlineHome /> Home
@@ -27,9 +31,11 @@ const MenuLinks = ({ isOpen }: any) => {
           <FiEdit /> Blog
         </MenuItem>
         {url === "/shop" ? (
-          <MenuItem to="/shop/cart">
-            <FiShoppingCart /> Carrello
-          </MenuItem>
+          <Button variant="outline" onClick={onOpen}>
+            <Text display="flex">
+              <FiShoppingCart /> Carrello
+            </Text>
+          </Button>
         ) : (
           ""
         )}
@@ -45,6 +51,11 @@ const MenuLinks = ({ isOpen }: any) => {
         )}
       </Stack>
     </Box>
+    <Carrello
+      onDrawerClose={onClose}
+      isDrawerOpen={isOpen}
+    />
+    </>
   );
 };
 
