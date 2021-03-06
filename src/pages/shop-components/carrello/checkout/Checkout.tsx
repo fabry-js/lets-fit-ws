@@ -16,8 +16,10 @@ import {
   getCurrentCartItems,
   getCurrentOrderRestaurantName,
   getCurrentTotal,
+  resetCart,
 } from "../../../../redux-store/slices/cartSlice";
 import { sendOrder, timestamp, _auth } from "../../../../utils/firebase";
+import { useDispatch } from "react-redux";
 import CheckoutRiepilogoCard from "./components/CheckoutRiepilogoCard";
 
 interface CheckoutProps {
@@ -37,6 +39,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
 
   const history = useHistory();
   const toast = useToast();
+  const dispatch = useDispatch();
 
   const confirmCurrentOrder = async () => {
     await sendOrder({
@@ -57,6 +60,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
           duration: 9000,
           isClosable: true,
         });
+        dispatch(resetCart());
       })
       .catch((_error) =>
         toast({

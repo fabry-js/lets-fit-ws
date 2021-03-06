@@ -9,7 +9,7 @@ import NavigationSidebar from "./NavigationSidebar";
 const NavigationAndShopWrapper = () => {
   return (
     <>
-      <SimpleGrid p="4" columns={2} spacing={1}>
+      <SimpleGrid p="4" columns={3} spacing={1}>
         <NavigationSidebar />
         <RestaurantProcessRoutes />
       </SimpleGrid>

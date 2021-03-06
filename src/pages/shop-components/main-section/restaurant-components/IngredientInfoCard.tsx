@@ -15,7 +15,7 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
   vegetarian,
 }) => {
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+    <Box mt="2" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
       <Heading m="5" mb="0" as="h4" size="md">
         {name}
       </Heading>

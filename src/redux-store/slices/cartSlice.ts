@@ -29,6 +29,11 @@ const slice = createSlice({
     updateCurentOrderRestaurantName: (items: any, action) => {
       items.currentOrderRestaurantName = action.payload.restaurantName;
     },
+    resetCart: (items: any) => {
+      items.currentOrder.length = 0;
+      items.totale = 0;
+      items.currentOrderRestaurantName = ""
+    }
   },
 });
 
@@ -37,6 +42,7 @@ export const {
   removeItemByName,
   updateCurentOrderRestaurantName,
   updateCurrentTotal,
+  resetCart
 } = slice.actions;
 
 export default slice.reducer;
