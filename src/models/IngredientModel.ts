@@ -12,4 +12,6 @@ export interface IngredientModel {
   price: number;
   vegan: boolean;
   vegetarian: boolean;
+  imageURI: string;
+  [key: string]: any;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { List, ListItem } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import { _firestore } from "../../../utils/firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import RestaurantCard from "./restaurant-components/RestaurantCard";
@@ -21,18 +21,17 @@ const RestaurantsList = () => {
   */
    useEffect(() => {
     dispatch(removeAllIngredients())
-  })
-
+  });
   return (
     <div>
-      <List spacing={5}>
+      <SimpleGrid columns={4} columnGap="3">
         {classicoRestaurants &&
           classicoRestaurants.map((ristoranti: any, _id) => {
             return ristoranti.restaurants.map((ristorante: any, id: number) => {
               const { name, hourtime, address, plates } = ristorante;
               let restaurantName = name;
               return (
-                <ListItem key={id}>
+                <Box key={id}>
                   <RestaurantCard
                     restaurantName={restaurantName}
                     orario={hourtime}
@@ -70,16 +69,11 @@ const RestaurantsList = () => {
                     buttonLabel="Esplora"
                     indirizzo={address}
                   />
-                </ListItem>
+                </Box>
               );
             });
           })}
-      </List>
-      {/**
-       * Altro Problema:
-       *  Quando si clicca su Ordini Recenti, non viene effettuato l'override di questa scheda, bensì il
-       *  component apparirà sotto il drawer.
-       */}
+      </SimpleGrid>
     </div>
   );
 };

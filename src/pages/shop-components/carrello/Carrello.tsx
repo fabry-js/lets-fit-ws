@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import {
   getCurrentCartItems,
@@ -29,12 +29,7 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
   const cartItems = useSelector(getCurrentCartItems);
   const totale = useSelector(getCurrentTotal);
 
-  const [currentCartItems, setCurrentCartItems] = useState<any[]>();
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  useEffect(() => {
-    setCurrentCartItems(cartItems);
-  }, [cartItems]);
 
   const dispatch = useDispatch();
 
@@ -47,8 +42,8 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
             <DrawerHeader>Carrello</DrawerHeader>
 
             <DrawerBody>
-              {currentCartItems &&
-                currentCartItems.map((cartItem, id) => {
+              {cartItems &&
+                cartItems.map((cartItem, id) => {
                   const { name, price } = cartItem;
                   return (
                     <>

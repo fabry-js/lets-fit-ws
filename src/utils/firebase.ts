@@ -55,3 +55,24 @@ export const sendOrder = async (order: Order) => {
     }
   });
 };
+
+export const __createRestaurants = (restaurants: any) => {
+  const restaurantsCollection = _firestore.collection("/classico-restaurants");
+  return new Promise<boolean>((resolve, reject) => {
+    try {
+      restaurantsCollection
+        .add(restaurants)
+        .then(() =>{
+          resolve(true)
+          console.log("Fatto!")
+        })
+        .catch((error) =>{
+          console.log(error);
+          reject(false)
+        })
+    } catch (error) {
+      reject(false);
+      console.log(error);
+    }
+  });
+}
