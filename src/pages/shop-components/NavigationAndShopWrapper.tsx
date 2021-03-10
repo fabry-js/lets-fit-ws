@@ -1,22 +1,39 @@
 import React from "react";
-import { SimpleGrid } from "@chakra-ui/react";
-import { Switch, Route } from "react-router-dom";
+import {
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 import Impostazioni from "./Impostazioni";
 import RestaurantProcessRoutes from "./main-section/routers/RestaurantProcessRoutes";
 import OrdiniRecenti from "./OrdiniRecenti";
-import NavigationSidebar from "./NavigationSidebar";
 
 const NavigationAndShopWrapper = () => {
+  const history = useHistory();
   return (
     <>
-      <SimpleGrid p="4" columns={3} spacing={1}>
-        <NavigationSidebar />
-        <RestaurantProcessRoutes />
-      </SimpleGrid>
-      <Switch>
-        <Route path="/shop/ordinirecenti" component={OrdiniRecenti} />
-        <Route path="/shop/impostazioni" component={Impostazioni} />
-      </Switch>
+      <Tabs p="4" variant="soft-rounded" colorScheme="green">
+        <TabList>
+          <Tab onClick={() => history.push("/shop")}>Ordina</Tab>
+          <Tab>Ordini Recenti</Tab>
+          <Tab>Impostazioni</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <RestaurantProcessRoutes />
+          </TabPanel>
+          <TabPanel>
+            <OrdiniRecenti />
+          </TabPanel>
+          <TabPanel>
+            <Impostazioni />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
     </>
   );
 };

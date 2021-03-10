@@ -24,10 +24,10 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
         {restaurantName}
       </Heading>
       <Text m="5" mt="0">
-        {orario}
+        {indirizzo}
       </Text>
       <Text m="5" fontSize="smaller">
-        {indirizzo}
+        {orario}
       </Text>
       <Button m="5" p="5" onClick={buttonFunction}>
         {buttonLabel}

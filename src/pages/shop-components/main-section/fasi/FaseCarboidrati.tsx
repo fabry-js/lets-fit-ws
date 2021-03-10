@@ -11,11 +11,11 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTrigger,
+  SimpleGrid,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
-  Switch,
   Text,
   useToast,
 } from "@chakra-ui/react";
@@ -23,6 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IngredientModel } from "../../../../models/IngredientModel";
 import { getCurrentIngredients } from "../../../../redux-store/slices/ingredientsSlice";
 import TopHeaderCard from "./fasi-components/TopHeaderCard";
+import { FaCartPlus } from "react-icons/fa";
 import {
   addItemToCart,
   updateCurrentTotal,
@@ -36,13 +37,6 @@ const FaseCarboidrati = () => {
 
   const filteredByPhaseIngredients = ingredients.filter(
     (ingredient) => ingredient.phase === "carboidrati"
-  );
-
-  const [isSwitchOn, setIsSwitchOn] = useState<any[]>(
-    filteredByPhaseIngredients.map((ingredient) => ({
-      value: false,
-      ...ingredient,
-    }))
   );
 
   const [sliderQuantityValue, setSliderQuantityValue] = useState<any[]>(
@@ -61,147 +55,141 @@ const FaseCarboidrati = () => {
     setSliderQuantityValue(temp);
   };
 
-  const onSwitchToggle = (
-    value: boolean,
-    ingredient: IngredientModel,
-    index: number
-  ) => {
-    const temp = [...isSwitchOn];
-    temp.splice(index, 1, {
-      value,
-      ...ingredient,
-    });
-    setIsSwitchOn(temp);
-  };
-
-  const checkedIngredientsObj = isSwitchOn.filter(
-    (ingredient: any) => ingredient.value === true
-  );
-
   let totale = 0;
 
-  const addCheckedIngredientsToCart = () => {
-    checkedIngredientsObj &&
-      checkedIngredientsObj.map(
-        (ingredient: IngredientModel, index: number) => {
-          const { name, price } = ingredient;
-          totale += price;
-          dispatch(
-            addItemToCart({
-              name,
-              price,
-              quantity: sliderQuantityValue[index].value,
-            })
-          );
-          return dispatch(
-            updateCurrentTotal({
-              totale,
-            })
-          );
-        }
-      );
+  const addIngredientToCart = (
+    ingredient: IngredientModel,
+    quantity: number
+  ) => {
+    const { name, price } = ingredient;
+    totale += price;
     toast({
-      title: "Aggiunto tutto al carrello!🛒",
+      title: "Aggiunto al carrello!🛒",
       description: "Vai nella sezione 'Carrello' per un riepilogo",
       status: "success",
-      duration: 4000,
+      duration: 1000,
       isClosable: true,
     });
+    dispatch(
+      addItemToCart({
+        name,
+        price,
+        quantity,
+      })
+    );
+    return dispatch(
+      updateCurrentTotal({
+        totale,
+      })
+    );
   };
 
   return (
     <div>
       <Text fontSize="2xl">Carboidrati</Text>
       <TopHeaderCard />
-      {filteredByPhaseIngredients &&
-        filteredByPhaseIngredients.map(
-          (ingredient: IngredientModel, index: number) => {
-            const { name, price } = ingredient;
-            const {
-              calorie,
-              carboidrati,
-              grassi,
-              proteine,
-            } = ingredient.macronut;
-            let sliderNumericValue: number = sliderQuantityValue[index].value;
-            let switchActivatedValue: boolean = isSwitchOn[index].value;
-            return (
-              <Box
-                p="2"
-                mt="2"
-                key={index}
-                maxW="sm"
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
-              >
-                <Popover>
-                  <PopoverTrigger>
-                    <Button variant="ghost">
-                      {name} | €{price}
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent>
-                    <PopoverArrow />
-                    <PopoverCloseButton />
-                    <PopoverHeader>
-                      Macronutrienti per {sliderNumericValue}g
-                    </PopoverHeader>
-                    <PopoverBody>
-                      <List>
-                        <ListItem>
-                          <Text fontSize="h1"></Text>Calorie:{" "}
-                          {((calorie * sliderNumericValue) / 100).toFixed(1)} kCal
-                        </ListItem>
-                        <ListItem>
-                          <Text fontSize="p"></Text>Carboidrati:{" "}
-                          {((carboidrati * sliderNumericValue) / 100).toFixed(1)}g
-                        </ListItem>
-                        <ListItem>
-                          <Text fontSize="p"></Text>Proteine:{" "}
-                          {((proteine * sliderNumericValue) / 100).toFixed(1)}g
-                        </ListItem>
-                        <ListItem>
-                          <Text fontSize="p"></Text>Grassi:{" "}
-                          {((grassi * sliderNumericValue) / 100).toFixed(1)}g
-                        </ListItem>
-                      </List>
-                    </PopoverBody>
-                  </PopoverContent>
-                </Popover>
-                <Switch
-                  isChecked={switchActivatedValue}
-                  color="lime"
-                  size="lg"
-                  onChange={() =>
-                    onSwitchToggle(!switchActivatedValue, ingredient, index)
-                  }
-                />
-                <Slider
-                  isDisabled={!switchActivatedValue}
-                  defaultValue={100}
-                  min={10}
-                  max={300}
-                  step={20}
-                  onChange={(value) => onToggleSlider(value, ingredient, index)}
+      <SimpleGrid columns={6} columnGap="3">
+        {filteredByPhaseIngredients &&
+          filteredByPhaseIngredients.map(
+            (ingredient: IngredientModel, index: number) => {
+              const { name, price } = ingredient;
+              const {
+                calorie,
+                carboidrati,
+                grassi,
+                proteine,
+              } = ingredient.macronut;
+              return (
+                <Box
+                  p="2"
+                  mt="2"
+                  key={index}
+                  maxW="sm"
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  overflow="hidden"
                 >
-                  <SliderTrack>
-                    <Box position="relative" right={10} />
-                    <SliderFilledTrack />
-                  </SliderTrack>
-                  <SliderThumb boxSize={6} />
-                </Slider>
-                <Text>Quantità: {sliderNumericValue}g</Text>
-              </Box>
-            );
-          }
-        )}
-      <Button
-        disabled={checkedIngredientsObj.length === 0}
-        onClick={() => addCheckedIngredientsToCart()}
-      >
-        Aggiungi gli elementi selezionati al carrello
-      </Button>
+                  <Popover>
+                    <PopoverTrigger>
+                      <Button variant="ghost">
+                        {name} | €{price}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                      <PopoverArrow />
+                      <PopoverCloseButton />
+                      <PopoverHeader>
+                        Macronutrienti per {sliderQuantityValue[index].value}g
+                      </PopoverHeader>
+                      <PopoverBody>
+                        <List>
+                          <ListItem>
+                            <Text fontSize="h1"></Text>Calorie:{" "}
+                            {(
+                              (calorie * sliderQuantityValue[index].value) /
+                              100
+                            ).toFixed(1)}{" "}
+                            kCal
+                          </ListItem>
+                          <ListItem>
+                            <Text fontSize="p"></Text>Carboidrati:{" "}
+                            {(
+                              (carboidrati * sliderQuantityValue[index].value) /
+                              100
+                            ).toFixed(1)}
+                            g
+                          </ListItem>
+                          <ListItem>
+                            <Text fontSize="p"></Text>Proteine:{" "}
+                            {(
+                              (proteine * sliderQuantityValue[index].value) /
+                              100
+                            ).toFixed(1)}
+                            g
+                          </ListItem>
+                          <ListItem>
+                            <Text fontSize="p"></Text>Grassi:{" "}
+                            {(
+                              (grassi * sliderQuantityValue[index].value) /
+                              100
+                            ).toFixed(1)}
+                            g
+                          </ListItem>
+                        </List>
+                      </PopoverBody>
+                    </PopoverContent>
+                  </Popover>
+                  <Button
+                    onClick={() =>
+                      addIngredientToCart(
+                        ingredient,
+                        sliderQuantityValue[index].value
+                      )
+                    }
+                  >
+                    <FaCartPlus />
+                  </Button>
+                  <Slider
+                    defaultValue={100}
+                    min={10}
+                    max={300}
+                    step={20}
+                    onChange={(value) =>
+                      onToggleSlider(value, ingredient, index)
+                    }
+                  >
+                    <SliderTrack>
+                      <Box position="relative" right={10} />
+                      <SliderFilledTrack />
+                    </SliderTrack>
+                    <SliderThumb boxSize={6} />
+                  </Slider>
+                  <Text>Quantità: {sliderQuantityValue[index].value}g</Text>
+                </Box>
+              );
+            }
+          )}
+      </SimpleGrid>
     </div>
   );
 };

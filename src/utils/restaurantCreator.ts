@@ -8,13 +8,14 @@ import { IngredientModel } from "../models/IngredientModel";
  * Abbiamo quindi: RestaurantModel
  */
 
-interface RestaurantModel {
+export interface RestaurantModel {
   name: string;
   address: string;
   forwardID: number;
   hourtime: string;
   imageName: string;
   plates: IngredientModel[];
+  [key: string]: any;
 }
 
 /**
@@ -434,11 +435,45 @@ const laPuttega: RestaurantModel = {
         proteine: 0,
       },
     },
+    // per Menu
+    {
+      name: "Parmigiana di melanzane grigliate light",
+      phase: "menu",
+      plateDescription:
+        "melanzane- provola- pomodorini Pachino- passata di pomodoro- basilico- formaggio grana grattugiato- olio Evo- sale- pepe",
+      price: 7.5,
+      vegan: false,
+      vegetarian: true,
+      imageURI: "",
+      macronut: {
+        calorie: 78,
+        carboidrati: 4.5,
+        grassi: 4.5,
+        proteine: 5.2,
+      },
+    },
+    {
+      name: "Pasta alla norma con melanzane grigliate",
+      phase: "menu",
+      plateDescription:
+        "Pennette Rigate Integrali- melanzane- formaggio primo sale grattugiato- pomodorini Pachino- basilico- aglio- olio Evo- sale",
+      price: 6.7,
+      vegan: false,
+      vegetarian: true,
+      imageURI: "",
+      macronut: {
+        calorie: 493,
+        carboidrati: 68,
+        grassi: 15.1,
+        proteine: 21.2,
+      },
+    },
   ],
 };
 
 const mas: RestaurantModel = {
   name: "MAS Panineria",
+  menuName: "I tradizionali",
   address: "Via Marina Garibaldi, 149, 98057 Milazzo",
   forwardID: 2,
   hourtime: "08:30-15:30 / 17:30-20:30",
@@ -551,7 +586,7 @@ const mas: RestaurantModel = {
       name: "Fiocchi di Latte",
       phase: "proteine",
       price: 15.1,
-      vegan: true,
+      vegan: false,
       vegetarian: true,
       imageURI: "",
       macronut: {
@@ -597,7 +632,7 @@ const mas: RestaurantModel = {
       phase: "proteine",
       price: 26.8,
       vegan: false,
-      vegetarian: true,
+      vegetarian: false,
       imageURI: "",
       macronut: {
         calorie: 159,
@@ -612,7 +647,7 @@ const mas: RestaurantModel = {
       phase: "proteine",
       price: 23,
       vegan: false,
-      vegetarian: true,
+      vegetarian: false,
       imageURI: "",
       macronut: {
         calorie: 147,
@@ -642,7 +677,7 @@ const mas: RestaurantModel = {
       phase: "proteine",
       price: 2.23,
       vegan: false,
-      vegetarian: true,
+      vegetarian: false,
       imageURI: "",
       macronut: {
         calorie: 96,
@@ -794,9 +829,58 @@ const mas: RestaurantModel = {
         proteine: 0.88,
       },
     },
-
-    // da qui dobbiamo creare una nuova phase denominata "menu", che comprende dei piatti già pronti.
+    // per Menu
+    {
+      name: "Cous cous ai frutti di mare",
+      phase: "menu",
+      plateDescription:
+        "cous cous- vongole-gamberi-cozze-calamari- vino bianco secco- peperoncino fresco- pomodorini Pachino-aglio- olio Evo-sale fino-menta",
+      price: 7.5,
+      vegan: false,
+      vegetarian: false,
+      imageURI: "",
+      macronut: {
+        calorie: 442,
+        carboidrati: 28.9,
+        grassi: 18.6,
+        proteine: 38.1,
+      },
+    },
+    {
+      name: "Caponata leggera",
+      phase: "menu",
+      plateDescription:
+        "basilico- sedano- sale- pomodorini Pachino- pinoli- pepe- olive nere- olio Evo- melanzane- capperi",
+      price: 8,
+      vegan: false,
+      vegetarian: false,
+      imageURI: "",
+      macronut: {
+        calorie: 52,
+        carboidrati: 4.60,
+        grassi: 3.90,
+        proteine: 1.20,
+      },
+    },
+    {
+      name: "Pesce spada alla siciliana",
+      phase: "menu",
+      plateDescription:
+        "Pesce spada- pomodorini Pachino- olive verdi denocciolate- olio Evo- aglio- pinoli- origano- sale- peperoncino fresco",
+      price: 10,
+      vegan: false,
+      vegetarian: false,
+      imageURI: "",
+      macronut: {
+        calorie: 381,
+        carboidrati: 6.40,
+        grassi: 27.40,
+        proteine: 27.20,
+      },
+    },
   ],
 };
 
-const restaurants = [laPuttega, mas];
+export const restaurants = [laPuttega, mas];
+
+export const restaurantsWrapper = { restaurants };

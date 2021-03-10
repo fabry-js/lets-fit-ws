@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Accordion,
   AccordionButton,
@@ -7,8 +8,10 @@ import {
   Heading,
   List,
   ListItem,
+  Text,
 } from "@chakra-ui/react";
-import React from "react";
+import { FiArrowDown } from "react-icons/fi";
+
 import { IngredientModel } from "../../../models/IngredientModel";
 
 interface RiepilogoCardProps {
@@ -32,11 +35,11 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
         Ordine #{id + 1} | {restaurantName}
       </Heading>
       <Accordion allowToggle>
-        <AccordionItem>
+        <AccordionItem borderRadius="full">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
-                Dettagli Ordine
+              <Box flex="1">
+                <Text textAlign="left">Dettagli Ordine<FiArrowDown /></Text>
               </Box>
             </AccordionButton>
           </h2>
