@@ -7,7 +7,7 @@ const slice = createSlice({
   reducers: {
     addIngredient: (ingredients: any, action) => {
       const payload: IngredientModel = action.payload;
-      const { name, macronut, phase, price, vegan, vegetarian } = payload;
+      const { name, macronut, phase, price, vegan, vegetarian, imageURI } = payload;
       ingredients.push({
         name,
         macronut,
@@ -15,6 +15,7 @@ const slice = createSlice({
         price,
         vegan,
         vegetarian,
+        imageURI
       });
     },
     removeAllIngredients: (ingredients: any) => {

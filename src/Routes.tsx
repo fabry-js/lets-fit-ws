@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Registrazione from "./pages/auth/Registrazione";
 import PasswordDimenticata from "./pages/auth/PasswordDimenticata";
-import Blog from "./pages/Blog";
+import Blog from "./pages/blog/Blog";
 
 const Routes = () => {
   return (

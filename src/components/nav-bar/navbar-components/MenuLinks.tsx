@@ -22,7 +22,6 @@ const MenuLinks = ({ isOpened }: any) => {
           justify={["center", "space-between", "flex-end", "flex-end"]}
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
-          ml="850"
         >
           <MenuItem to="/">
             <AiOutlineHome /> Home

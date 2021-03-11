@@ -39,7 +39,7 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Carrello</DrawerHeader>
+            <DrawerHeader>Carrello🛒</DrawerHeader>
 
             <DrawerBody>
               {cartItems &&
