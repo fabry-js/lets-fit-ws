@@ -8,6 +8,10 @@ import mergedReducers from "./redux-store/configureStore";
 
 const store = configureStore({
   reducer: mergedReducers,
+  /**
+   * PRODUCTION
+   * devTools: false
+   */
 });
 
 export const Providers = () => {
