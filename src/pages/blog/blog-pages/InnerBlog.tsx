@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import { _firestore, __createBlogPost } from "../../../utils/firebase";
+import { _firestore } from "../../../utils/firebase";
 import BlogLinkToPost from "../blog-components/BlogLinkToPost";
 import BlogMainHero from "../blog-components/BlogMainHero";
 
