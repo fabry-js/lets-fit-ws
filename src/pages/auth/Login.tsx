@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Button,
   Center,
@@ -10,7 +11,6 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";

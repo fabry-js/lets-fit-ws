@@ -1,4 +1,5 @@
 import firebase from "firebase/app";
+import { BlogPost } from "../models/BlogPost";
 import "firebase/auth";
 import "firebase/firestore";
 import "firebase/analytics";
@@ -65,6 +66,27 @@ export const __createRestaurants = (restaurants: any) => {
     try {
       restaurantsCollection
         .add(restaurants)
+        .then(() =>{
+          resolve(true)
+          console.log("Fatto!")
+        })
+        .catch((error) =>{
+          console.log(error);
+          reject(false)
+        })
+    } catch (error) {
+      reject(false);
+      console.log(error);
+    }
+  });
+}
+
+export const __createBlogPost = (postData: BlogPost) => {
+  const blogPostsCollectionRef = _firestore.collection("/blog-posts");
+  return new Promise<boolean>((resolve, reject) => {
+    try {
+      blogPostsCollectionRef
+        .add(postData)
         .then(() =>{
           resolve(true)
           console.log("Fatto!")
