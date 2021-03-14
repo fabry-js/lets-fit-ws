@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   Box,
   Button,
+  Image,
   List,
   ListItem,
   Popover,
@@ -40,29 +41,32 @@ const FaseCarboidrati = () => {
   );
 
   const [sliderQuantityValue, setSliderQuantityValue] = useState<any[]>(
-    filteredByPhaseIngredients.map((ingredient) => ({
+    filteredByPhaseIngredients.map((ingredient: IngredientModel) => ({
       value: 100,
+      finalPrice: ingredient.price,
       ...ingredient,
     }))
   );
 
-  const onToggleSlider = (value: number, ingrediente: any, index: number) => {
+  const onToggleSlider = (value: number, ingrediente: any, finalPrice: number, index: number) => {
     const temp = [...sliderQuantityValue];
     temp.splice(index, 1, {
       value,
+      finalPrice,
       ...ingrediente,
     });
     setSliderQuantityValue(temp);
   };
 
-  let totale = 0;
+   const [totale, setTotale] = useState<number>(0);
 
   const addIngredientToCart = (
     ingredient: IngredientModel,
-    quantity: number
+    quantity: number,
+    finalPrice: number
   ) => {
     const { name, price } = ingredient;
-    totale += price;
+    setTotale(totale + price);
     toast({
       title: "Aggiunto al carrello!🛒",
       description: "Vai nella sezione 'Carrello' per un riepilogo",
@@ -73,7 +77,7 @@ const FaseCarboidrati = () => {
     dispatch(
       addItemToCart({
         name,
-        price,
+        price: finalPrice,
         quantity,
       })
     );
@@ -92,7 +96,7 @@ const FaseCarboidrati = () => {
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
-              const { name, price } = ingredient;
+              const { name, price, imageURI } = ingredient;
               const {
                 calorie,
                 carboidrati,
@@ -107,12 +111,12 @@ const FaseCarboidrati = () => {
                   maxW="sm"
                   borderWidth="1px"
                   borderRadius="lg"
-                  overflow="hidden"
                 >
+                  <Image src={imageURI} />
                   <Popover>
                     <PopoverTrigger>
                       <Button variant="ghost">
-                        {name} | €{price}
+                        {name} | €{((sliderQuantityValue[index].value * price) / 100).toFixed(1)}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent>
@@ -163,7 +167,8 @@ const FaseCarboidrati = () => {
                     onClick={() =>
                       addIngredientToCart(
                         ingredient,
-                        sliderQuantityValue[index].value
+                        sliderQuantityValue[index].value,
+                        sliderQuantityValue[index].finalPrice
                       )
                     }
                   >
@@ -175,7 +180,7 @@ const FaseCarboidrati = () => {
                     max={300}
                     step={20}
                     onChange={(value) =>
-                      onToggleSlider(value, ingredient, index)
+                      onToggleSlider(value, ingredient, (price * sliderQuantityValue[index].value) / 100 , index)
                     }
                   >
                     <SliderTrack>

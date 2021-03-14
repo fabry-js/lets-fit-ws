@@ -12,7 +12,7 @@ const MenuRistorante = () => {
     <SimpleGrid columns={6} columnGap="3">
       {menu &&
         menu.map((availableIngredient: IngredientModel, index: number) => {
-          const { name, price, vegan, vegetarian } = availableIngredient;
+          const { name, price, vegan, vegetarian, imageURI } = availableIngredient;
           return (
               <IngredientInfoCard
                key={index}
@@ -20,14 +20,8 @@ const MenuRistorante = () => {
                price={price}
                vegan={vegan}
                vegetarian={vegetarian}
+               imageURI={imageURI}
              />
-            // <IngredientInfoCard
-            //   key={index}
-            //   name={name}
-            //   price={price}
-            //   vegan={vegan}
-            //   vegetarian={vegetarian}
-            // />
           );
         })}
       <Link to="/shop/fase-carboidrati">

@@ -7,7 +7,7 @@ import { connect, useDispatch } from "react-redux";
 import { addIngredient, removeAllIngredients } from "../../../redux-store/slices/ingredientsSlice";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { useHistory } from "react-router-dom";
-import { updateCurentOrderRestaurantName } from "../../../redux-store/slices/cartSlice";
+import { resetCart, updateCurentOrderRestaurantName } from "../../../redux-store/slices/cartSlice";
 
 const mapDispatch = { addIngredient };
 
@@ -20,7 +20,8 @@ const RestaurantsList = () => {
    * Remover degli ingredienti per Redux
   */
    useEffect(() => {
-    dispatch(removeAllIngredients())
+    dispatch(removeAllIngredients());
+    dispatch(resetCart());
   });
   return (
     <div>
@@ -44,6 +45,7 @@ const RestaurantsList = () => {
                           price,
                           vegan,
                           vegetarian,
+                          imageURI
                         } = plate;
                         // Navigazione ai Piatti Disponibili
                         history.push("/shop/menu-ristorante");
@@ -62,6 +64,7 @@ const RestaurantsList = () => {
                             price,
                             vegan,
                             vegetarian,
+                            imageURI
                           })
                         );
                       });
