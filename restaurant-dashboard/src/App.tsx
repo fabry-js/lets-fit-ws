@@ -1,11 +1,3 @@
-import React from 'react';
+import Providers from "./Providers";
 
-function App() {
-  return (
-    <div className="App">
-      <p>Salve</p>
-    </div>
-  );
-}
-
-export default App;
+export default Providers;
