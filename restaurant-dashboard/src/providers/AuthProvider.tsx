@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { SpecialLoginResolveData, _auth } from '../utils/firebase';
 import { getCurrentUserInfos } from "../store/slices/userSlice";
 
 interface AuthProviderProps {}
@@ -15,7 +14,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({children}) =>{
       setActualUser(user)
     :
       setActualUser(null);
-  });
+  }, [user]);
 
   return (
     <UserContext.Provider value={{ actualUser }}>
