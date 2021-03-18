@@ -27,13 +27,14 @@ const InnerBlog = () => {
     <Box p="4">
       {featuredPosts &&
         featuredPosts.map((featuredPost: any, index: number) => {
-          const { postTitle, postShortDesc, postId } = featuredPost;
+          const { postTitle, postShortDesc, postId, coverURL } = featuredPost;
           return (
             <BlogMainHero
               key={index}
               featPostTitle={postTitle}
               featPostDescription={postShortDesc}
               postId={postId}
+              coverURL={coverURL}
             />
           );
         })}
