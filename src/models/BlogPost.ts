@@ -1,5 +1,6 @@
 interface BlogPostMainContent {
   postBody: string;
+  [key: string]: string | string[];
 }
 
 interface BlogPostAdditional {
@@ -19,5 +20,6 @@ export interface BlogPost {
   mainContent: BlogPostMainContent;
   additional: BlogPostAdditional;
   featured: boolean;
+  postAuthor: string
   comments: BlogPostComment[]
 }

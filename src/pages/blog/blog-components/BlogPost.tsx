@@ -30,7 +30,9 @@ const BlogPost: React.FC<BlogPostProps> = () => {
   const [toUpdateDocumentId, setToUpdateDocumentId] = useState<string>();
 
   // Così evitiamo di avere errori con lo state history (è un discorso complesso, sostanzialmente lo state è ritardato HAHAH)
-  blogPostsCollectionRef.get().then((snap) => snap.forEach((post) => setToUpdateDocumentId(post.id)))
+  blogPostsCollectionRef
+    .get()
+    .then((snap) => snap.forEach((post) => setToUpdateDocumentId(post.id)));
 
   const toast = useToast();
 
@@ -69,15 +71,47 @@ const BlogPost: React.FC<BlogPostProps> = () => {
     <Box p="4">
       {blogPosts ? (
         blogPosts.map((blogPost: BlogPostInterface | any, index: number) => {
-          const { additional, mainContent, postTitle, comments } = blogPost;
+          const {
+            additional,
+            mainContent,
+            postTitle,
+            comments,
+            postAuthor,
+          } = blogPost;
           const { likes } = additional;
-          const { postBody } = mainContent;
+          const {
+            postBody,
+            postHeader,
+            postTopFooter,
+            postFooter,
+            postEventualPointedList,
+          } = mainContent;
           return (
             <React.Fragment key={index}>
               <Box borderRadius="lg" borderWidth="1px" p="6" key={index}>
                 <Heading>{postTitle}</Heading>
                 <Text mt="5" fontSize="p">
+                  {postHeader}
+                </Text>
+                <Text mt="5" fontSize="p">
                   {postBody}
+                </Text>
+                {postEventualPointedList &&
+                postEventualPointedList.map((point: any, id: number) => (
+
+                  <Text key={id} mt="5" fontSize="p">
+                    - {point}
+                  </Text>
+                ))
+                }
+                <Text mt="5" fontSize="p">
+                  {postTopFooter}
+                </Text>
+                <Text mt="5" fontSize="p">
+                  {postFooter}
+                </Text>
+                <Text mt="5" fontSize="small" fontStyle="italic">
+                  {postAuthor}
                 </Text>
                 <Badge
                   mt="5"
@@ -113,19 +147,25 @@ const BlogPost: React.FC<BlogPostProps> = () => {
                       Nessun commento, sii la prima persona!
                     </Text>
                   )}
-                  <form onSubmit={handleSubmit(onSubmit)}>
-                    <InputGroup>
-                      <Input
-                        mt="3"
-                        name="comment"
-                        ref={register}
-                        placeholder="Commenta..."
-                      />
-                      <Button mt="3" type="submit" variant="ghost">
-                        <AiOutlineSend />
-                      </Button>
-                    </InputGroup>
-                  </form>
+                  {_auth.currentUser !== null ? (
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                      <InputGroup>
+                        <Input
+                          mt="3"
+                          name="comment"
+                          ref={register}
+                          placeholder="Commenta..."
+                        />
+                        <Button mt="3" type="submit" variant="ghost">
+                          <AiOutlineSend />
+                        </Button>
+                      </InputGroup>
+                    </form>
+                  ) : (
+                    <Text mt="5" opacity="0.5">
+                      Devi fare il login per poter commentare!
+                    </Text>
+                  )}
                 </Box>
               </Box>
             </React.Fragment>
