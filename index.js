@@ -1,7 +1,10 @@
 const express = require('express');
 const stripe = require('stripe')('sk_test_51IJJPcIzkBXCvUW1usTx6HMp1Rh2bjoWM1TOyoA05BlP9qySrnUrQ8wjq1CCIEIJie6XjLvEJsYxZEbxP5Uo7GmD00EojT4de0')
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 const calculateOrderAmount = (items) => {
   let accumTotal = 0;
