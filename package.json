@@ -1,0 +1,12 @@
+{
+  "name": "eatfit-server",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "fabry-js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "stripe": "^8.138.0"
+  }
+}
