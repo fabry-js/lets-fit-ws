@@ -24,22 +24,16 @@ app.get("/", async (_req, res) => {
 });
 
 app.post("/create-payment-intent", async (req, res) => {
-  if (req.body.ingredients) {
-    const { ingredients } = req.body;
-    console.log(ingredients);
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: calculateOrderAmount(ingredients),
-      currency: "eur",
-    });
+  console.log(req.body);
 
-    res.send({
-      clientSecret: paymentIntent.clientSecret,
-    });
-  } else {
-    res.send({
-      message: "no ingredients",
-    });
-  }
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: 10,
+    currency: "eur",
+  });
+
+  res.send({
+    clientSecret: paymentIntent.clientSecret,
+  });
 });
 
 app.listen(process.env.PORT || 5000, () => console.log("pronto."));
