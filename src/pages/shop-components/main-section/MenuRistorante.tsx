@@ -16,6 +16,7 @@ const MenuRistorante = () => {
           return (
               <IngredientInfoCard
                key={index}
+               iteratorKey={index}
                name={name}
                price={price}
                vegan={vegan}

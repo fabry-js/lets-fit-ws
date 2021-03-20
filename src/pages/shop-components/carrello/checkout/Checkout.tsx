@@ -53,13 +53,14 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
   const [processing, setProcessing] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [clientSecret, setClientSecret] = useState<string>();
+  const [currentPaymentMethod, setCurrentPaymentMethod] = useState<any[] | any>();
   const stripe = useStripe();
   const elements = useElements();
 
   const confirmCurrentOrder = async () => {
     await sendOrder({
       allIngredients: currentCartItems,
-      paymentMethod: "Paypal *",
+      paymentMethod: currentPaymentMethod,
       restaurantName,
       user: _auth.currentUser?.email,
       totale,
@@ -90,27 +91,21 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     axios.post(
-      "https://stripe-letsfitja.herokuapp.com/create-payment-intent",
-      JSON.stringify({ingredients: currentCartItems})
+      "http://localhost:5000/create-payment-intent",
+      JSON.stringify({ingredients: currentCartItems}),
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
     )
-      .then((res) => console.log(res))
-      .then((data: any) => setClientSecret(data.clientSecret))
+      .then((res) => {
+        setClientSecret(res.data.clientSecret);
+        setCurrentPaymentMethod(res.data.paymentMethodTypes);
+      })
       .catch((error) => console.error(error))
-    // window
-    //   .fetch("https://stripe-letsfitja.herokuapp.com/create-payment-intent", {
-    //     method: "post",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify({items: currentCartItems})
-    //   })
-    //   .then(res => {
-    //     return res.json();
-    //   })
-    //   .then(data => {
-    //     setClientSecret(data.clientSecret);
-    //   })
-  }, []);
+
+  }, [cartItems, currentCartItems])
 
   const handleChange = async (event: any) => {
     setDisabled(event.empty);
@@ -131,10 +126,12 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
       setError(`Errore durante il pagamento :(`);
       setProcessing(false);
     }
+
     else {
       setError(null);
       setProcessing(false);
       setSucceded(true);
+      await confirmCurrentOrder();
     }
   }
 
@@ -170,12 +167,11 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                   }
                 </Button>
                 {error && (
-                  <Alert status="error">
+                  <Alert status="error" mt="3">
                     <AlertIcon />
-                    Oh, c'è un problema con i dettagli di pagamento
+                    Oh, c'è un problema con il pagamento
                   </Alert>
                 )}
-                {succeded ? confirmCurrentOrder() : ""}
               </form>
             </Box>
           </ModalBody>
