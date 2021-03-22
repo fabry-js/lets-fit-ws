@@ -46,17 +46,18 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
                 cartItems.map((cartItem, id) => {
                   const { name, price } = cartItem;
                   return (
-                    <>
-                      <RiepilogoIngredientCard
-                        key={id}
-                        ingredientName={name}
-                        price={price}
-                        onClick={() => dispatch(removeItemByName(name))}
-                      />
-                    </>
+                    <RiepilogoIngredientCard
+                      key={id}
+                      ingredientName={name}
+                      price={price}
+                      onClick={() => dispatch(removeItemByName({
+                        name,
+                        price
+                      }))}
+                    />
                   );
                 })}
-              {totale ? <Text>Subtotale: €{totale}</Text> : ""}
+              {totale ? <Text>Subtotale: €{Math.floor(totale)}</Text> : ""}
             </DrawerBody>
 
             <DrawerFooter>

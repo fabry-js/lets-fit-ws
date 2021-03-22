@@ -10,11 +10,11 @@ const BlogNavigationWrapper = () => {
   return(
     <div>
       <Box p="4">
-        <Tabs colorScheme="green" orientation="vertical" >
-          <TabList mt="20">
+        <Tabs colorScheme="green" orientation="horizontal">
+          <TabList>
             <Tab onClick={() => history.push("/blog")}>Home</Tab>
-            <Tab mt="20">Notizie</Tab>
-            <Tab mt="20">Contatti</Tab>
+            <Tab>Notizie</Tab>
+            <Tab>Contatti</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

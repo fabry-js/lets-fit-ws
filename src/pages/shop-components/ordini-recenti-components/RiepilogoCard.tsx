@@ -12,12 +12,10 @@ import {
 } from "@chakra-ui/react";
 import { FiArrowDown } from "react-icons/fi";
 
-import { IngredientModel } from "../../../models/IngredientModel";
-
 interface RiepilogoCardProps {
   id: number;
   restaurantName: string;
-  allIngredients: IngredientModel[];
+  allIngredients: any[];
   totale: number;
   method: string;
 }
@@ -47,12 +45,11 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
             <h1>Ingredienti Ordinati</h1>
             <List>
               {allIngredients &&
-                allIngredients.map((ingredient, index) => {
+                allIngredients.map((ingredient: any, index) => {
                   const { name, price } = ingredient;
                   return (
                     <React.Fragment key={index}>
-                      <ListItem>{name}</ListItem>
-                      <ListItem>€{price}</ListItem>
+                      <ListItem>{name} | €{price}</ListItem>
                     </React.Fragment>
                   );
                 })}

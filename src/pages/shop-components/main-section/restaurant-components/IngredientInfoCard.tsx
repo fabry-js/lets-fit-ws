@@ -7,6 +7,7 @@ interface IngredientInfoCardProps {
   vegan: boolean;
   vegetarian: boolean;
   imageURI: string;
+  iteratorKey: number;
 }
 
 const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
@@ -14,10 +15,11 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
   price,
   vegan,
   vegetarian,
-  imageURI
+  imageURI,
+  iteratorKey
 }) => {
   return (
-    <Box mt="2" borderWidth="1px" borderRadius="lg">
+    <Box key={iteratorKey} mt="2" borderWidth="1px" borderRadius="lg">
       <Image src={imageURI} alt="" width="250px" height="155px" />
       <Heading m="5" mb="0" as="h4" size="md">
         {name}
@@ -27,15 +29,15 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
       </Text>
       <Text m="5" fontSize="smaller">
         {vegan ? (
-          <Badge borderRadius="2xl" ml="1" colorScheme="green" p="0.5" variant="subtle">
-            <Text p="1">Vegan</Text>
+          <Badge borderRadius="2xl" ml="1" colorScheme="green" p="1" variant="subtle">
+            Vegan
           </Badge>
         ) : (
           ""
         )}
         {vegetarian ? (
-          <Badge borderRadius="2xl" ml="1" colorScheme="green" p="0.5" variant="subtle">
-            <Text p="1">Vegetariano</Text>
+          <Badge borderRadius="2xl" ml="1" colorScheme="green" p="1" variant="subtle">
+            Vegetariano
           </Badge>
         ) : (
           ""

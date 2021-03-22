@@ -27,13 +27,12 @@ const slice = createSlice({
     },
     removeItemByName: (
       items: any,
-      action: PayloadAction<IngredientNamePayload>
+      action: PayloadAction<{name: string, price: number}>
     ) => {
-      let toRemoveElementIndex = items.currentOrder.indexOf(
-        action.payload.name
-      );
-      toRemoveElementIndex &&
-        items.currentOrder.splice(toRemoveElementIndex, 1);
+      const typedItems: [] = items.currentOrder;
+      const filtered = typedItems.filter((item: any) => item.name !== action.payload.name);
+      items.currentOrder = filtered;
+      items.totale -= action.payload.price;
     },
     updateCurrentTotal: (
       items: any,
