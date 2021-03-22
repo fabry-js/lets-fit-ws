@@ -8,7 +8,7 @@ interface MenuToggleProps {
 
 const MenuToggle = ({ toggle, isOpen }: MenuToggleProps) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+    <Box display={{ base: "block", md: "none" }} ml="48%" onClick={toggle}>
       {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
     </Box>
   );

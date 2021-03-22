@@ -1,13 +1,12 @@
-import { createSelector, createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IngredientModel } from "../../models/IngredientModel";
 
 const slice = createSlice({
   name: "ingredients",
   initialState: [],
   reducers: {
-    addIngredient: (ingredients: any, action) => {
-      const payload: IngredientModel = action.payload;
-      const { name, macronut, phase, price, vegan, vegetarian, imageURI } = payload;
+    addIngredient: (ingredients: any, action: PayloadAction<IngredientModel>) => {
+      const { name, macronut, phase, price, vegan, vegetarian, imageURI } = action.payload;
       ingredients.push({
         name,
         macronut,

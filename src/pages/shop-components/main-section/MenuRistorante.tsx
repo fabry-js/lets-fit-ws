@@ -9,7 +9,7 @@ import { IngredientModel } from "../../../models/IngredientModel";
 const MenuRistorante = () => {
   const menu = useSelector(getCurrentIngredients);
   return (
-    <SimpleGrid columns={6} columnGap="3">
+    <SimpleGrid columns={[1, 6]} columnGap="3">
       {menu &&
         menu.map((availableIngredient: IngredientModel, index: number) => {
           const { name, price, vegan, vegetarian, imageURI } = availableIngredient;

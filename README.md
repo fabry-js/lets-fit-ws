@@ -10,7 +10,7 @@ Questo è il sito ufficiale dell'impresa simulata Let's Fit JA dell'ITT E.Majora
 
 ## Stack - Tecnologie
 
-- React & Snowpack
+- React & TypeScript
 - Firebase
 - Chakra UI
 

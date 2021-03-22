@@ -1,5 +1,6 @@
 export interface IngredientNamePayload {
   name: string;
+  price: number;
 }
 
 export interface SubtotalPayload {
