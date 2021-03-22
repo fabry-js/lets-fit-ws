@@ -1,6 +1,5 @@
 import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {
-  IngredientNamePayload,
   RestaurantNameUpdatePayload,
   ShortenedIngredientModelPayload,
   SubtotalPayload,
