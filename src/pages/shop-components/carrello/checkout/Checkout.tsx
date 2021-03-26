@@ -8,6 +8,10 @@ import {
   ModalFooter,
   Button,
   useToast,
+  Box,
+  Spinner,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -21,6 +25,9 @@ import {
 import { sendOrder, timestamp, _auth } from "../../../../utils/firebase";
 import { useDispatch } from "react-redux";
 import CheckoutRiepilogoCard from "./components/CheckoutRiepilogoCard";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import axios from "axios";
+import { BsCheckCircle } from "react-icons/bs";
 
 interface CheckoutProps {
   onClose(): void;
@@ -41,10 +48,22 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
   const toast = useToast();
   const dispatch = useDispatch();
 
+  // stripe hooks
+  const [succeded, setSucceded] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>();
+  const [processing, setProcessing] = useState<boolean>(false);
+  const [disabled, setDisabled] = useState<boolean>(false);
+  const [clientSecret, setClientSecret] = useState<string>();
+  const [currentPaymentMethod, setCurrentPaymentMethod] = useState<
+    any[] | any
+  >();
+  const stripe = useStripe();
+  const elements = useElements();
+
   const confirmCurrentOrder = async () => {
     await sendOrder({
       allIngredients: currentCartItems,
-      paymentMethod: "Paypal *",
+      paymentMethod: currentPaymentMethod,
       restaurantName,
       user: _auth.currentUser?.email,
       totale,
@@ -73,6 +92,54 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
       );
   };
 
+  useEffect(() => {
+    axios
+      .post(
+        "http://localhost:5000/create-payment-intent",
+        JSON.stringify({ ingredients: currentCartItems }),
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        setClientSecret(res.data.clientSecret);
+        setCurrentPaymentMethod(res.data.paymentMethodTypes);
+      })
+      .catch((error) => console.error(error));
+  }, [cartItems, currentCartItems]);
+
+  const handleChange = async (event: any) => {
+    setDisabled(event.empty);
+    setError(event.error ? event.error.message : "");
+  };
+
+  const handlePaymentReq = async (event: any) => {
+    event.preventDefault();
+    setProcessing(true);
+
+    try {
+      const payload = await stripe?.confirmCardPayment(clientSecret!, {
+        payment_method: {
+          card: elements?.getElement(CardElement)!,
+        },
+      });
+
+      if (payload?.error) {
+        setError(`Errore durante il pagamento :(`);
+        setProcessing(false);
+      } else {
+        setError(null);
+        setProcessing(false);
+        setSucceded(true);
+        await confirmCurrentOrder();
+      }
+    } catch (error) {
+      setError(error);
+    }
+  };
+
   return (
     <div>
       <Modal onClose={onClose} size="md" isOpen={isOpen}>
@@ -85,24 +152,36 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
               currentCartItems.map((cartItem, id) => {
                 const { name, price } = cartItem;
                 return (
-                  <>
-                    <CheckoutRiepilogoCard
-                      key={id}
-                      ingredientName={name}
-                      price={price}
-                    />
-                  </>
+                  <CheckoutRiepilogoCard
+                    key={id}
+                    ingredientName={name}
+                    price={price}
+                  />
                 );
               })}
+            <Box p="4" mt="2" borderWidth="1px" borderRadius="lg">
+              <form onSubmit={handlePaymentReq}>
+                <CardElement onChange={handleChange} />
+                <Button
+                  ml="35%"
+                  mt="5%"
+                  variant="solid"
+                  type="submit"
+                  disabled={processing || disabled || succeded}
+                >
+                  {processing ? <Spinner /> : "Paga Ora"}
+                  {succeded ? <BsCheckCircle color="green" /> : ""}
+                </Button>
+                {error && (
+                  <Alert status="error" mt="3">
+                    <AlertIcon />
+                    Oh, c'è un problema con il pagamento
+                  </Alert>
+                )}
+              </form>
+            </Box>
           </ModalBody>
           <ModalFooter>
-            <Button
-              colorScheme="green"
-              disabled={currentCartItems?.length === 0}
-              onClick={confirmCurrentOrder}
-            >
-              Conferma
-            </Button>
             <Button onClick={onClose}>Chiudi</Button>
           </ModalFooter>
         </ModalContent>

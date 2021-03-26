@@ -58,15 +58,16 @@ const FaseCarboidrati = () => {
     setSliderQuantityValue(temp);
   };
 
-   const [totale, setTotale] = useState<number>(0);
+  let totale = 0;
 
   const addIngredientToCart = (
     ingredient: IngredientModel,
     quantity: number,
     finalPrice: number
   ) => {
-    const { name, price } = ingredient;
-    setTotale(totale + price);
+    const { name } = ingredient;
+    totale = 0;
+    totale += finalPrice;
     toast({
       title: "Aggiunto al carrello!🛒",
       description: "Vai nella sezione 'Carrello' per un riepilogo",
@@ -83,7 +84,7 @@ const FaseCarboidrati = () => {
     );
     return dispatch(
       updateCurrentTotal({
-        totale,
+        totale
       })
     );
   };
@@ -92,7 +93,7 @@ const FaseCarboidrati = () => {
     <div>
       <Text fontSize="2xl">Carboidrati</Text>
       <TopHeaderCard />
-      <SimpleGrid columns={6} columnGap="3">
+      <SimpleGrid columns={[1, 6]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
@@ -168,7 +169,7 @@ const FaseCarboidrati = () => {
                       addIngredientToCart(
                         ingredient,
                         sliderQuantityValue[index].value,
-                        sliderQuantityValue[index].finalPrice
+                        (price * sliderQuantityValue[index].value) / 100
                       )
                     }
                   >

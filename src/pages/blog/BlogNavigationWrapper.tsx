@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react';
-import Contatti from './blog-pages/Contatti';
 import InnerBlogRoutes from './routers/InnerBlogRoutes';
 import Notizie from './blog-pages/Notizie';
 import { useHistory } from 'react-router-dom';
@@ -10,11 +9,10 @@ const BlogNavigationWrapper = () => {
   return(
     <div>
       <Box p="4">
-        <Tabs colorScheme="green" orientation="vertical" >
-          <TabList mt="20">
+        <Tabs colorScheme="green" orientation="horizontal">
+          <TabList>
             <Tab onClick={() => history.push("/blog")}>Home</Tab>
-            <Tab mt="20">Notizie</Tab>
-            <Tab mt="20">Contatti</Tab>
+            <Tab>Notizie</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -22,9 +20,6 @@ const BlogNavigationWrapper = () => {
             </TabPanel>
             <TabPanel>
               <Notizie />
-            </TabPanel>
-            <TabPanel>
-              <Contatti />
             </TabPanel>
           </TabPanels>
         </Tabs>

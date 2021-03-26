@@ -2,8 +2,8 @@ import React from "react";
 import { Box, Button, List, ListItem, Text } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 import { _auth } from "../../utils/firebase";
-// import { __createBlogPost } from "../../utils/firebase";
-// import { examplePost } from "../../utils/blogPostCreator";
+import { __createBlogPost } from "../../utils/firebase";
+import { examplePost } from "../../utils/blogPostCreator";
 
 interface ImpostazioniProps {}
 
@@ -23,9 +23,9 @@ const Impostazioni: React.FC<ImpostazioniProps> = () => {
           <Button variant="outline" onClick={handleLogout}>
             Log out
           </Button>
-          {/* <Button variant="outline" onClick={() => __createBlogPost(examplePost)}>
+          <Button variant="outline" onClick={() => __createBlogPost(examplePost)}>
             bp
-          </Button> */}
+          </Button>
         </ListItem>
       </List>
     </Box>

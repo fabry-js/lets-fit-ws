@@ -3,6 +3,7 @@ import { Stack, Box, Text, Button, useDisclosure } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
 import { FiUserPlus, FiEdit, FiShoppingCart } from "react-icons/fi";
+import { RiContactsLine } from "react-icons/ri";
 import { UserContext } from "../../../contextes/AuthProvider";
 import { useRouteMatch } from "react-router";
 import Carrello from "../../../pages/shop-components/carrello/Carrello";
@@ -25,6 +26,9 @@ const MenuLinks = ({ isOpened }: any) => {
         >
           <MenuItem to="/">
             <AiOutlineHome /> Home
+          </MenuItem>
+          <MenuItem to="/contatti">
+            <RiContactsLine /> Contatti
           </MenuItem>
           <MenuItem to="/blog">
             <FiEdit /> Blog

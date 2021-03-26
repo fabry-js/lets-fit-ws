@@ -20,6 +20,7 @@ export interface BlogPost {
   mainContent: BlogPostMainContent;
   additional: BlogPostAdditional;
   featured: boolean;
-  postAuthor: string
-  comments: BlogPostComment[]
+  postAuthor: string;
+  comments: BlogPostComment[];
+  coverURL?: string
 }

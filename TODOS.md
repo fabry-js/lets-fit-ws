@@ -1,9 +1,9 @@
 # TODOS - Sito Web
 
-- Newsletter, sia articoli blog / offerte
-- Shop
-- Blog
-- Menù a parte indipendente dalla registrazione => Dolci
-- (...altre domande)
+- menu a parte indipendente <!-- chiedo un pdf>
 
+- migliora la landing page
 
+## App
+
+- i modi di immagazzinare gli ingredienti e inviare ordini devono essere congruenti, altrimenti vengono generati errori sia dall'app che dal sito.
