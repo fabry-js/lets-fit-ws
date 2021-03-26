@@ -11,7 +11,7 @@ const MainSection = () => {
         src="../res/mainsectiongif.gif"
         alt=""
         style={{
-          opacity: 0.1,
+          opacity: 0.15,
           width: "100%",
           height: "100%",
         }}
@@ -24,6 +24,7 @@ const MainSection = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
         }}
+        fontWeight="bold"
       >
         EAT & FIT Semplice,
         <br /> sano e con gusto, ovunque tu sia!

@@ -1,13 +1,24 @@
 import React, { useState } from "react";
-import { Box, Heading, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/layout";
 import { useParams } from "react-router-dom";
 import { _auth, _firestore } from "../../../utils/firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
-import { Badge, Button, Input, InputGroup, useToast } from "@chakra-ui/react";
+import {
+  Badge,
+  Button,
+  Input,
+  InputGroup,
+  Skeleton,
+  Stack,
+  useToast,
+} from "@chakra-ui/react";
 import { BlogPost as BlogPostInterface } from "../../../models/BlogPost";
 import { AiOutlineSend } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import Markdown from "markdown-to-jsx";
+import "./BlogPostStyles.css";
 
 interface BlogPostProps {}
 interface BlogPostParams {
@@ -67,52 +78,19 @@ const BlogPost: React.FC<BlogPostProps> = () => {
         })
       );
   };
+
   return (
     <Box p="4">
       {blogPosts ? (
         blogPosts.map((blogPost: BlogPostInterface | any, index: number) => {
-          const {
-            additional,
-            mainContent,
-            postTitle,
-            comments,
-            postAuthor,
-          } = blogPost;
+          const { additional, comments, mainContent } = blogPost;
           const { likes } = additional;
-          const {
-            postBody,
-            postHeader,
-            postTopFooter,
-            postFooter,
-            postEventualPointedList,
-          } = mainContent;
           return (
             <React.Fragment key={index}>
               <Box borderRadius="lg" borderWidth="1px" p="6" key={index}>
-                <Heading>{postTitle}</Heading>
-                <Text mt="5" fontSize="p">
-                  {postHeader}
-                </Text>
-                <Text mt="5" fontSize="p">
-                  {postBody}
-                </Text>
-                {postEventualPointedList &&
-                postEventualPointedList.map((point: any, id: number) => (
-
-                  <Text key={id} mt="5" fontSize="p">
-                    - {point}
-                  </Text>
-                ))
-                }
-                <Text mt="5" fontSize="p">
-                  {postTopFooter}
-                </Text>
-                <Text mt="5" fontSize="p">
-                  {postFooter}
-                </Text>
-                <Text mt="5" fontSize="small" fontStyle="italic">
-                  {postAuthor}
-                </Text>
+                <div className="blog-post-font-wrapper">
+                  <Markdown>{mainContent.postBody}</Markdown>
+                </div>
                 <Badge
                   mt="5"
                   borderRadius="2xl"
@@ -172,7 +150,11 @@ const BlogPost: React.FC<BlogPostProps> = () => {
           );
         })
       ) : (
-        <Text>😱 Non riesco a caricare i contenuti di questo post...</Text>
+        <Stack>
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+          <Skeleton height="20px" />
+        </Stack>
       )}
     </Box>
   );

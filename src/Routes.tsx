@@ -6,6 +6,7 @@ import Shop from "./pages/Shop";
 import Registrazione from "./pages/auth/Registrazione";
 import PasswordDimenticata from "./pages/auth/PasswordDimenticata";
 import Blog from "./pages/blog/Blog";
+import Contatti from "./pages/Contatti";
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
         <Route path="/forgotpassword" component={PasswordDimenticata} />
         <Route path="/shop" component={Shop} />
         <Route path="/blog" component={Blog} />
+        <Route path="/contatti" component={Contatti} />
       </Switch>
     </Router>
   );

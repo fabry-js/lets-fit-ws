@@ -3,7 +3,7 @@ import { Box, Text } from '@chakra-ui/layout';
 
 const Notizie = () => {
   return(
-    <Box position="absolute" mt="20%" ml="25%" opacity="0.5">
+    <Box opacity="0.5">
       <Text fontSize="p">Nessuna notizia...</Text>
       <Text fontSize="p">...vuoi un caffè? ☕</Text>
     </Box>
