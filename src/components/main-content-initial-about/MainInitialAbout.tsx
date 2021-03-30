@@ -172,7 +172,7 @@ const MainInitialAbout = () => {
               opacity="0.4"
               borderRadius="4%"
             />
-          </Box>
+           </Box>
         </Flex>
       </Box>
       <HomeFooter mt="-10%" initialRef={initialContainer} />
