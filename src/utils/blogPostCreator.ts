@@ -1,59 +1,54 @@
 import { BlogPost } from "../models/BlogPost";
 
 export const examplePost: BlogPost = {
-  postId: 1,
+  postId: 3,
   additional: {
-    likes: 1,
+    likes: 0,
   },
-  featured: true,
+  featured: false,
   coverURL: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/blog-posts%2Fsport-e-alimentazione.jpeg?alt=media&token=6e4ead3b-3829-4c40-907a-82b1f2f06a87",
   mainContent: {
     postBody: `
-    Sport e alimentazione per gli atleti vanno di pari passo, basta pensare che fare sport e mangiare sano siano fondamentali
-     per far sì che una persona mantenga uno stile di vita sano e appropriato.
-    L’attività fisica e l’alimentazione bisogna sempre considerarli come due argomenti molto uniti,
-    spesso si fa l’errore di considerarli in maniera distaccata.
+    Numerosi studi ancora una volta ribadiscono l’importanza dei cereali nell’alimentazione, indispensabili per rafforzare il nostro metabolismo.
+    L’importanza dei cerealiall’interno di una sana alimentazione è stata riconosciuta anche dai maggiori scienziati ed esponenti di
+    istituzioni internazionali che hanno elaborato la nuova piramide alimentare per la dieta mediterranea moderna.
+    Questa piramideclassifica gli alimenti in otto gruppi, da quelli essenziali che stanno alla base ampia della piramide fino a
+    quelli non indispensabili che stanno in cima. Alla base per la prima volta sono stati posizionati anche i cereali, ritenuti
+    insieme alla verdura e alla frutta fondamentali da consumare in ogni pasto principaledella giornata.
+    E’ importante che ad ogni pasto principale sia presente una porzione di cereali perché:
+      •apportano amido
+      •forniscono fibra
+      •contengono vitamine e minerali
+      •sono una buona fonte di proteine
 
-    Mangiare sano inoltre ha un ruolo molto importante per la prestazione fisica di un atleta, che seguita da allenamenti può portare molte soddisfazioni.
-    Mentre chi segue dei principi di alimentazione scorretta e fa poca attività fisica, può portare ad uno stile di vita sbagliato.
+    E’ accertato che seguire un regime alimentare in cui sono presenti in quantità sufficiente i cereali, ci protegga da numerose
+    malattie cardiovascolari, dell’apparato digerente e dell’apparato respiratorio.
+    Ecco i motivi per cui i cereali sono importanti per il benessere dell’organismo.
+    I cereali e derivati nell’alimentazione italiana costituiscono la principale fonte di carboidrati.
+    Una buona e sana alimentazione dovrebbe contenere in ogni porzione circa il 60% delle calorie provenienti dai carboidrati,
+    e la maggiore parte di questi dovrebbe provenire dai carboidrati complessi (amido).
+    La presenza di carboidrati complessie semplici nelle giuste proporzioni garantisce all’organismo un apporto di energia costante e duratura,
+    e mantiene sotto controllo la glicemia.
+    La fibra fornita dai cereali è molto importante per il buon funzionamento dell’intestino.
+    La fibra contenuta nei cereali integrali favorisce anche ilraggiungimento del senso di sazietà a fronte di un apporto ridotto
+    di calorie.
+    Inoltre, un corretto apporto di fibre diminuisce il rischio di malattie cardiovascolari.
+    Contengono Omega 3 e 6, necessari per la crescita, lo sviluppo e per mantenersi in buona salute, gli acidi grassi essenziali,
+    ovvero gli Omega 3 e 6, sono indispensabili per il nostro organismo e devono essere introdotti con l’alimentazione.
+    Sono fonte di vitamine e minerali–contengono vitamine del gruppo B che hanno un ruolo importante nel metabolismo e nell’apporto di energia,
+    e sono anche essenziali permantenere integro il sistema nervoso.
+    Anche minerali come ferro, selenio, zinco e magnesio favoriscono la formazione dello scheletro, hanno azione antiossidante
+    e contribuiscono all’integrità del sistema immunitario.
 
-    Tutto ciò può accadere sin da piccoli anche grazie a vari avvenimenti, come per esempio:
-    passare troppe ore al computer o alla televisione,
-    utilizzare sempre la macchina o i mezzi di trasporto (anche per tragitti brevi)
-    o molto semplicemente prendere sempre l’ascensore.
+    Forniscono proteine di buona qualità
 
-    E tra i maggiori casi senza considerare lo sport ovviamente, ecco alcuni dei motivi che portano all’obesità:
-        - Aumento dell’uso di trasporto motorizzato (ad esempio per andare a scuola);
-        - Diminuzione dell’attività fisica durante il tempo libero e conseguente aumento della sedentarietà;
-        - Aumento del tempo trascorso davanti alla tv e/o strumenti digitali;
-        - Aumento della quantità e varietà degli alimenti grassi ed energetici e relativo aumento della loro pubblicità;
-        - Aumento dell’uso di ristoranti e fast food per pranzare e cenare, i quali offrono grandi porzioni a poco prezzo;
-        - Aumento del numero dei pasti durante la giornata;
-        - Aumento dell’uso di bibite analcoliche, dolci e gasate come sostituzione all’acqua;
-
-    L’alimentazione per chi fa palestra deve essere equilibrata e corretta, per poter influire sulla qualità delle prestazioni,
-    inoltre non bisogna esagerare con le quantità perché può appesantire e di conseguenza comporterà a stanchezza.
-    Per chi deve cominciare conviene sempre affidarsi sempre ai professionisti e non basarsi su chi non esperto.
-    Ciò che magari può aver funzionato per lui non è detto sia la cosa migliore anche per te. Inoltre esistono diversi miti che ovviamente sono falsi,
-
-    come:
-    mangiare entro un’ora dall’allenamento per evitare la chiusura della finestra anabolica.
-    Un altro mito è allenarsi a digiuno aiuta a bruciare più grassi, allenarsi a digiuno si riferisce all’esercizio fisico eseguito a stomaco
-    vuoto nella finestra temporale che va dalla cena alla prima colazione e chi ne promuove l’efficacia,
-    sostiene che l’allenamento a digiuno aiuti l’organismo a ossidare i grassi in maniera più efficiente rispetto a quanto accade a stomaco pieno.
-    Un ultimo mito è per chi crede che si possa far uso degli integratori però,
-    gli integratori non devono sostituire un’alimentazione sana e bilanciata,
-    ma completarla, tenendo a mente che nella piramide dei fattori che influenzano il cambiamento fisico,
-    l’integrazione occupa l’ultimo posto.
-
-    Un consiglio è quello di evitare di fare allenamento a digiuno,
-    se ti alleni la mattina, sarebbe meglio mangiare un pasto a base di carboidrati semplici che durante la notte diminuiscono.
-    Avere l’energia giusta ti permetterà di dare il massimo durante l’allenamento, senza cali di prestazione.
+    Le proteine sono i mattoni per la formazione dei muscoli, delle ossa, della pelle, della cartilagine e del sangue e quelle
+    fornite dai cereali sono di buona qualità.
 
 `,
   },
-  postTitle: "Sport e alimentazione",
-  postShortDesc: "Sport e alimentazione per gli atleti vanno di pari passo, basta pensare che fare sport e mangiare sano siano fondamentali per far sì che una persona mantenga uno stile di vita...",
+  postTitle: "I cereali",
+  postShortDesc: "Numerosi studi ancora una volta ribadiscono l’importanza dei cereali nell’alimentazione, indispensabili per rafforzare il nostro metabolismo...",
   comments: [],
-  postAuthor: "Desirèe Carbone",
+  postAuthor: "Denise Maiorana",
 };

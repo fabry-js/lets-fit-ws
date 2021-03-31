@@ -83,7 +83,7 @@ const BlogPost: React.FC<BlogPostProps> = () => {
     <Box p="4">
       {blogPosts ? (
         blogPosts.map((blogPost: BlogPostInterface | any, index: number) => {
-          const { additional, comments, mainContent } = blogPost;
+          const { additional, comments, mainContent, postAuthor } = blogPost;
           const { likes } = additional;
           return (
             <React.Fragment key={index}>
@@ -91,6 +91,8 @@ const BlogPost: React.FC<BlogPostProps> = () => {
                 <div className="blog-post-font-wrapper">
                   <Markdown>{mainContent.postBody}</Markdown>
                 </div>
+                <br/>
+                <Text fontSize="small" fontStyle="italic">{postAuthor}</Text>
                 <Badge
                   mt="5"
                   borderRadius="2xl"
