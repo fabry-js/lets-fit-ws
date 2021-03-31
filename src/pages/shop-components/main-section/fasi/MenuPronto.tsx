@@ -29,16 +29,15 @@ import {
   addItemToCart,
   updateCurrentTotal,
 } from "../../../../redux-store/slices/cartSlice";
-import { Link } from "react-router-dom";
 
-const FaseCarboidrati = () => {
+const MenuPronto = () => {
   const ingredients = useSelector(getCurrentIngredients);
 
   const dispatch = useDispatch();
   const toast = useToast();
 
   const filteredByPhaseIngredients = ingredients.filter(
-    (ingredient) => ingredient.phase === "carboidrati"
+    (ingredient) => ingredient.phase === "menu"
   );
 
   const [sliderQuantityValue, setSliderQuantityValue] = useState<any[]>(
@@ -92,7 +91,7 @@ const FaseCarboidrati = () => {
 
   return (
     <div>
-      <Text fontSize="2xl">Carboidrati</Text>
+      <Text fontSize="2xl">Piatti già pronti</Text>
       <TopHeaderCard />
       <SimpleGrid columns={[1, 6]} columnGap="3">
         {filteredByPhaseIngredients &&
@@ -196,12 +195,9 @@ const FaseCarboidrati = () => {
               );
             }
           )}
-          <Link to="/shop/fase-proteine">
-            <Button>Seleziona le Proteine</Button>
-          </Link>
       </SimpleGrid>
     </div>
   );
 };
 
-export default FaseCarboidrati;
+export default MenuPronto;
