@@ -14,4 +14,5 @@ export interface IngredientModel {
   vegetarian: boolean;
   imageURI: string;
   [key: string]: any;
+  plateDescription?: string;
 }
