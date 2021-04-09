@@ -179,7 +179,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                 {error && (
                   <Alert status="error" mt="3">
                     <AlertIcon />
-                    Oh, c'è un problema con il pagamento
+                    Pagamento Respinto!
                   </Alert>
                 )}
               </form>
