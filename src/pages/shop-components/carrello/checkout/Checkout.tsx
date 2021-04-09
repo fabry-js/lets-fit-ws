@@ -95,7 +95,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     axios
       .post(
-        "http://localhost:5000/create-payment-intent",
+        "https://stripe-letsfitja.herokuapp.com/create-payment-intent",
         JSON.stringify({ ingredients: currentCartItems }),
         {
           headers: {
