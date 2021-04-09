@@ -10,10 +10,7 @@ import mergedReducers from "./redux-store/configureStore";
 
 const store = configureStore({
   reducer: mergedReducers,
-  /**
-   * PRODUCTION
-   * devTools: false
-   */
+  devTools: false
 });
 
 const stripePromise = loadStripe("pk_test_51IJJPcIzkBXCvUW1qIStQ2EqJTC1Mqnxbghj8NIPecGGw9ZAS8c3zAS35X4efCTDGBJUXRsZGGYOAA7An0Q5pBml00le9WcWrh");
