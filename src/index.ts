@@ -12,7 +12,7 @@ const stripe = new Stripe(
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: "https://www.letsfitja.com" }));
 app.use(express.static("."));
 app.use(express.json());
 
