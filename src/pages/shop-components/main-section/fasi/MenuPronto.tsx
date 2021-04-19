@@ -48,7 +48,12 @@ const MenuPronto = () => {
     }))
   );
 
-  const onToggleSlider = (value: number, ingrediente: any, finalPrice: number, index: number) => {
+  const onToggleSlider = (
+    value: number,
+    ingrediente: any,
+    finalPrice: number,
+    index: number
+  ) => {
     const temp = [...sliderQuantityValue];
     temp.splice(index, 1, {
       value,
@@ -84,7 +89,7 @@ const MenuPronto = () => {
     );
     return dispatch(
       updateCurrentTotal({
-        totale
+        totale,
       })
     );
   };
@@ -117,7 +122,11 @@ const MenuPronto = () => {
                   <Popover>
                     <PopoverTrigger>
                       <Button variant="ghost">
-                        {name} | €{((sliderQuantityValue[index].value * price) / 100).toFixed(1)}
+                        {name} | €
+                        {(
+                          (sliderQuantityValue[index].value * price) /
+                          100
+                        ).toFixed(1)}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent>
@@ -181,7 +190,12 @@ const MenuPronto = () => {
                     max={300}
                     step={20}
                     onChange={(value) =>
-                      onToggleSlider(value, ingredient, (price * sliderQuantityValue[index].value) / 100 , index)
+                      onToggleSlider(
+                        value,
+                        ingredient,
+                        (price * sliderQuantityValue[index].value) / 100,
+                        index
+                      )
                     }
                   >
                     <SliderTrack>

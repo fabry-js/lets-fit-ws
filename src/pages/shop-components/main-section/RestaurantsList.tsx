@@ -4,10 +4,16 @@ import { _firestore } from "../../../utils/firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import RestaurantCard from "./restaurant-components/RestaurantCard";
 import { connect, useDispatch } from "react-redux";
-import { addIngredient, removeAllIngredients } from "../../../redux-store/slices/ingredientsSlice";
+import {
+  addIngredient,
+  removeAllIngredients,
+} from "../../../redux-store/slices/ingredientsSlice";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { useHistory } from "react-router-dom";
-import { resetCart, updateCurentOrderRestaurantName } from "../../../redux-store/slices/cartSlice";
+import {
+  resetCart,
+  updateCurentOrderRestaurantName,
+} from "../../../redux-store/slices/cartSlice";
 
 const mapDispatch = { addIngredient };
 
@@ -18,8 +24,8 @@ const RestaurantsList = () => {
   const history = useHistory();
   /**
    * Remover degli ingredienti per Redux
-  */
-   useEffect(() => {
+   */
+  useEffect(() => {
     dispatch(removeAllIngredients());
     dispatch(resetCart());
   });
@@ -45,7 +51,7 @@ const RestaurantsList = () => {
                           price,
                           vegan,
                           vegetarian,
-                          imageURI
+                          imageURI,
                         } = plate;
                         // Navigazione ai Piatti Disponibili
                         history.push("/shop/menu-ristorante");
@@ -64,7 +70,7 @@ const RestaurantsList = () => {
                             price,
                             vegan,
                             vegetarian,
-                            imageURI
+                            imageURI,
                           })
                         );
                       });

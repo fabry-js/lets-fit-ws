@@ -16,7 +16,7 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
   vegan,
   vegetarian,
   imageURI,
-  iteratorKey
+  iteratorKey,
 }) => {
   return (
     <Box key={iteratorKey} mt="2" borderWidth="1px" borderRadius="lg">
@@ -29,14 +29,26 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
       </Text>
       <Text m="5" fontSize="smaller">
         {vegan ? (
-          <Badge borderRadius="2xl" ml="1" colorScheme="green" p="1" variant="subtle">
+          <Badge
+            borderRadius="2xl"
+            ml="1"
+            colorScheme="green"
+            p="1"
+            variant="subtle"
+          >
             Vegan
           </Badge>
         ) : (
           ""
         )}
         {vegetarian ? (
-          <Badge borderRadius="2xl" ml="1" colorScheme="green" p="1" variant="subtle">
+          <Badge
+            borderRadius="2xl"
+            ml="1"
+            colorScheme="green"
+            p="1"
+            variant="subtle"
+          >
             Vegetariano
           </Badge>
         ) : (

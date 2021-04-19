@@ -22,5 +22,5 @@ export interface BlogPost {
   featured: boolean;
   postAuthor: string;
   comments: BlogPostComment[];
-  coverURL?: string
+  coverURL?: string;
 }

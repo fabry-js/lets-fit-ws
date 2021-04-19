@@ -857,9 +857,9 @@ const mas: RestaurantModel = {
       imageURI: "",
       macronut: {
         calorie: 52,
-        carboidrati: 4.60,
-        grassi: 3.90,
-        proteine: 1.20,
+        carboidrati: 4.6,
+        grassi: 3.9,
+        proteine: 1.2,
       },
     },
     {
@@ -873,9 +873,9 @@ const mas: RestaurantModel = {
       imageURI: "",
       macronut: {
         calorie: 381,
-        carboidrati: 6.40,
-        grassi: 27.40,
-        proteine: 27.20,
+        carboidrati: 6.4,
+        grassi: 27.4,
+        proteine: 27.2,
       },
     },
   ],

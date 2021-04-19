@@ -50,10 +50,14 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
                       key={id}
                       ingredientName={name}
                       price={price}
-                      onClick={() => dispatch(removeItemByName({
-                        name,
-                        price
-                      }))}
+                      onClick={() =>
+                        dispatch(
+                          removeItemByName({
+                            name,
+                            price,
+                          })
+                        )
+                      }
                     />
                   );
                 })}

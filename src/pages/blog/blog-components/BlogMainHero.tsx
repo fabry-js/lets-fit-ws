@@ -24,10 +24,23 @@ const BlogMainHero: React.FC<BlogMainHeroProps> = ({
       position="relative"
       overflow="hidden"
     >
-      <Badge position="absolute" borderRadius="2xl" colorScheme="green"variant="subtle">
-        <Text p="1" color="white">In evidenza</Text>
+      <Badge
+        position="absolute"
+        borderRadius="2xl"
+        colorScheme="green"
+        variant="subtle"
+      >
+        <Text p="1" color="white">
+          In evidenza
+        </Text>
       </Badge>
-      <Image opacity="0.1" src={coverURL} height="100%" width="100%" objectFit="contain"/>
+      <Image
+        opacity="0.1"
+        src={coverURL}
+        height="100%"
+        width="100%"
+        objectFit="contain"
+      />
       <Box mt="3" ml="3">
         <Link to={`/blog/posts/${postId}`}>
           <Heading

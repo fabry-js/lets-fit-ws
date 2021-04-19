@@ -37,7 +37,10 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
           <h2>
             <AccordionButton>
               <Box flex="1">
-                <Text textAlign="left">Dettagli Ordine<FiArrowDown /></Text>
+                <Text textAlign="left">
+                  Dettagli Ordine
+                  <FiArrowDown />
+                </Text>
               </Box>
             </AccordionButton>
           </h2>
@@ -49,7 +52,9 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
                   const { name, price } = ingredient;
                   return (
                     <React.Fragment key={index}>
-                      <ListItem>{name} | €{price}</ListItem>
+                      <ListItem>
+                        {name} | €{price}
+                      </ListItem>
                     </React.Fragment>
                   );
                 })}
