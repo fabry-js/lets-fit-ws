@@ -26,10 +26,12 @@ const slice = createSlice({
     },
     removeItemByName: (
       items: any,
-      action: PayloadAction<{name: string, price: number}>
+      action: PayloadAction<{ name: string; price: number }>
     ) => {
       const typedItems: [] = items.currentOrder;
-      const filtered = typedItems.filter((item: any) => item.name !== action.payload.name);
+      const filtered = typedItems.filter(
+        (item: any) => item.name !== action.payload.name
+      );
       items.currentOrder = filtered;
       items.totale -= action.payload.price;
     },

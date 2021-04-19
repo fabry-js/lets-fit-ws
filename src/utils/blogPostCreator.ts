@@ -6,7 +6,8 @@ export const examplePost: BlogPost = {
     likes: 0,
   },
   featured: false,
-  coverURL: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/blog-posts%2Fsport-e-alimentazione.jpeg?alt=media&token=6e4ead3b-3829-4c40-907a-82b1f2f06a87",
+  coverURL:
+    "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/blog-posts%2Fsport-e-alimentazione.jpeg?alt=media&token=6e4ead3b-3829-4c40-907a-82b1f2f06a87",
   mainContent: {
     postBody: `
     Numerosi studi ancora una volta ribadiscono l’importanza dei cereali nell’alimentazione, indispensabili per rafforzare il nostro metabolismo.
@@ -48,7 +49,8 @@ export const examplePost: BlogPost = {
 `,
   },
   postTitle: "I cereali",
-  postShortDesc: "Numerosi studi ancora una volta ribadiscono l’importanza dei cereali nell’alimentazione, indispensabili per rafforzare il nostro metabolismo...",
+  postShortDesc:
+    "Numerosi studi ancora una volta ribadiscono l’importanza dei cereali nell’alimentazione, indispensabili per rafforzare il nostro metabolismo...",
   comments: [],
   postAuthor: "Denise Maiorana",
 };

@@ -7,8 +7,8 @@ import { Box, Text, Stack, Skeleton } from "@chakra-ui/react";
 interface BlogPostProps {}
 
 interface BlogPostParams {
-  slug: any
-};
+  slug: any;
+}
 
 const BlogPost: React.FC<BlogPostProps> = () => {
   const [postData, setPostData] = useState<any>();
@@ -36,18 +36,22 @@ const BlogPost: React.FC<BlogPostProps> = () => {
       .catch(console.error);
   }, [slug]);
 
-  if(!postData){
-    return <Stack>
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-    </Stack>
+  if (!postData) {
+    return (
+      <Stack>
+        <Skeleton height="20px" />
+        <Skeleton height="20px" />
+        <Skeleton height="20px" />
+      </Stack>
+    );
   }
 
   return (
     <Box p="3%">
       <Box>
-        <Text fontSize="4xl" fontWeight="bold">{postData.title}</Text>
+        <Text fontSize="4xl" fontWeight="bold">
+          {postData.title}
+        </Text>
       </Box>
       <Box p="5%">
         <BlockContent
@@ -57,7 +61,9 @@ const BlogPost: React.FC<BlogPostProps> = () => {
         />
       </Box>
       <div>
-        <Text fontSize="small" fontStyle="italic">{postData.name}</Text>
+        <Text fontSize="small" fontStyle="italic">
+          {postData.name}
+        </Text>
       </div>
     </Box>
   );

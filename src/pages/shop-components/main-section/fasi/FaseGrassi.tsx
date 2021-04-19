@@ -49,7 +49,12 @@ const FaseGrassi = () => {
     }))
   );
 
-  const onToggleSlider = (value: number, ingrediente: any, finalPrice: number, index: number) => {
+  const onToggleSlider = (
+    value: number,
+    ingrediente: any,
+    finalPrice: number,
+    index: number
+  ) => {
     const temp = [...sliderQuantityValue];
     temp.splice(index, 1, {
       value,
@@ -85,7 +90,7 @@ const FaseGrassi = () => {
     );
     return dispatch(
       updateCurrentTotal({
-        totale
+        totale,
       })
     );
   };
@@ -118,7 +123,11 @@ const FaseGrassi = () => {
                   <Popover>
                     <PopoverTrigger>
                       <Button variant="ghost">
-                        {name} | €{((sliderQuantityValue[index].value * price) / 100).toFixed(1)}
+                        {name} | €
+                        {(
+                          (sliderQuantityValue[index].value * price) /
+                          100
+                        ).toFixed(1)}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent>
@@ -182,7 +191,12 @@ const FaseGrassi = () => {
                     max={300}
                     step={20}
                     onChange={(value) =>
-                      onToggleSlider(value, ingredient, (price * sliderQuantityValue[index].value) / 100 , index)
+                      onToggleSlider(
+                        value,
+                        ingredient,
+                        (price * sliderQuantityValue[index].value) / 100,
+                        index
+                      )
                     }
                   >
                     <SliderTrack>
@@ -196,9 +210,9 @@ const FaseGrassi = () => {
               );
             }
           )}
-          <Link to="/shop/fase-menu">
-            <Button>Seleziona eventuali piatti pronti</Button>
-          </Link>
+        <Link to="/shop/fase-menu">
+          <Button>Seleziona eventuali piatti pronti</Button>
+        </Link>
       </SimpleGrid>
     </div>
   );

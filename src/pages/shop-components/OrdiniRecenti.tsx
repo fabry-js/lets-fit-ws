@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { _auth, _firestore } from "../../utils/firebase";
 import RiepilogoCard from "./ordini-recenti-components/RiepilogoCard";
 import { useCollectionData } from "react-firebase-hooks/firestore";

@@ -1,12 +1,12 @@
-import React from 'react';
-import { Box, Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react';
-import InnerBlogRoutes from './routers/InnerBlogRoutes';
-import Notizie from './blog-pages/Notizie';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { Box, Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
+import InnerBlogRoutes from "./routers/InnerBlogRoutes";
+import Notizie from "./blog-pages/Notizie";
+import { useHistory } from "react-router-dom";
 
 const BlogNavigationWrapper = () => {
   const history = useHistory();
-  return(
+  return (
     <div>
       <Box p="4">
         <Tabs colorScheme="green" orientation="horizontal">
@@ -26,6 +26,6 @@ const BlogNavigationWrapper = () => {
       </Box>
     </div>
   );
-}
+};
 
 export default BlogNavigationWrapper;

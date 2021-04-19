@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-} from "@chakra-ui/react";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 import Impostazioni from "./Impostazioni";
 import RestaurantProcessRoutes from "./main-section/routers/RestaurantProcessRoutes";

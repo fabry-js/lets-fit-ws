@@ -63,20 +63,20 @@ export const __createRestaurants = (restaurants: any) => {
     try {
       restaurantsCollection
         .add(restaurants)
-        .then(() =>{
-          resolve(true)
-          console.log("Fatto!")
+        .then(() => {
+          resolve(true);
+          console.log("Fatto!");
         })
-        .catch((error) =>{
+        .catch((error) => {
           console.log(error);
-          reject(false)
-        })
+          reject(false);
+        });
     } catch (error) {
       reject(false);
       console.log(error);
     }
   });
-}
+};
 
 export const __createBlogPost = (postData: BlogPost) => {
   const blogPostsCollectionRef = _firestore.collection("/blog-posts");
@@ -84,17 +84,17 @@ export const __createBlogPost = (postData: BlogPost) => {
     try {
       blogPostsCollectionRef
         .add(postData)
-        .then(() =>{
-          resolve(true)
-          console.log("Fatto!")
+        .then(() => {
+          resolve(true);
+          console.log("Fatto!");
         })
-        .catch((error) =>{
+        .catch((error) => {
           console.log(error);
-          reject(false)
-        })
+          reject(false);
+        });
     } catch (error) {
       reject(false);
       console.log(error);
     }
   });
-}
+};

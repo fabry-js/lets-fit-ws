@@ -14,9 +14,12 @@ const Contatti = () => {
             <Text fontSize="5xl" fontWeight="bold">
               I Nostri Contatti
             </Text>
-            <ul style={{padding: "4% 4% 4% 4%"}}>
+            <ul style={{ padding: "4% 4% 4% 4%" }}>
               <li>
-                📧 <a href="mailto://letsfitja2021@gmail.com">E-Mail: <code>letsfitja2021@gmail.com</code></a>
+                📧{" "}
+                <a href="mailto://letsfitja2021@gmail.com">
+                  E-Mail: <code>letsfitja2021@gmail.com</code>
+                </a>
               </li>
               <li>📞 +390909221775</li>
               <li>🏢 Sede legale: Via Tre Monti 4 Milazzo (Me)</li>

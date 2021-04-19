@@ -210,9 +210,9 @@ const FaseProteine = () => {
               );
             }
           )}
-          <Link to="/shop/fase-grassi">
-            <Button>Seleziona i Grassi</Button>
-          </Link>
+        <Link to="/shop/fase-grassi">
+          <Button>Seleziona i Grassi</Button>
+        </Link>
       </SimpleGrid>
     </div>
   );

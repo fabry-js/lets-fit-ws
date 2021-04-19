@@ -26,12 +26,14 @@ const InnerBlog = () => {
       .catch(console.error);
   }, []);
 
-  if(!allPostData){
-    return <Stack>
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-      <Skeleton height="20px" />
-    </Stack>
+  if (!allPostData) {
+    return (
+      <Stack>
+        <Skeleton height="20px" />
+        <Skeleton height="20px" />
+        <Skeleton height="20px" />
+      </Stack>
+    );
   }
 
   return (
@@ -41,12 +43,18 @@ const InnerBlog = () => {
           <Box borderRadius="lg" border="2px" overflow="hidden" ml="3%">
             <Link to={`/blog/${post.slug.current}`} key={post.slug.current}>
               <span key={index}>
-                <img style={{
-                  opacity: 0.3
-                }} src={post.mainImage.asset.url} alt=""/>
+                <img
+                  style={{
+                    opacity: 0.3,
+                  }}
+                  src={post.mainImage.asset.url}
+                  alt=""
+                />
                 <Box p="2%">
                   <Text fontSize="3xl">{post.title}</Text>
-                  <Text fontSize="small" fontStyle="italic">{post.authorName}</Text>
+                  <Text fontSize="small" fontStyle="italic">
+                    {post.authorName}
+                  </Text>
                 </Box>
               </span>
             </Link>

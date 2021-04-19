@@ -16,7 +16,7 @@ interface HomeFooterProps {
   initialRef?: React.MutableRefObject<null | HTMLDivElement>;
 }
 
-const HomeFooter = ({initialRef, mt}: HomeFooterProps) => {
+const HomeFooter = ({ initialRef, mt }: HomeFooterProps) => {
   return (
     <Box as="footer" mt={mt} role="contentinfo" py="6">
       <Flex
@@ -45,7 +45,8 @@ const HomeFooter = ({initialRef, mt}: HomeFooterProps) => {
           textAlign={{ base: "center", md: "start" }}
         >
           <Text>
-            &copy; {new Date().getFullYear()} Let's Fit JA | <a href="https://github.com/fabry-js"> Fabrizio Piperno</a>
+            &copy; {new Date().getFullYear()} Let's Fit JA |{" "}
+            <a href="https://github.com/fabry-js"> Fabrizio Piperno</a>
           </Text>
         </Stack>
         <ButtonGroup
