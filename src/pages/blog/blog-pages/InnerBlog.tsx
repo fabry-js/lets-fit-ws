@@ -38,9 +38,9 @@ const InnerBlog = () => {
 
   return (
     <div>
-      <SimpleGrid columns={3}>
+      <SimpleGrid columns={[1, null, 3]}>
         {allPostData?.map((post, index) => (
-          <Box borderRadius="lg" border="2px" overflow="hidden" ml="3%">
+          <Box borderRadius="lg" border="1px" overflow="hidden" ml="3%" mt="3%" key={index}>
             <Link to={`/blog/${post.slug.current}`} key={post.slug.current}>
               <span key={index}>
                 <img
