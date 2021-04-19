@@ -107,11 +107,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
         setClientSecret(res.data.clientSecret);
         setCurrentPaymentMethod(res.data.paymentMethodTypes);
       })
-      .catch(() => toast({
-        title: "Oh! Errore di connessione al nostro server!",
-        status: "warning",
-        position: "top-left",
-      }));
+      .catch(() => {});
   }, [cartItems, currentCartItems, toast]);
 
   const handleChange = async (event: any) => {
