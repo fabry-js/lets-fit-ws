@@ -20,7 +20,7 @@ const stripe = new stripe_1.default("sk_test_51IJJPcIzkBXCvUW1usTx6HMp1Rh2bjoWM1
     typescript: true,
 });
 const app = express();
-app.use(cors({ origin: "https://www.letsfitja.com" }));
+app.use(cors({ origin: "*" }));
 app.use(express.static("."));
 app.use(express.json());
 const calculateOrderAmount = (items) => {
