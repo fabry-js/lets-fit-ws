@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import { BlogPost } from "../models/BlogPost";
 import "firebase/auth";
 import "firebase/firestore";
+
 // https://stackoverflow.com/questions/48592656/firebase-auth-is-not-a-function
 
 const firebaseConfig = {

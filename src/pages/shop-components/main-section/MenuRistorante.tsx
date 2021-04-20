@@ -8,6 +8,7 @@ import { IngredientModel } from "../../../models/IngredientModel";
 
 const MenuRistorante = () => {
   const menu = useSelector(getCurrentIngredients);
+
   return (
     <SimpleGrid columns={[1, 6]} columnGap="3">
       {menu &&
