@@ -53,7 +53,7 @@ const RestaurantsList = () => {
                           vegetarian,
                           imageURI,
                           glutenFree,
-                          frequencyAlert
+                          frequencyAlert,
                         } = plate;
                         // Navigazione ai Piatti Disponibili
                         history.push("/shop/menu-ristorante");
@@ -75,7 +75,7 @@ const RestaurantsList = () => {
                               vegetarian,
                               imageURI,
                               glutenFree,
-                              frequencyAlert
+                              frequencyAlert,
                             })
                           );
                         } else if (frequencyAlert) {
@@ -88,7 +88,7 @@ const RestaurantsList = () => {
                               vegan,
                               vegetarian,
                               imageURI,
-                              frequencyAlert
+                              frequencyAlert,
                             })
                           );
                         } else if (glutenFree) {
@@ -101,7 +101,7 @@ const RestaurantsList = () => {
                               vegan,
                               vegetarian,
                               imageURI,
-                              glutenFree
+                              glutenFree,
                             })
                           );
                         } else {
@@ -115,7 +115,7 @@ const RestaurantsList = () => {
                               vegetarian,
                               imageURI,
                             })
-                          )
+                          );
                         }
                       });
                     }}

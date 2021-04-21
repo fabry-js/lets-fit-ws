@@ -18,7 +18,7 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
   vegetarian,
   imageURI,
   iteratorKey,
-  availableIngredient
+  availableIngredient,
 }) => {
   return (
     <Box key={iteratorKey} mt="2" borderWidth="1px" borderRadius="lg">

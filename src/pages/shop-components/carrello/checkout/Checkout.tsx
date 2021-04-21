@@ -70,7 +70,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
       user: _auth.currentUser?.email,
       totale,
       createdAt: timestamp,
-      userInfos
+      userInfos,
     })
       .then((_res) => {
         history.push("/");
@@ -127,7 +127,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
         payment_method: {
           card: elements?.getElement(CardElement)!,
         },
-        receipt_email: _auth.currentUser?.email!
+        receipt_email: _auth.currentUser?.email!,
       });
 
       if (payload?.error) {
@@ -165,7 +165,13 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
               })}
             <Box p="4" mt="2" borderWidth="1px" borderRadius="lg">
               <form onSubmit={handlePaymentReq}>
-                <Input mb="4%" placeholder="Nome e Cognome" required isRequired onChange={(e) => setUserInfos(e.target.value)} />
+                <Input
+                  mb="4%"
+                  placeholder="Nome e Cognome"
+                  required
+                  isRequired
+                  onChange={(e) => setUserInfos(e.target.value)}
+                />
                 <CardElement onChange={handleChange} />
                 <Button
                   ml="35%"

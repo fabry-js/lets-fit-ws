@@ -18,9 +18,9 @@ const slice = createSlice({
         vegetarian,
         imageURI,
         glutenFree,
-        frequencyAlert
+        frequencyAlert,
       } = action.payload;
-      if(glutenFree && frequencyAlert){
+      if (glutenFree && frequencyAlert) {
         ingredients.push({
           name,
           macronut,
@@ -30,9 +30,9 @@ const slice = createSlice({
           vegetarian,
           imageURI,
           glutenFree,
-          frequencyAlert
+          frequencyAlert,
         });
-      } else if(frequencyAlert) {
+      } else if (frequencyAlert) {
         ingredients.push({
           name,
           macronut,
@@ -41,9 +41,9 @@ const slice = createSlice({
           vegan,
           vegetarian,
           imageURI,
-          frequencyAlert
+          frequencyAlert,
         });
-      } else if(glutenFree) {
+      } else if (glutenFree) {
         ingredients.push({
           name,
           macronut,
@@ -52,7 +52,7 @@ const slice = createSlice({
           vegan,
           vegetarian,
           imageURI,
-          glutenFree
+          glutenFree,
         });
       } else {
         ingredients.push({

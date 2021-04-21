@@ -28,7 +28,8 @@ const laPuttega: RestaurantModel = {
   forwardID: 1,
   hourtime: "19:00 - 23:59",
   imageName: "",
-  imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/restaurants-images%2Fputtega.jpg?alt=media&token=f8b09233-2be9-4ca7-b0f0-d8862aaaa838",
+  imageURI:
+    "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/restaurants-images%2Fputtega.jpg?alt=media&token=f8b09233-2be9-4ca7-b0f0-d8862aaaa838",
   plates: [
     // per Carboidrati
     {
@@ -37,8 +38,10 @@ const laPuttega: RestaurantModel = {
       price: 2.5,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/ceci.jpg?alt=media&token=0c697199-5d25-4bbb-8595-b7223fe5baba",
-      frequencyAlert: "è una buona abitudine consumare i legumi 2-3 volte alla settimana. Il consiglio è di abbinarli a una fonte di cereali e alle verdure per un piatto unico completo!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/ceci.jpg?alt=media&token=0c697199-5d25-4bbb-8595-b7223fe5baba",
+      frequencyAlert:
+        "è una buona abitudine consumare i legumi 2-3 volte alla settimana. Il consiglio è di abbinarli a una fonte di cereali e alle verdure per un piatto unico completo!",
       macronut: {
         calorie: 364,
         carboidrati: 60.65,
@@ -52,7 +55,8 @@ const laPuttega: RestaurantModel = {
       price: 5.5,
       vegan: false,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cous_cous.jpg?alt=media&token=56c21d7a-3a6b-4ba1-9b68-a199b30040c7",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cous_cous.jpg?alt=media&token=56c21d7a-3a6b-4ba1-9b68-a199b30040c7",
       macronut: {
         calorie: 376,
         carboidrati: 77.43,
@@ -66,7 +70,8 @@ const laPuttega: RestaurantModel = {
       price: 5,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/orzo_perlato.jpg?alt=media&token=ab9bd2f5-38a8-4581-9d18-ea826e3261ae",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/orzo_perlato.jpg?alt=media&token=ab9bd2f5-38a8-4581-9d18-ea826e3261ae",
       macronut: {
         calorie: 319,
         carboidrati: 264.8,
@@ -80,7 +85,8 @@ const laPuttega: RestaurantModel = {
       price: 3,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/patate.jpg?alt=media&token=117dfaef-3499-473e-b855-13a99709fafa",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/patate.jpg?alt=media&token=117dfaef-3499-473e-b855-13a99709fafa",
       macronut: {
         calorie: 93,
         carboidrati: 21.15,
@@ -94,7 +100,8 @@ const laPuttega: RestaurantModel = {
       price: 4.5,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pasta_di_semola.jpg?alt=media&token=0857e223-fc2d-48f8-83ca-7c7f768b238a",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pasta_di_semola.jpg?alt=media&token=0857e223-fc2d-48f8-83ca-7c7f768b238a",
       macronut: {
         calorie: 296.8,
         carboidrati: 60.65,
@@ -108,7 +115,8 @@ const laPuttega: RestaurantModel = {
       price: 4.8,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pasta_integrale.jpg?alt=media&token=45243134-d8d3-4dcd-bda5-635ce79c8412",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pasta_integrale.jpg?alt=media&token=45243134-d8d3-4dcd-bda5-635ce79c8412",
       macronut: {
         calorie: 323.5,
         carboidrati: 66.2,
@@ -123,7 +131,8 @@ const laPuttega: RestaurantModel = {
       vegan: true,
       vegetarian: true,
       glutenFree: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso-basmati.jpg?alt=media&token=0737fb39-4dc0-4f43-bc65-42db8669cb00",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso-basmati.jpg?alt=media&token=0737fb39-4dc0-4f43-bc65-42db8669cb00",
       macronut: {
         calorie: 314,
         carboidrati: 25.52,
@@ -137,7 +146,8 @@ const laPuttega: RestaurantModel = {
       price: 7.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso%20venere.jpg?alt=media&token=d8cbc4ee-b3a8-40fb-a2f9-517fd71d2a7e",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso%20venere.jpg?alt=media&token=d8cbc4ee-b3a8-40fb-a2f9-517fd71d2a7e",
       glutenFree: true,
       macronut: {
         calorie: 377,
@@ -152,7 +162,8 @@ const laPuttega: RestaurantModel = {
       price: 6,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso%20integrale.jpg?alt=media&token=140206cf-081a-4623-8f05-e5356107a08d",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso%20integrale.jpg?alt=media&token=140206cf-081a-4623-8f05-e5356107a08d",
       glutenFree: true,
       macronut: {
         calorie: 337,
@@ -168,7 +179,8 @@ const laPuttega: RestaurantModel = {
       price: 2,
       vegan: false,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/albume.jpg?alt=media&token=5f9ed9a3-7513-43ab-a05b-917c824ac0ed",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/albume.jpg?alt=media&token=5f9ed9a3-7513-43ab-a05b-917c824ac0ed",
       macronut: {
         calorie: 43,
         carboidrati: 0.2,
@@ -182,8 +194,10 @@ const laPuttega: RestaurantModel = {
       price: 7,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/filetto.jpg?alt=media&token=95f7de24-2b3c-47ab-9f87-e0e885dd151e",
-      frequencyAlert: "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/filetto.jpg?alt=media&token=95f7de24-2b3c-47ab-9f87-e0e885dd151e",
+      frequencyAlert:
+        "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
       macronut: {
         calorie: 43,
         carboidrati: 0.2,
@@ -197,8 +211,10 @@ const laPuttega: RestaurantModel = {
       price: 10,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/gamberoni-arrosto.jpg?alt=media&token=6b0a5c8b-6541-46f6-a7fd-a254c157052f",
-      frequencyAlert: "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/gamberoni-arrosto.jpg?alt=media&token=6b0a5c8b-6541-46f6-a7fd-a254c157052f",
+      frequencyAlert:
+        "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
       macronut: {
         calorie: 71,
         carboidrati: 11.2,
@@ -212,8 +228,10 @@ const laPuttega: RestaurantModel = {
       price: 3.3,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lenticchie.jpg?alt=media&token=f1edebca-c11b-49e5-9934-c925f78a0db0",
-      frequencyAlert: "è una buona abitudine consumare i legumi 2-3 volte alla settimana. Il consiglio è di abbinarli a una fonte di cereali e alle verdure per un piatto unico completo!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lenticchie.jpg?alt=media&token=f1edebca-c11b-49e5-9934-c925f78a0db0",
+      frequencyAlert:
+        "è una buona abitudine consumare i legumi 2-3 volte alla settimana. Il consiglio è di abbinarli a una fonte di cereali e alle verdure per un piatto unico completo!",
       macronut: {
         calorie: 291,
         carboidrati: 191.2,
@@ -227,8 +245,10 @@ const laPuttega: RestaurantModel = {
       price: 11,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lonza_di_maiale.jpg?alt=media&token=b96b6706-e949-41d3-b5ca-34eeda15fcc7",
-      frequencyAlert: "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lonza_di_maiale.jpg?alt=media&token=b96b6706-e949-41d3-b5ca-34eeda15fcc7",
+      frequencyAlert:
+        "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
       macronut: {
         calorie: 136,
         carboidrati: 0,
@@ -242,7 +262,8 @@ const laPuttega: RestaurantModel = {
       price: 13,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/merluzzo.jpg?alt=media&token=876d5c00-e38b-4f71-8a18-002decf2131b",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/merluzzo.jpg?alt=media&token=876d5c00-e38b-4f71-8a18-002decf2131b",
       macronut: {
         calorie: 91,
         carboidrati: 0,
@@ -256,7 +277,8 @@ const laPuttega: RestaurantModel = {
       price: 13.28,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pesce_spada.jpg?alt=media&token=d9f1042a-6d46-497d-b789-415e66aacfc8",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pesce_spada.jpg?alt=media&token=d9f1042a-6d46-497d-b789-415e66aacfc8",
       macronut: {
         calorie: 144,
         carboidrati: 0,
@@ -270,8 +292,10 @@ const laPuttega: RestaurantModel = {
       price: 9,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/petto_di_pollo.jpg?alt=media&token=1bbdbb21-f87a-49a1-9c8f-3ee762651bb1",
-      frequencyAlert: "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/petto_di_pollo.jpg?alt=media&token=1bbdbb21-f87a-49a1-9c8f-3ee762651bb1",
+      frequencyAlert:
+        "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
       macronut: {
         calorie: 100,
         carboidrati: 0,
@@ -285,8 +309,10 @@ const laPuttega: RestaurantModel = {
       price: 18,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/salmone.jpg?alt=media&token=238dea98-02a0-4571-b436-6e3820561b2b",
-      frequencyAlert: "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/salmone.jpg?alt=media&token=238dea98-02a0-4571-b436-6e3820561b2b",
+      frequencyAlert:
+        "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
       macronut: {
         calorie: 185,
         carboidrati: 3.4,
@@ -300,8 +326,10 @@ const laPuttega: RestaurantModel = {
       price: 7.33,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tacchino.jpg?alt=media&token=39c7224c-8d8b-41ee-a214-c16286c3f36e",
-      frequencyAlert: "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tacchino.jpg?alt=media&token=39c7224c-8d8b-41ee-a214-c16286c3f36e",
+      frequencyAlert:
+        "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
       macronut: {
         calorie: 107,
         carboidrati: 0,
@@ -315,8 +343,10 @@ const laPuttega: RestaurantModel = {
       price: 10,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tonno.jpg?alt=media&token=42931044-849e-48a5-b642-588f58d43177",
-      frequencyAlert: "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tonno.jpg?alt=media&token=42931044-849e-48a5-b642-588f58d43177",
+      frequencyAlert:
+        "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
       macronut: {
         calorie: 159,
         carboidrati: 0.1,
@@ -330,8 +360,10 @@ const laPuttega: RestaurantModel = {
       price: 4,
       vegan: false,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/uova.jpg?alt=media&token=ba532b5f-39b5-4652-98fc-aa765e9e3173",
-      frequencyAlert: "è consigliato di consumare da 1 a un massimo di 4 porzioni alla settimana.",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/uova.jpg?alt=media&token=ba532b5f-39b5-4652-98fc-aa765e9e3173",
+      frequencyAlert:
+        "è consigliato di consumare da 1 a un massimo di 4 porzioni alla settimana.",
       macronut: {
         calorie: 128,
         carboidrati: 0.1,
@@ -346,7 +378,8 @@ const laPuttega: RestaurantModel = {
       price: 7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/avocado.jpg?alt=media&token=998f5a49-6d79-49f1-a9f1-54907964ee46",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/avocado.jpg?alt=media&token=998f5a49-6d79-49f1-a9f1-54907964ee46",
       macronut: {
         calorie: 670,
         carboidrati: 9,
@@ -361,7 +394,8 @@ const laPuttega: RestaurantModel = {
       price: 1,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mandorle.jpg?alt=media&token=091af73a-2411-4c5b-b7d5-a063cc806f6c",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mandorle.jpg?alt=media&token=091af73a-2411-4c5b-b7d5-a063cc806f6c",
       macronut: {
         calorie: 575,
         carboidrati: 15.3,
@@ -376,7 +410,8 @@ const laPuttega: RestaurantModel = {
       price: 2.4,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/nocciole.jpg?alt=media&token=7e14f802-3058-4f6b-8bd7-62e1145bc8a4",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/nocciole.jpg?alt=media&token=7e14f802-3058-4f6b-8bd7-62e1145bc8a4",
       macronut: {
         calorie: 628,
         carboidrati: 6.1,
@@ -391,7 +426,8 @@ const laPuttega: RestaurantModel = {
       price: 2.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/noci.jpg?alt=media&token=53ef588c-f6c5-4b51-a214-752b4414fae5",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/noci.jpg?alt=media&token=53ef588c-f6c5-4b51-a214-752b4414fae5",
       macronut: {
         calorie: 654,
         carboidrati: 5.1,
@@ -406,7 +442,8 @@ const laPuttega: RestaurantModel = {
       price: 2.5,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pistacchi-sfusi.jpg?alt=media&token=9a98905b-d8b7-4e2d-90c9-798ad70e8a04",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pistacchi-sfusi.jpg?alt=media&token=9a98905b-d8b7-4e2d-90c9-798ad70e8a04",
       macronut: {
         calorie: 562,
         carboidrati: 27.51,
@@ -421,7 +458,8 @@ const laPuttega: RestaurantModel = {
       price: 8,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/olio.jpg?alt=media&token=35ac5011-22e5-4c7f-8918-a225602b33e3",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/olio.jpg?alt=media&token=35ac5011-22e5-4c7f-8918-a225602b33e3",
       macronut: {
         calorie: 884,
         carboidrati: 0,
@@ -440,7 +478,8 @@ const mas: RestaurantModel = {
   forwardID: 2,
   hourtime: "08:30-15:30 / 17:30-20:30",
   imageName: "masmilazzo.jpg",
-  imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/restaurants-images%2Fmas.jpg?alt=media&token=23bb6243-cbbc-4f16-94c6-b32a407349d3",
+  imageURI:
+    "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/restaurants-images%2Fmas.jpg?alt=media&token=23bb6243-cbbc-4f16-94c6-b32a407349d3",
   plates: [
     // per Carboidrati
     {
@@ -449,7 +488,8 @@ const mas: RestaurantModel = {
       price: 0.5,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fpane-integrale.jpg?alt=media&token=4de58da8-940d-4725-9399-081343ce2bcc",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fpane-integrale.jpg?alt=media&token=4de58da8-940d-4725-9399-081343ce2bcc",
       macronut: {
         calorie: 224,
         carboidrati: 182.3,
@@ -463,7 +503,8 @@ const mas: RestaurantModel = {
       price: 0.6,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fpane-5-cereali.jpg?alt=media&token=88103a56-d4e4-4b17-8646-fef09bd2cbc4",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fpane-5-cereali.jpg?alt=media&token=88103a56-d4e4-4b17-8646-fef09bd2cbc4",
       macronut: {
         calorie: 279,
         carboidrati: 45.5,
@@ -477,7 +518,8 @@ const mas: RestaurantModel = {
       price: 0.62,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fsegale.jpg?alt=media&token=141d58d4-872a-47b7-a13d-b82f9dd4fc57",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fsegale.jpg?alt=media&token=141d58d4-872a-47b7-a13d-b82f9dd4fc57",
       macronut: {
         calorie: 259,
         carboidrati: 48.3,
@@ -491,7 +533,8 @@ const mas: RestaurantModel = {
       price: 1,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fpapavero.jpg?alt=media&token=d18b80f1-1573-401c-99a9-a563b7f67a28",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fpapavero.jpg?alt=media&token=d18b80f1-1573-401c-99a9-a563b7f67a28",
       macronut: {
         calorie: 276,
         carboidrati: 52.47,
@@ -506,8 +549,10 @@ const mas: RestaurantModel = {
       price: 29.8,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fbresaola.jpg?alt=media&token=c4adec9f-0ddb-4656-bcdc-2447f285e8aa",
-      frequencyAlert: "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fbresaola.jpg?alt=media&token=c4adec9f-0ddb-4656-bcdc-2447f285e8aa",
+      frequencyAlert:
+        "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
       macronut: {
         calorie: 151,
         carboidrati: 1.1,
@@ -521,8 +566,10 @@ const mas: RestaurantModel = {
       price: 5.13,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fcarpaccio.jpg?alt=media&token=b9c4d02a-bd0a-428c-9342-12635a0e80aa",
-      frequencyAlert: "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fcarpaccio.jpg?alt=media&token=b9c4d02a-bd0a-428c-9342-12635a0e80aa",
+      frequencyAlert:
+        "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
       macronut: {
         calorie: 119,
         carboidrati: 0,
@@ -537,8 +584,10 @@ const mas: RestaurantModel = {
       price: 3.98,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ffesa-tacchino.jpg?alt=media&token=56a11dc3-2c96-4f5e-a937-59608ff705d9",
-      frequencyAlert: "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ffesa-tacchino.jpg?alt=media&token=56a11dc3-2c96-4f5e-a937-59608ff705d9",
+      frequencyAlert:
+        "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
       macronut: {
         calorie: 111,
         carboidrati: 0,
@@ -553,7 +602,8 @@ const mas: RestaurantModel = {
       price: 7,
       vegan: false,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ffiocchi-latte.jpg?alt=media&token=ddd65f96-b4a0-4d01-a47b-38ab5a6ff278",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ffiocchi-latte.jpg?alt=media&token=ddd65f96-b4a0-4d01-a47b-38ab5a6ff278",
       macronut: {
         calorie: 98,
         carboidrati: 3.4,
@@ -568,8 +618,10 @@ const mas: RestaurantModel = {
       price: 2.25,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pollo-arrosto.jpg?alt=media&token=6ade17b3-4378-4659-89ca-55f04198c05d",
-      frequencyAlert: "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pollo-arrosto.jpg?alt=media&token=6ade17b3-4378-4659-89ca-55f04198c05d",
+      frequencyAlert:
+        "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
       macronut: {
         calorie: 165,
         carboidrati: 0,
@@ -583,7 +635,8 @@ const mas: RestaurantModel = {
       price: 4.8,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fquark.jpg?alt=media&token=5f1fb907-49f5-41bb-944f-1f9848ecd8cf",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fquark.jpg?alt=media&token=5f1fb907-49f5-41bb-944f-1f9848ecd8cf",
       macronut: {
         calorie: 90,
         carboidrati: 4.5,
@@ -598,8 +651,10 @@ const mas: RestaurantModel = {
       price: 26.8,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tonno.jpg?alt=media&token=42931044-849e-48a5-b642-588f58d43177",
-      frequencyAlert: "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tonno.jpg?alt=media&token=42931044-849e-48a5-b642-588f58d43177",
+      frequencyAlert:
+        "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
       macronut: {
         calorie: 159,
         carboidrati: 0,
@@ -614,8 +669,10 @@ const mas: RestaurantModel = {
       price: 23,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ftonno-affumicato.jpg?alt=media&token=330efddc-102c-49bc-bf81-507291ce6725",
-      frequencyAlert: "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ftonno-affumicato.jpg?alt=media&token=330efddc-102c-49bc-bf81-507291ce6725",
+      frequencyAlert:
+        "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
       macronut: {
         calorie: 147,
         carboidrati: 1,
@@ -630,8 +687,10 @@ const mas: RestaurantModel = {
       price: 14.5,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ftonno-affumicato.jpg?alt=media&token=330efddc-102c-49bc-bf81-507291ce6725",
-      frequencyAlert: "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ftonno-affumicato.jpg?alt=media&token=330efddc-102c-49bc-bf81-507291ce6725",
+      frequencyAlert:
+        "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
       macronut: {
         calorie: 117,
         carboidrati: 0,
@@ -646,8 +705,10 @@ const mas: RestaurantModel = {
       price: 2.23,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ftacchino-arrosto.jpg?alt=media&token=8e8d9a50-65d4-4697-aff2-7d61a651e99e",
-      frequencyAlert: "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Ftacchino-arrosto.jpg?alt=media&token=8e8d9a50-65d4-4697-aff2-7d61a651e99e",
+      frequencyAlert:
+        "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
       macronut: {
         calorie: 96,
         carboidrati: 3.55,
@@ -662,8 +723,10 @@ const mas: RestaurantModel = {
       price: 15.9,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fcotto.jpg?alt=media&token=74e5e08c-daeb-4731-a0d5-06d2fef56fca",
-      frequencyAlert: "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fcotto.jpg?alt=media&token=74e5e08c-daeb-4731-a0d5-06d2fef56fca",
+      frequencyAlert:
+        "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
       macronut: {
         calorie: 215,
         carboidrati: 0.9,
@@ -678,8 +741,10 @@ const mas: RestaurantModel = {
       price: 22.3,
       vegan: false,
       vegetarian: false,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fcrudo-magro.jpg?alt=media&token=975f07fb-539e-4086-8913-497a9b16f5af",
-      frequencyAlert: "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fcrudo-magro.jpg?alt=media&token=975f07fb-539e-4086-8913-497a9b16f5af",
+      frequencyAlert:
+        "Attenzione! Secondo le linee guida per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO è di circa 1-2 volte alla settimana. ",
       macronut: {
         calorie: 147,
         carboidrati: 0.05,
@@ -694,7 +759,8 @@ const mas: RestaurantModel = {
       price: 2,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/olio.jpg?alt=media&token=35ac5011-22e5-4c7f-8918-a225602b33e3",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/olio.jpg?alt=media&token=35ac5011-22e5-4c7f-8918-a225602b33e3",
       macronut: {
         calorie: 884,
         carboidrati: 0,
@@ -708,7 +774,8 @@ const mas: RestaurantModel = {
       price: 1,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/avocado.jpg?alt=media&token=998f5a49-6d79-49f1-a9f1-54907964ee46",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/avocado.jpg?alt=media&token=998f5a49-6d79-49f1-a9f1-54907964ee46",
       macronut: {
         calorie: 322,
         carboidrati: 17.15,
@@ -722,7 +789,8 @@ const mas: RestaurantModel = {
       price: 1,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mandorle.jpg?alt=media&token=091af73a-2411-4c5b-b7d5-a063cc806f6c",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mandorle.jpg?alt=media&token=091af73a-2411-4c5b-b7d5-a063cc806f6c",
       macronut: {
         calorie: 578,
         carboidrati: 19.74,
@@ -736,7 +804,8 @@ const mas: RestaurantModel = {
       price: 3,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pistacchi-sfusi.jpg?alt=media&token=9a98905b-d8b7-4e2d-90c9-798ad70e8a04",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pistacchi-sfusi.jpg?alt=media&token=9a98905b-d8b7-4e2d-90c9-798ad70e8a04",
       macronut: {
         calorie: 557,
         carboidrati: 27.97,
@@ -750,7 +819,8 @@ const mas: RestaurantModel = {
       price: 4,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/noci.jpg?alt=media&token=53ef588c-f6c5-4b51-a214-752b4414fae5",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/noci.jpg?alt=media&token=53ef588c-f6c5-4b51-a214-752b4414fae5",
       macronut: {
         calorie: 654,
         carboidrati: 13.71,
@@ -764,7 +834,8 @@ const mas: RestaurantModel = {
       price: 3,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fnocciole.jpg?alt=media&token=97b8a1d9-75a8-45f8-b97f-c9a7aaf54c44",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Fnocciole.jpg?alt=media&token=97b8a1d9-75a8-45f8-b97f-c9a7aaf54c44",
       macronut: {
         calorie: 628,
         carboidrati: 16.7,
@@ -778,7 +849,8 @@ const mas: RestaurantModel = {
       price: 2,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Folive-nere.jpg?alt=media&token=d0150838-a8af-461d-9004-e73920d409b0",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Folive-nere.jpg?alt=media&token=d0150838-a8af-461d-9004-e73920d409b0",
       macronut: {
         calorie: 147,
         carboidrati: 0.05,
@@ -792,7 +864,8 @@ const mas: RestaurantModel = {
       price: 2,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Folive-verde.jpg?alt=media&token=2bbaad73-88e3-4e63-b6b8-8ff3cb3bdea3",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mas%2Folive-verde.jpg?alt=media&token=2bbaad73-88e3-4e63-b6b8-8ff3cb3bdea3",
       macronut: {
         calorie: 105,
         carboidrati: 6.04,
@@ -803,58 +876,61 @@ const mas: RestaurantModel = {
     // per Menu,
     {
       name: "Busiate con cubetti di pesce spada e melanzane ",
-       imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/busiate.png?alt=media&token=472b1e27-5e5c-4726-994d-58b49c2206b0",
-       macronut: {
-         calorie: 680,
-         carboidrati: 69,
-         grassi: 29,
-         proteine: 34
-       },
-       phase: "menu",
-       price: 8.3,
-       vegan: false,
-       vegetarian: false,
-       plateDescription: `Pasta 80g
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/busiate.png?alt=media&token=472b1e27-5e5c-4726-994d-58b49c2206b0",
+      macronut: {
+        calorie: 680,
+        carboidrati: 69,
+        grassi: 29,
+        proteine: 34,
+      },
+      phase: "menu",
+      price: 8.3,
+      vegan: false,
+      vegetarian: false,
+      plateDescription: `Pasta 80g
        Pesce Spada 120g
        1 melanzana (circa 150g)
-       Pomodorini 60g`
+       Pomodorini 60g`,
     },
     {
       name: "Pennette con cubetti di tofu e melanzane",
-       imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pennette-tofu.png?alt=media&token=1f4c965f-c958-4250-b84f-70b4f643bd74",
-       macronut: {
-         calorie: 604,
-         carboidrati: 71,
-         grassi: 27,
-         proteine: 20
-       },
-       phase: "menu",
-       price: 9,
-       vegan: true,
-       vegetarian: true,
-       plateDescription: `Pasta 80g
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pennette-tofu.png?alt=media&token=1f4c965f-c958-4250-b84f-70b4f643bd74",
+      macronut: {
+        calorie: 604,
+        carboidrati: 71,
+        grassi: 27,
+        proteine: 20,
+      },
+      phase: "menu",
+      price: 9,
+      vegan: true,
+      vegetarian: true,
+      plateDescription: `Pasta 80g
        Tofu 100 g
        Melanzana 200 g
-       Pomodorini 60g`
+       Pomodorini 60g`,
     },
     {
       name: "Caserecce al ragù bianco con asparagi",
-       imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/casarecce-ragu.png?alt=media&token=cf87dd5f-c2ad-49bf-8027-2c504067f60a",
-       macronut: {
-         calorie: 650,
-         carboidrati: 68,
-         grassi: 28,
-         proteine: 32
-       },
-       phase: "menu",
-       price: 10,
-       vegan: true,
-       vegetarian: true,
-       plateDescription: `Pasta 80 g
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/casarecce-ragu.png?alt=media&token=cf87dd5f-c2ad-49bf-8027-2c504067f60a",
+      macronut: {
+        calorie: 650,
+        carboidrati: 68,
+        grassi: 28,
+        proteine: 32,
+      },
+      phase: "menu",
+      price: 10,
+      vegan: true,
+      vegetarian: true,
+      plateDescription: `Pasta 80 g
        Macinato di vitello 50g
        Parmigiano 20g
-       Asparagi 150 g`
-    }
+       Asparagi 150 g`,
+    },
   ],
 };
 
