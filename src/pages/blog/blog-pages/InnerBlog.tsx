@@ -40,7 +40,14 @@ const InnerBlog = () => {
     <div>
       <SimpleGrid columns={[1, null, 3]}>
         {allPostData?.map((post, index) => (
-          <Box borderRadius="lg" border="1px" overflow="hidden" ml="3%" mt="3%" key={index}>
+          <Box
+            borderRadius="lg"
+            border="1px"
+            overflow="hidden"
+            ml="3%"
+            mt="3%"
+            key={index}
+          >
             <Link to={`/blog/${post.slug.current}`} key={post.slug.current}>
               <span key={index}>
                 <img

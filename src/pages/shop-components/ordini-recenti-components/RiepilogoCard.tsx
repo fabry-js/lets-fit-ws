@@ -18,6 +18,7 @@ interface RiepilogoCardProps {
   allIngredients: any[];
   totale: number;
   method: string;
+  completed: boolean;
 }
 
 const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
@@ -26,6 +27,7 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
   method,
   restaurantName,
   totale,
+  completed
 }) => {
   return (
     <>
@@ -33,7 +35,7 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
         Ordine #{id + 1} | {restaurantName}
       </Heading>
       <Accordion allowToggle>
-        <AccordionItem borderRadius="full">
+        <AccordionItem borderRadius="2xl">
           <h2>
             <AccordionButton>
               <Box flex="1">
@@ -60,6 +62,7 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
                 })}
               <ListItem>Metodo di Pagamento: {method}</ListItem>
               <ListItem>Totale: €{totale}</ListItem>
+              {completed && <Text fontStyle="italic">L'ordine risulta consegnato.</Text>}
             </List>
           </AccordionPanel>
         </AccordionItem>

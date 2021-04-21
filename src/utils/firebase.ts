@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import { BlogPost } from "../models/BlogPost";
 import "firebase/auth";
 import "firebase/firestore";
+
 // https://stackoverflow.com/questions/48592656/firebase-auth-is-not-a-function
 
 const firebaseConfig = {
@@ -39,6 +40,7 @@ interface Order {
   user?: string | null | undefined;
   paymentMethod?: string | undefined;
   createdAt?: firebase.firestore.FieldValue;
+  userInfos?: string;
 }
 
 export const sendOrder = async (order: Order) => {
@@ -46,7 +48,10 @@ export const sendOrder = async (order: Order) => {
   return new Promise<boolean>((resolve, reject) => {
     try {
       ordersCollectionRef
-        .add(order)
+        .add({
+          ...order,
+          completed: false
+        })
         .then((_data) => resolve(true))
         .catch((_err) => {
           reject(false);

@@ -15,4 +15,6 @@ export interface IngredientModel {
   imageURI: string;
   [key: string]: any;
   plateDescription?: string;
+  glutenFree?: boolean;
+  frequencyAlert?: string;
 }

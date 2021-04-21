@@ -8,6 +8,7 @@ interface IngredientInfoCardProps {
   vegetarian: boolean;
   imageURI: string;
   iteratorKey: number;
+  availableIngredient: any;
 }
 
 const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
@@ -17,6 +18,7 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
   vegetarian,
   imageURI,
   iteratorKey,
+  availableIngredient,
 }) => {
   return (
     <Box key={iteratorKey} mt="2" borderWidth="1px" borderRadius="lg">
@@ -50,6 +52,19 @@ const IngredientInfoCard: React.FC<IngredientInfoCardProps> = ({
             variant="subtle"
           >
             Vegetariano
+          </Badge>
+        ) : (
+          ""
+        )}
+        {availableIngredient.glutenFree ? (
+          <Badge
+            borderRadius="2xl"
+            ml="1"
+            colorScheme="orange"
+            p="1"
+            variant="subtle"
+          >
+            Gluten Free
           </Badge>
         ) : (
           ""
