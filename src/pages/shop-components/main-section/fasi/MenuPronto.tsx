@@ -73,6 +73,14 @@ const MenuPronto = () => {
     const { name } = ingredient;
     totale = 0;
     totale += finalPrice;
+
+    ingredient.frequencyAlert && toast({
+      title: "Consiglio della Nutrizionista",
+      description: ingredient.frequencyAlert,
+      status: "info",
+      duration: 5000,
+      isClosable: true,
+    });
     toast({
       title: "Aggiunto al carrello!🛒",
       description: "Vai nella sezione 'Carrello' per un riepilogo",
@@ -103,6 +111,7 @@ const MenuPronto = () => {
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
               const { name, price, imageURI } = ingredient;
+              console.log(ingredient)
               const {
                 calorie,
                 carboidrati,

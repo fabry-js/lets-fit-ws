@@ -17,16 +17,54 @@ const slice = createSlice({
         vegan,
         vegetarian,
         imageURI,
+        glutenFree,
+        frequencyAlert
       } = action.payload;
-      ingredients.push({
-        name,
-        macronut,
-        phase,
-        price,
-        vegan,
-        vegetarian,
-        imageURI,
-      });
+      if(glutenFree && frequencyAlert){
+        ingredients.push({
+          name,
+          macronut,
+          phase,
+          price,
+          vegan,
+          vegetarian,
+          imageURI,
+          glutenFree,
+          frequencyAlert
+        });
+      } else if(frequencyAlert) {
+        ingredients.push({
+          name,
+          macronut,
+          phase,
+          price,
+          vegan,
+          vegetarian,
+          imageURI,
+          frequencyAlert
+        });
+      } else if(glutenFree) {
+        ingredients.push({
+          name,
+          macronut,
+          phase,
+          price,
+          vegan,
+          vegetarian,
+          imageURI,
+          glutenFree
+        });
+      } else {
+        ingredients.push({
+          name,
+          macronut,
+          phase,
+          price,
+          vegan,
+          vegetarian,
+          imageURI,
+        });
+      }
     },
     removeAllIngredients: (ingredients: any) => {
       ingredients.length = 0;

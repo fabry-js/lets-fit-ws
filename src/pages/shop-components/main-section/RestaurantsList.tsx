@@ -52,6 +52,8 @@ const RestaurantsList = () => {
                           vegan,
                           vegetarian,
                           imageURI,
+                          glutenFree,
+                          frequencyAlert
                         } = plate;
                         // Navigazione ai Piatti Disponibili
                         history.push("/shop/menu-ristorante");
@@ -62,17 +64,59 @@ const RestaurantsList = () => {
                           })
                         );
                         // Aggiunge ingredienti
-                        return dispatch(
-                          addIngredient({
-                            name,
-                            macronut,
-                            phase,
-                            price,
-                            vegan,
-                            vegetarian,
-                            imageURI,
-                          })
-                        );
+                        if (glutenFree && frequencyAlert) {
+                          return dispatch(
+                            addIngredient({
+                              name,
+                              macronut,
+                              phase,
+                              price,
+                              vegan,
+                              vegetarian,
+                              imageURI,
+                              glutenFree,
+                              frequencyAlert
+                            })
+                          );
+                        } else if (frequencyAlert) {
+                          return dispatch(
+                            addIngredient({
+                              name,
+                              macronut,
+                              phase,
+                              price,
+                              vegan,
+                              vegetarian,
+                              imageURI,
+                              frequencyAlert
+                            })
+                          );
+                        } else if (glutenFree) {
+                          return dispatch(
+                            addIngredient({
+                              name,
+                              macronut,
+                              phase,
+                              price,
+                              vegan,
+                              vegetarian,
+                              imageURI,
+                              glutenFree
+                            })
+                          );
+                        } else {
+                          return dispatch(
+                            addIngredient({
+                              name,
+                              macronut,
+                              phase,
+                              price,
+                              vegan,
+                              vegetarian,
+                              imageURI,
+                            })
+                          )
+                        }
                       });
                     }}
                     buttonLabel="Esplora"

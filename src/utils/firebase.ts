@@ -40,6 +40,7 @@ interface Order {
   user?: string | null | undefined;
   paymentMethod?: string | undefined;
   createdAt?: firebase.firestore.FieldValue;
+  userInfos?: string;
 }
 
 export const sendOrder = async (order: Order) => {

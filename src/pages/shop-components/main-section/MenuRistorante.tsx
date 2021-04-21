@@ -29,6 +29,7 @@ const MenuRistorante = () => {
               vegan={vegan}
               vegetarian={vegetarian}
               imageURI={imageURI}
+              availableIngredient={availableIngredient}
             />
           );
         })}
