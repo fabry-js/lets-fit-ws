@@ -48,7 +48,10 @@ export const sendOrder = async (order: Order) => {
   return new Promise<boolean>((resolve, reject) => {
     try {
       ordersCollectionRef
-        .add(order)
+        .add({
+          ...order,
+          completed: false
+        })
         .then((_data) => resolve(true))
         .catch((_err) => {
           reject(false);

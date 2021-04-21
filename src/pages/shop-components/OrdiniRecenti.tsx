@@ -26,6 +26,7 @@ const OrdiniRecenti: React.FC<OrdiniRecentiProps> = () => {
             paymentMethod,
             restaurantName,
             totale,
+            completed
           } = order;
           return (
             <RiepilogoCard
@@ -35,6 +36,7 @@ const OrdiniRecenti: React.FC<OrdiniRecentiProps> = () => {
               method={paymentMethod}
               restaurantName={restaurantName}
               totale={totale}
+              completed={completed}
             />
           );
         })
