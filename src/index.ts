@@ -1,6 +1,9 @@
 import express = require("express");
 import cors = require("cors");
 import Stripe from "stripe";
+import dotenv from "dotenv";
+dotenv.config();
+
 import { addUserToNSCollection, removeUserFromNSCollection } from "./firebase";
 
 const stripe = new Stripe(
