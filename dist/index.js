@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const cors = require("cors");
 const stripe_1 = __importDefault(require("stripe"));
+const firebase_1 = require("./firebase");
 const stripe = new stripe_1.default("sk_test_51IJJPcIzkBXCvUW1usTx6HMp1Rh2bjoWM1TOyoA05BlP9qySrnUrQ8wjq1CCIEIJie6XjLvEJsYxZEbxP5Uo7GmD00EojT4de0", {
     apiVersion: "2020-08-27",
     typescript: true,
@@ -66,6 +67,32 @@ app.post("/create-payment-intent", (req, res) => __awaiter(void 0, void 0, void 
     else {
         console.log(`❌ Nessun Ingrediente, Richiesta chiusa.`);
     }
+}));
+app.post("/ns-sub", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { email, userName } = req.body;
+    console.log(`⚡ Nuova richiesta di Aggiunta nella Newsletter per conto di ${userName} | ${new Date()}`);
+    yield firebase_1.addUserToNSCollection(email).then(() => {
+        res.send({
+            message: "successful"
+        });
+    }).catch((error) => {
+        res.send({
+            error
+        });
+    });
+}));
+app.post("/ns-remove", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { email } = req.body;
+    console.log(`⚡ Nuova richiesta di Rimozione dalla Newsletter ${new Date()}`);
+    yield firebase_1.removeUserFromNSCollection(email).then(() => {
+        res.send({
+            message: "successful"
+        });
+    }).catch((error) => {
+        res.send({
+            error
+        });
+    });
 }));
 app.listen(process.env.PORT || 5000, () => console.log(`🗻 API Pronta sulla porta ${process.env.PORT ? process.env.PORT : "5000"}`));
 //# sourceMappingURL=index.js.map
