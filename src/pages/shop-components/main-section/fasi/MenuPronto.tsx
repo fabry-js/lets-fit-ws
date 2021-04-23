@@ -112,7 +112,6 @@ const MenuPronto = () => {
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
               const { name, price, imageURI } = ingredient;
-              console.log(ingredient);
               const {
                 calorie,
                 carboidrati,

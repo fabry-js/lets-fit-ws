@@ -625,6 +625,55 @@ const laPuttega: RestaurantModel = {
       },
     },
     // per Menu
+    {
+      name: "Insalata di quinoa con ceci e zucchine",
+      phase: "menu",
+      price: 9.50,
+      vegan: true,
+      vegetarian: true,
+      glutenFree: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/insalata-quinoa.jpg?alt=media&token=48a5f163-1755-4fce-b2db-7ac367286d5b",
+      macronut: {
+        calorie: 655,
+        carboidrati: 77,
+        grassi: 28,
+        proteine: 24,
+      },
+      plateDescription: `80 g di quinoa - 50 g di ceci secchi (circa 150 g di ceci lessati) - 150 g di zucchine`
+    },
+    {
+      name: "Spiedini di pollo e zucchine grigliate con pane tostato",
+      phase: "menu",
+      price: 11,
+      vegan: false,
+      vegetarian: false,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/spiedini-di-pollo.jpg?alt=media&token=41b7aa31-13ac-47ea-957d-3561f58abd48",
+      macronut: {
+        calorie: 500,
+        carboidrati: 42,
+        grassi: 22,
+        proteine: 32,
+      },
+      plateDescription: `80 g di pane integrale - 100 g di pollo - 200 g di zucchine`
+    },
+    {
+      name: "Insalata di polpo e patate con olive e lattuga",
+      phase: "menu",
+      price: 8,
+      vegan: false,
+      vegetarian: false,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/insalata-polpo.jpg?alt=media&token=df26acd1-ec91-4688-8e9a-70ff27d08386",
+      macronut: {
+        calorie: 526,
+        carboidrati: 41,
+        grassi: 29,
+        proteine: 27,
+      },
+      plateDescription: `200 g di polpo - 200 g di patate - 80 g di lattuga - 30 g di olive`
+    },
   ],
 };
 
