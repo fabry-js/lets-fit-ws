@@ -175,77 +175,82 @@ const laPuttega: RestaurantModel = {
     {
       name: "Broccoli",
       phase: "carboidrati",
-      price: 0.70,
+      price: 0.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/broccoli.jpg?alt=media&token=0c8a2e64-43ba-4aa8-9c38-b47b1fbf6718",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/broccoli.jpg?alt=media&token=0c8a2e64-43ba-4aa8-9c38-b47b1fbf6718",
       glutenFree: true,
       macronut: {
         calorie: 20,
         carboidrati: 2,
         grassi: 0.3,
-        proteine: 2.9
-      }
+        proteine: 2.9,
+      },
     },
     {
       name: "Carciofi",
       phase: "carboidrati",
-      price: 0.70,
+      price: 0.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/carciofi.jpg?alt=media&token=2e630acc-5f81-43a9-b99e-e67ebb3e9e7c",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/carciofi.jpg?alt=media&token=2e630acc-5f81-43a9-b99e-e67ebb3e9e7c",
       glutenFree: true,
       macronut: {
         calorie: 22,
-        carboidrati: 9.40,
-        grassi: 1.80,
-        proteine: 10.80
-      }
+        carboidrati: 9.4,
+        grassi: 1.8,
+        proteine: 10.8,
+      },
     },
     {
       name: "Cavolfiore",
       phase: "carboidrati",
-      price: 0.80,
+      price: 0.8,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cavolfiore.jpg?alt=media&token=47cbac46-ece5-494c-87b1-185b2e394da2",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cavolfiore.jpg?alt=media&token=47cbac46-ece5-494c-87b1-185b2e394da2",
       glutenFree: true,
       macronut: {
         calorie: 25,
-        carboidrati: 10.40,
+        carboidrati: 10.4,
         grassi: 1.8,
-        proteine: 12.8
-      }
+        proteine: 12.8,
+      },
     },
     {
       name: "Cetrioli",
       phase: "carboidrati",
-      price: 0.90,
+      price: 0.9,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cetrioli.jpg?alt=media&token=a109b345-b281-487a-8c74-1fb721f364b5",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cetrioli.jpg?alt=media&token=a109b345-b281-487a-8c74-1fb721f364b5",
       glutenFree: true,
       macronut: {
         calorie: 14,
-        carboidrati: 6.70,
+        carboidrati: 6.7,
         grassi: 4.5,
-        proteine: 2.8
-      }
+        proteine: 2.8,
+      },
     },
     {
       name: "Zucchina",
       phase: "carboidrati",
-      price: 0.70,
+      price: 0.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
       glutenFree: true,
       macronut: {
         calorie: 11,
         carboidrati: 4.9,
         grassi: 0.9,
-        proteine: 5.20
-      }
+        proteine: 5.2,
+      },
     },
     {
       name: "Finocchio",
@@ -253,29 +258,31 @@ const laPuttega: RestaurantModel = {
       price: 1,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/finocchio.jpg?alt=media&token=e9116dbc-2238-4705-9911-68ba5503e551",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/finocchio.jpg?alt=media&token=e9116dbc-2238-4705-9911-68ba5503e551",
       glutenFree: true,
       macronut: {
         calorie: 9,
-        carboidrati: 4.20,
+        carboidrati: 4.2,
         grassi: 0,
-        proteine: 4.80
-      }
+        proteine: 4.8,
+      },
     },
     {
       name: "Lattuga Iceberg",
       phase: "carboidrati",
-      price: 0.70,
+      price: 0.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-iceberg.jpg?alt=media&token=2be9f4fc-6100-47c9-82c6-c658a6107e22",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-iceberg.jpg?alt=media&token=2be9f4fc-6100-47c9-82c6-c658a6107e22",
       glutenFree: true,
       macronut: {
         calorie: 14,
         carboidrati: 2.97,
         grassi: 0.14,
-        proteine: 0.9
-      }
+        proteine: 0.9,
+      },
     },
     // per Proteine
     {
@@ -695,47 +702,50 @@ const mas: RestaurantModel = {
     {
       name: "Lattuga Romana",
       phase: "carboidrati",
-      price: 0.60,
+      price: 0.6,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-romana.jpg?alt=media&token=17d82468-ac68-4291-850b-e9f0f47ad033",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-romana.jpg?alt=media&token=17d82468-ac68-4291-850b-e9f0f47ad033",
       glutenFree: true,
       macronut: {
         calorie: 17,
         carboidrati: 3.29,
         grassi: 0.3,
-        proteine: 1.23
-      }
+        proteine: 1.23,
+      },
     },
     {
       name: "Melanzana",
       phase: "carboidrati",
-      price: 0.70,
+      price: 0.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/melanzana.jpg?alt=media&token=c94b196b-bcad-4c6c-9e1d-17f2db2440a4",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/melanzana.jpg?alt=media&token=c94b196b-bcad-4c6c-9e1d-17f2db2440a4",
       glutenFree: true,
       macronut: {
         calorie: 18,
         carboidrati: 10,
         grassi: 3.6,
-        proteine: 4.4
-      }
+        proteine: 4.4,
+      },
     },
     {
       name: "Peperoni",
       phase: "carboidrati",
-      price: 0.90,
+      price: 0.9,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/peperoni.jpg?alt=media&token=650c732d-70f9-447e-96f2-d11de72da282",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/peperoni.jpg?alt=media&token=650c732d-70f9-447e-96f2-d11de72da282",
       glutenFree: true,
       macronut: {
         calorie: 22,
         carboidrati: 15.7,
         grassi: 2.7,
-        proteine: 3.6
-      }
+        proteine: 3.6,
+      },
     },
     {
       name: "Rucola",
@@ -743,14 +753,15 @@ const mas: RestaurantModel = {
       price: 0.55,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/rucola.jpg?alt=media&token=086cead4-b73b-4955-8d02-88dbb7ebbc52",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/rucola.jpg?alt=media&token=086cead4-b73b-4955-8d02-88dbb7ebbc52",
       glutenFree: true,
       macronut: {
         calorie: 28,
         carboidrati: 14.9,
         grassi: 2.7,
-        proteine: 10.4
-      }
+        proteine: 10.4,
+      },
     },
     {
       name: "Scarola",
@@ -758,44 +769,47 @@ const mas: RestaurantModel = {
       price: 0.9,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/scarola.jpg?alt=media&token=4077c21f-071d-4953-99d5-b8b0a0093ca2",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/scarola.jpg?alt=media&token=4077c21f-071d-4953-99d5-b8b0a0093ca2",
       glutenFree: true,
       macronut: {
         calorie: 16,
         carboidrati: 2.7,
         grassi: 0.3,
-        proteine: 0.9
-      }
+        proteine: 0.9,
+      },
     },
     {
       name: "Sedano",
       phase: "carboidrati",
-      price: 1.10,
+      price: 1.1,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/sedano.jpg?alt=media&token=e022b7f3-d9b6-4218-bbdb-e8d277310e0e",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/sedano.jpg?alt=media&token=e022b7f3-d9b6-4218-bbdb-e8d277310e0e",
       glutenFree: true,
       macronut: {
         calorie: 20,
         carboidrati: 9,
-        grassi: 1.80,
-        proteine: 9.20
-      }
+        grassi: 1.8,
+        proteine: 9.2,
+      },
     },
     {
       name: "Zucchine",
       phase: "carboidrati",
-      price: 0.70,
+      price: 0.7,
       vegan: true,
       vegetarian: true,
-      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=be877d31-7eef-4560-a42f-0d1e5c06a464",
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=be877d31-7eef-4560-a42f-0d1e5c06a464",
       glutenFree: true,
       macronut: {
         calorie: 11,
         carboidrati: 4.9,
-        grassi: 0.90,
-        proteine: 5.20
-      }
+        grassi: 0.9,
+        proteine: 5.2,
+      },
     },
     // per Proteine
     {
@@ -1383,77 +1397,82 @@ export const exampleIngredients = [
   {
     name: "Broccoli",
     phase: "carboidrati",
-    price: 0.70,
+    price: 0.7,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/broccoli.jpg?alt=media&token=0c8a2e64-43ba-4aa8-9c38-b47b1fbf6718",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/broccoli.jpg?alt=media&token=0c8a2e64-43ba-4aa8-9c38-b47b1fbf6718",
     glutenFree: true,
     macronut: {
       calorie: 20,
       carboidrati: 2,
       grassi: 0.3,
-      proteine: 2.9
-    }
+      proteine: 2.9,
+    },
   },
   {
     name: "Carciofi",
     phase: "carboidrati",
-    price: 0.70,
+    price: 0.7,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/carciofi.jpg?alt=media&token=2e630acc-5f81-43a9-b99e-e67ebb3e9e7c",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/carciofi.jpg?alt=media&token=2e630acc-5f81-43a9-b99e-e67ebb3e9e7c",
     glutenFree: true,
     macronut: {
       calorie: 22,
-      carboidrati: 9.40,
-      grassi: 1.80,
-      proteine: 10.80
-    }
+      carboidrati: 9.4,
+      grassi: 1.8,
+      proteine: 10.8,
+    },
   },
   {
     name: "Cavolfiore",
     phase: "carboidrati",
-    price: 0.80,
+    price: 0.8,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cavolfiore.jpg?alt=media&token=47cbac46-ece5-494c-87b1-185b2e394da2",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cavolfiore.jpg?alt=media&token=47cbac46-ece5-494c-87b1-185b2e394da2",
     glutenFree: true,
     macronut: {
       calorie: 25,
-      carboidrati: 10.40,
+      carboidrati: 10.4,
       grassi: 1.8,
-      proteine: 12.8
-    }
+      proteine: 12.8,
+    },
   },
   {
     name: "Cetrioli",
     phase: "carboidrati",
-    price: 0.90,
+    price: 0.9,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cetrioli.jpg?alt=media&token=a109b345-b281-487a-8c74-1fb721f364b5",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cetrioli.jpg?alt=media&token=a109b345-b281-487a-8c74-1fb721f364b5",
     glutenFree: true,
     macronut: {
       calorie: 14,
-      carboidrati: 6.70,
+      carboidrati: 6.7,
       grassi: 4.5,
-      proteine: 2.8
-    }
+      proteine: 2.8,
+    },
   },
   {
     name: "Zucchina",
     phase: "carboidrati",
-    price: 0.70,
+    price: 0.7,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
     glutenFree: true,
     macronut: {
       calorie: 11,
       carboidrati: 4.9,
       grassi: 0.9,
-      proteine: 5.20
-    }
+      proteine: 5.2,
+    },
   },
   {
     name: "Finocchio",
@@ -1461,29 +1480,31 @@ export const exampleIngredients = [
     price: 1,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/finocchio.jpg?alt=media&token=e9116dbc-2238-4705-9911-68ba5503e551",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/finocchio.jpg?alt=media&token=e9116dbc-2238-4705-9911-68ba5503e551",
     glutenFree: true,
     macronut: {
       calorie: 9,
-      carboidrati: 4.20,
+      carboidrati: 4.2,
       grassi: 0,
-      proteine: 4.80
-    }
+      proteine: 4.8,
+    },
   },
   {
     name: "Lattuga Iceberg",
     phase: "carboidrati",
-    price: 0.70,
+    price: 0.7,
     vegan: true,
     vegetarian: true,
-    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-iceberg.jpg?alt=media&token=2be9f4fc-6100-47c9-82c6-c658a6107e22",
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-iceberg.jpg?alt=media&token=2be9f4fc-6100-47c9-82c6-c658a6107e22",
     glutenFree: true,
     macronut: {
       calorie: 14,
       carboidrati: 2.97,
       grassi: 0.14,
-      proteine: 0.9
-    }
+      proteine: 0.9,
+    },
   },
   // per Proteine
   {
@@ -1825,4 +1846,4 @@ export const exampleIngredients = [
       proteine: 0,
     },
   },
-]
+];

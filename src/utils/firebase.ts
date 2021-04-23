@@ -49,7 +49,7 @@ export const sendOrder = async (order: Order) => {
       ordersCollectionRef
         .add({
           ...order,
-          completed: false
+          completed: false,
         })
         .then((_data) => resolve(true))
         .catch((_err) => {
@@ -86,11 +86,9 @@ export const __createExampleIngredients = async (data: any[]) => {
   const vetrinaCollection = _firestore.collection("/vetrina-ingredients");
   try {
     data.forEach(async (ingredient) => {
-      await vetrinaCollection
-      .add(ingredient)
-      .then(() => console.log("Appost"))
+      await vetrinaCollection.add(ingredient).then(() => console.log("Appost"));
     });
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-}
+};
