@@ -29,7 +29,6 @@ import {
   addItemToCart,
   updateCurrentTotal,
 } from "../../../../redux-store/slices/cartSlice";
-import { Link } from "react-router-dom";
 
 const FaseCarboidrati = () => {
   const ingredients = useSelector(getCurrentIngredients);
@@ -108,7 +107,7 @@ const FaseCarboidrati = () => {
     <div>
       <Text fontSize="2xl">Carboidrati</Text>
       <TopHeaderCard />
-      <SimpleGrid columns={[1, 6]} columnGap="3">
+      <SimpleGrid columns={[1, 4]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
@@ -219,9 +218,6 @@ const FaseCarboidrati = () => {
               );
             }
           )}
-        <Link to="/shop/fase-proteine">
-          <Button>Seleziona le Proteine</Button>
-        </Link>
       </SimpleGrid>
     </div>
   );

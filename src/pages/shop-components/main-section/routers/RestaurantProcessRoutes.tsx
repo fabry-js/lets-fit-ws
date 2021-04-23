@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import FaseSwitchRouting from "./FaseSwitchRouting";
+import FasiTabs from "./FasiTabs";
 import MenuRistorante from "../MenuRistorante";
 import RestaurantsList from "../RestaurantsList";
 const RestaurantProcessRoutes = () => {
@@ -8,7 +8,7 @@ const RestaurantProcessRoutes = () => {
     <Switch>
       <Route path="/shop" exact component={RestaurantsList} />
       <Route path="/shop/menu-ristorante" component={MenuRistorante} />
-      <Route path="/shop/" component={FaseSwitchRouting} />
+      <Route path="/shop/" component={FasiTabs} />
     </Switch>
   );
 };

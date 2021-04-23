@@ -14,7 +14,7 @@ const VetrinaGrassi: React.FC<VetrinaProps> = () => {
   const [vetrinaIngredients] = useCollectionData<IngredientModel>(vetrinaRef);
   return (
     <>
-      <SimpleGrid columns={[1, 6]} columnGap="3">
+      <SimpleGrid columns={[1, 4]} columnGap="3">
         {vetrinaIngredients &&
           vetrinaIngredients.map((ingredient, index) => {
             const { imageURI, name, price, vegetarian, vegan } = ingredient;

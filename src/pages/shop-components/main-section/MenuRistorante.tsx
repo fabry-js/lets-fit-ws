@@ -10,7 +10,7 @@ const MenuRistorante = () => {
   const menu = useSelector(getCurrentIngredients);
 
   return (
-    <SimpleGrid columns={[1, 6]} columnGap="3">
+    <SimpleGrid columns={[1, 4]} columnGap="3">
       {menu &&
         menu.map((availableIngredient: IngredientModel, index: number) => {
           const {

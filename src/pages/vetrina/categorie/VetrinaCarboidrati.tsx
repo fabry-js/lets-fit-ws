@@ -17,7 +17,7 @@ const VetrinaCarboidrati: React.FC<VetrinaProps> = () => {
   );
   return (
     <>
-      <SimpleGrid columns={[1, 6]} columnGap="3">
+      <SimpleGrid columns={[1, 4]} columnGap="3">
         {exF &&
           exF.map((ingredient, index) => {
             const { imageURI, name, price, vegetarian, vegan } = ingredient;
