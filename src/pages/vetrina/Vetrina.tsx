@@ -11,7 +11,7 @@ import IngredientInfoCard from "../shop-components/main-section/restaurant-compo
 interface VetrinaProps {}
 
 const Vetrina: React.FC<VetrinaProps> = () => {
-  const vetrinaRef = _firestore.collection("/vetrina-ingredients");
+  const vetrinaRef = _firestore.collection("/vetrina-ingredients").orderBy("phase");
   const [vetrinaIngredients] = useCollectionData<IngredientModel>(vetrinaRef);
   const { actualUser } = useContext(UserContext);
   return (
@@ -34,9 +34,9 @@ const Vetrina: React.FC<VetrinaProps> = () => {
               />
             );
           })}
-        <Button>
-          <Link to={actualUser ? "/shop" : "/auth"}>Nuovo Ordine</Link>
-        </Button>
+        <Link to={actualUser ? "/shop" : "/auth"}>
+          <Button>Nuovo Ordine</Button>
+        </Link>
       </SimpleGrid>
     </>
   );

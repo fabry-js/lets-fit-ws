@@ -1239,6 +1239,115 @@ export const restaurants = [laPuttega, mas];
 export const restaurantsWrapper = { restaurants };
 
 export const exampleIngredients = [
+  // per Carboidrati
+  {
+    name: "Ceci",
+    phase: "carboidrati",
+    price: 2.5,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/ceci.jpg?alt=media&token=0c697199-5d25-4bbb-8595-b7223fe5baba",
+    frequencyAlert:
+      "è una buona abitudine consumare i legumi 2-3 volte alla settimana. Il consiglio è di abbinarli a una fonte di cereali e alle verdure per un piatto unico completo!",
+    macronut: {
+      calorie: 364,
+      carboidrati: 60.65,
+      grassi: 6.04,
+      proteine: 19.3,
+    },
+  },
+  {
+    name: "Cous Cous",
+    phase: "carboidrati",
+    price: 5.5,
+    vegan: false,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cous_cous.jpg?alt=media&token=56c21d7a-3a6b-4ba1-9b68-a199b30040c7",
+    macronut: {
+      calorie: 376,
+      carboidrati: 77.43,
+      grassi: 0.64,
+      proteine: 12.7,
+    },
+  },
+  {
+    name: "Orzo perlato",
+    phase: "carboidrati",
+    price: 5,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/orzo_perlato.jpg?alt=media&token=ab9bd2f5-38a8-4581-9d18-ea826e3261ae",
+    macronut: {
+      calorie: 319,
+      carboidrati: 264.8,
+      grassi: 12.6,
+      proteine: 41.6,
+    },
+  },
+  {
+    name: "Patate Al Forno",
+    phase: "carboidrati",
+    price: 3,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/patate.jpg?alt=media&token=117dfaef-3499-473e-b855-13a99709fafa",
+    macronut: {
+      calorie: 93,
+      carboidrati: 21.15,
+      grassi: 0.13,
+      proteine: 2.5,
+    },
+  },
+  {
+    name: "Pasta di semola",
+    phase: "carboidrati",
+    price: 4.5,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pasta_di_semola.jpg?alt=media&token=0857e223-fc2d-48f8-83ca-7c7f768b238a",
+    macronut: {
+      calorie: 296.8,
+      carboidrati: 60.65,
+      grassi: 12.6,
+      proteine: 43.6,
+    },
+  },
+  {
+    name: "Pasta di Semola Integrale",
+    phase: "carboidrati",
+    price: 4.8,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pasta_integrale.jpg?alt=media&token=45243134-d8d3-4dcd-bda5-635ce79c8412",
+    macronut: {
+      calorie: 323.5,
+      carboidrati: 66.2,
+      grassi: 2.4,
+      proteine: 13.4,
+    },
+  },
+  {
+    name: "Riso Basmati",
+    phase: "carboidrati",
+    price: 7,
+    vegan: true,
+    vegetarian: true,
+    glutenFree: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso-basmati.jpg?alt=media&token=0737fb39-4dc0-4f43-bc65-42db8669cb00",
+    macronut: {
+      calorie: 314,
+      carboidrati: 25.52,
+      grassi: 0,
+      proteine: 3.54,
+    },
+  },
   {
     name: "Riso Venere",
     phase: "carboidrati",
@@ -1271,6 +1380,111 @@ export const exampleIngredients = [
       proteine: 30,
     },
   },
+  {
+    name: "Broccoli",
+    phase: "carboidrati",
+    price: 0.70,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/broccoli.jpg?alt=media&token=0c8a2e64-43ba-4aa8-9c38-b47b1fbf6718",
+    glutenFree: true,
+    macronut: {
+      calorie: 20,
+      carboidrati: 2,
+      grassi: 0.3,
+      proteine: 2.9
+    }
+  },
+  {
+    name: "Carciofi",
+    phase: "carboidrati",
+    price: 0.70,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/carciofi.jpg?alt=media&token=2e630acc-5f81-43a9-b99e-e67ebb3e9e7c",
+    glutenFree: true,
+    macronut: {
+      calorie: 22,
+      carboidrati: 9.40,
+      grassi: 1.80,
+      proteine: 10.80
+    }
+  },
+  {
+    name: "Cavolfiore",
+    phase: "carboidrati",
+    price: 0.80,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cavolfiore.jpg?alt=media&token=47cbac46-ece5-494c-87b1-185b2e394da2",
+    glutenFree: true,
+    macronut: {
+      calorie: 25,
+      carboidrati: 10.40,
+      grassi: 1.8,
+      proteine: 12.8
+    }
+  },
+  {
+    name: "Cetrioli",
+    phase: "carboidrati",
+    price: 0.90,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cetrioli.jpg?alt=media&token=a109b345-b281-487a-8c74-1fb721f364b5",
+    glutenFree: true,
+    macronut: {
+      calorie: 14,
+      carboidrati: 6.70,
+      grassi: 4.5,
+      proteine: 2.8
+    }
+  },
+  {
+    name: "Zucchina",
+    phase: "carboidrati",
+    price: 0.70,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
+    glutenFree: true,
+    macronut: {
+      calorie: 11,
+      carboidrati: 4.9,
+      grassi: 0.9,
+      proteine: 5.20
+    }
+  },
+  {
+    name: "Finocchio",
+    phase: "carboidrati",
+    price: 1,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/finocchio.jpg?alt=media&token=e9116dbc-2238-4705-9911-68ba5503e551",
+    glutenFree: true,
+    macronut: {
+      calorie: 9,
+      carboidrati: 4.20,
+      grassi: 0,
+      proteine: 4.80
+    }
+  },
+  {
+    name: "Lattuga Iceberg",
+    phase: "carboidrati",
+    price: 0.70,
+    vegan: true,
+    vegetarian: true,
+    imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-iceberg.jpg?alt=media&token=2be9f4fc-6100-47c9-82c6-c658a6107e22",
+    glutenFree: true,
+    macronut: {
+      calorie: 14,
+      carboidrati: 2.97,
+      grassi: 0.14,
+      proteine: 0.9
+    }
+  },
   // per Proteine
   {
     name: "Albume d'uovo",
@@ -1302,6 +1516,313 @@ export const exampleIngredients = [
       carboidrati: 0.2,
       grassi: 0,
       proteine: 42.8,
+    },
+  },
+  {
+    name: "Gamberi di paranza",
+    phase: "proteine",
+    price: 10,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/gamberoni-arrosto.jpg?alt=media&token=6b0a5c8b-6541-46f6-a7fd-a254c157052f",
+    frequencyAlert:
+      "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+    macronut: {
+      calorie: 71,
+      carboidrati: 11.2,
+      grassi: 5.4,
+      proteine: 54.4,
+    },
+  },
+  {
+    name: "Lenticchie",
+    phase: "proteine",
+    price: 3.3,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lenticchie.jpg?alt=media&token=f1edebca-c11b-49e5-9934-c925f78a0db0",
+    frequencyAlert:
+      "è una buona abitudine consumare i legumi 2-3 volte alla settimana. Il consiglio è di abbinarli a una fonte di cereali e alle verdure per un piatto unico completo!",
+    macronut: {
+      calorie: 291,
+      carboidrati: 191.2,
+      grassi: 9,
+      proteine: 90.8,
+    },
+  },
+  {
+    name: "Lonza di maiale*",
+    phase: "proteine",
+    price: 11,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lonza_di_maiale.jpg?alt=media&token=b96b6706-e949-41d3-b5ca-34eeda15fcc7",
+    frequencyAlert:
+      "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
+    macronut: {
+      calorie: 136,
+      carboidrati: 0,
+      grassi: 5.41,
+      proteine: 20.54,
+    },
+  },
+  {
+    name: "Merluzzo*",
+    phase: "proteine",
+    price: 13,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/merluzzo.jpg?alt=media&token=876d5c00-e38b-4f71-8a18-002decf2131b",
+    macronut: {
+      calorie: 91,
+      carboidrati: 0,
+      grassi: 0.3,
+      proteine: 17,
+    },
+  },
+  {
+    name: "Pesce spada*",
+    phase: "proteine",
+    price: 13.28,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pesce_spada.jpg?alt=media&token=d9f1042a-6d46-497d-b789-415e66aacfc8",
+    macronut: {
+      calorie: 144,
+      carboidrati: 0,
+      grassi: 6.65,
+      proteine: 19.66,
+    },
+  },
+  {
+    name: "Petto di Pollo*",
+    phase: "proteine",
+    price: 9,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/petto_di_pollo.jpg?alt=media&token=1bbdbb21-f87a-49a1-9c8f-3ee762651bb1",
+    frequencyAlert:
+      "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
+    macronut: {
+      calorie: 100,
+      carboidrati: 0,
+      grassi: 7.2,
+      proteine: 93.2,
+    },
+  },
+  {
+    name: "Salmone*",
+    phase: "proteine",
+    price: 18,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/salmone.jpg?alt=media&token=238dea98-02a0-4571-b436-6e3820561b2b",
+    frequencyAlert:
+      "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+    macronut: {
+      calorie: 185,
+      carboidrati: 3.4,
+      grassi: 108,
+      proteine: 73.6,
+    },
+  },
+  {
+    name: "Petto di Tacchino*",
+    phase: "proteine",
+    price: 7.33,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tacchino.jpg?alt=media&token=39c7224c-8d8b-41ee-a214-c16286c3f36e",
+    frequencyAlert:
+      "Occhio alla salute! Ricorda che per una sana alimentazione il CONSUMO SETTIMANALE RACCOMANDATO per le carni bianche (pollo, tacchino, coniglio) è di 2-3 volte a settimana.",
+    macronut: {
+      calorie: 107,
+      carboidrati: 0,
+      grassi: 1.2,
+      proteine: 24,
+    },
+  },
+  {
+    name: "Tonno fresco*",
+    phase: "proteine",
+    price: 10,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/tonno.jpg?alt=media&token=42931044-849e-48a5-b642-588f58d43177",
+    frequencyAlert:
+      "Il consumo di pesce, molluschi e crostacei raccomandato durante la settimana è di almeno 2-3 volte alla settimana. Il consiglio è di privilegiare pesce azzurro (merluzzo, acciughe, sardine, palamita, sgombro ecc.) e di piccola taglia!",
+    macronut: {
+      calorie: 159,
+      carboidrati: 0.1,
+      grassi: 8.1,
+      proteine: 21.5,
+    },
+  },
+  {
+    name: "Uova Sode o alla Coque",
+    phase: "proteine",
+    price: 4,
+    vegan: false,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/uova.jpg?alt=media&token=ba532b5f-39b5-4652-98fc-aa765e9e3173",
+    frequencyAlert:
+      "è consigliato di consumare da 1 a un massimo di 4 porzioni alla settimana.",
+    macronut: {
+      calorie: 128,
+      carboidrati: 0.1,
+      grassi: 78.3,
+      proteine: 49.6,
+    },
+  },
+  // per Grassi
+  {
+    name: "Avocado",
+    phase: "grassi",
+    price: 7,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/avocado.jpg?alt=media&token=998f5a49-6d79-49f1-a9f1-54907964ee46",
+    macronut: {
+      calorie: 670,
+      carboidrati: 9,
+      grassi: 14.66,
+      proteine: 2,
+    },
+  },
+
+  {
+    name: "Mandorle",
+    phase: "grassi",
+    price: 1,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/mandorle.jpg?alt=media&token=091af73a-2411-4c5b-b7d5-a063cc806f6c",
+    macronut: {
+      calorie: 575,
+      carboidrati: 15.3,
+      grassi: 71.9,
+      proteine: 12.8,
+    },
+  },
+
+  {
+    name: "Nocciole",
+    phase: "grassi",
+    price: 2.4,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/nocciole.jpg?alt=media&token=7e14f802-3058-4f6b-8bd7-62e1145bc8a4",
+    macronut: {
+      calorie: 628,
+      carboidrati: 6.1,
+      grassi: 64,
+      proteine: 13.8,
+    },
+  },
+
+  {
+    name: "Noci",
+    phase: "grassi",
+    price: 2.7,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/noci.jpg?alt=media&token=53ef588c-f6c5-4b51-a214-752b4414fae5",
+    macronut: {
+      calorie: 654,
+      carboidrati: 5.1,
+      grassi: 68.1,
+      proteine: 15.23,
+    },
+  },
+
+  {
+    name: "Pistacchi",
+    phase: "grassi",
+    price: 2.5,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/pistacchi-sfusi.jpg?alt=media&token=9a98905b-d8b7-4e2d-90c9-798ad70e8a04",
+    macronut: {
+      calorie: 562,
+      carboidrati: 27.51,
+      grassi: 45.39,
+      proteine: 20.27,
+    },
+  },
+
+  {
+    name: "Acqua Naturale Fontalba 0.5L",
+    phase: "grassi",
+    price: 1,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/fontalba.png?alt=media&token=2c06ae43-2ed2-47b9-ab54-a584f51662df",
+    macronut: {
+      calorie: 0,
+      carboidrati: 0,
+      grassi: 0,
+      proteine: 0,
+    },
+  },
+  {
+    name: "Coca Cola Zero 0.5L",
+    phase: "grassi",
+    price: 2,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/coca-zero.jpg?alt=media&token=a1650588-c2bd-4e93-9b44-46c7f2ff104f",
+    macronut: {
+      calorie: 0,
+      carboidrati: 0,
+      grassi: 0,
+      proteine: 0,
+    },
+  },
+  {
+    name: "Fuze Tea Limone 0.5L",
+    phase: "grassi",
+    price: 1.7,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/fuze-limone.jpg?alt=media&token=f65a9ef5-81bd-41da-a358-fe5afc4accc1",
+    macronut: {
+      calorie: 0,
+      carboidrati: 10,
+      grassi: 0,
+      proteine: 0,
+    },
+  },
+  {
+    name: "Olio Evo",
+    phase: "grassi",
+    price: 8,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/olio.jpg?alt=media&token=35ac5011-22e5-4c7f-8918-a225602b33e3",
+    macronut: {
+      calorie: 884,
+      carboidrati: 0,
+      grassi: 100,
+      proteine: 0,
     },
   },
 ]
