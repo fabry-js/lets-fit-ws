@@ -27,7 +27,7 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
   method,
   restaurantName,
   totale,
-  completed
+  completed,
 }) => {
   return (
     <>
@@ -62,7 +62,9 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
                 })}
               <ListItem>Metodo di Pagamento: {method}</ListItem>
               <ListItem>Totale: €{totale}</ListItem>
-              {completed && <Text fontStyle="italic">L'ordine risulta consegnato.</Text>}
+              {completed && (
+                <Text fontStyle="italic">L'ordine risulta consegnato.</Text>
+              )}
             </List>
           </AccordionPanel>
         </AccordionItem>

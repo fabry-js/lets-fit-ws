@@ -10,17 +10,14 @@ interface NewsletterSubscriptionProps {}
 const NewsletterSubscription: React.FC<NewsletterSubscriptionProps> = () => {
   const { register, handleSubmit } = useForm();
   const toast = useToast();
-  const onSubmit = (data: {
-    email: string,
-    userName: string
-  }) => {
+  const onSubmit = (data: { email: string; userName: string }) => {
     toast({
       title: `Email ${data.email}Iscritta con  successo!`,
       description: `Salve! ${data.userName}`,
       isClosable: true,
       duration: 2000,
-      status: "success"
-    })
+      status: "success",
+    });
   };
   return (
     <Box p="7%">
@@ -35,10 +32,8 @@ const NewsletterSubscription: React.FC<NewsletterSubscriptionProps> = () => {
             placeItems: "center",
           }}
         >
-          <Input name
-          ="userName" ref={register} placeholder="Nome" required />
-          <Input name
-          ="email" ref={register} placeholder="E-Mail" required />
+          <Input name="userName" ref={register} placeholder="Nome" required />
+          <Input name="email" ref={register} placeholder="E-Mail" required />
           <Button mt="2%" type="submit" value="submit">
             Iscrivimi!
           </Button>
