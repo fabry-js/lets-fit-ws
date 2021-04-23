@@ -7,6 +7,7 @@ import { RiContactsLine } from "react-icons/ri";
 import { UserContext } from "../../../contextes/AuthProvider";
 import { useRouteMatch } from "react-router";
 import Carrello from "../../../pages/shop-components/carrello/Carrello";
+import { BsEye } from "react-icons/bs";
 const MenuLinks = ({ isOpened }: any) => {
   const { actualUser } = useContext(UserContext);
   const { url } = useRouteMatch();
@@ -32,6 +33,9 @@ const MenuLinks = ({ isOpened }: any) => {
           </MenuItem>
           <MenuItem to="/blog">
             <FiEdit /> Blog
+          </MenuItem>
+          <MenuItem to="/vetrina">
+            <BsEye /> Vetrina
           </MenuItem>
           {url === "/shop" ? (
             <Button variant="outline" onClick={onOpen}>

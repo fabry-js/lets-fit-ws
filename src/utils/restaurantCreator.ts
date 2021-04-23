@@ -172,6 +172,111 @@ const laPuttega: RestaurantModel = {
         proteine: 30,
       },
     },
+    {
+      name: "Broccoli",
+      phase: "carboidrati",
+      price: 0.70,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/broccoli.jpg?alt=media&token=0c8a2e64-43ba-4aa8-9c38-b47b1fbf6718",
+      glutenFree: true,
+      macronut: {
+        calorie: 20,
+        carboidrati: 2,
+        grassi: 0.3,
+        proteine: 2.9
+      }
+    },
+    {
+      name: "Carciofi",
+      phase: "carboidrati",
+      price: 0.70,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/carciofi.jpg?alt=media&token=2e630acc-5f81-43a9-b99e-e67ebb3e9e7c",
+      glutenFree: true,
+      macronut: {
+        calorie: 22,
+        carboidrati: 9.40,
+        grassi: 1.80,
+        proteine: 10.80
+      }
+    },
+    {
+      name: "Cavolfiore",
+      phase: "carboidrati",
+      price: 0.80,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cavolfiore.jpg?alt=media&token=47cbac46-ece5-494c-87b1-185b2e394da2",
+      glutenFree: true,
+      macronut: {
+        calorie: 25,
+        carboidrati: 10.40,
+        grassi: 1.8,
+        proteine: 12.8
+      }
+    },
+    {
+      name: "Cetrioli",
+      phase: "carboidrati",
+      price: 0.90,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/cetrioli.jpg?alt=media&token=a109b345-b281-487a-8c74-1fb721f364b5",
+      glutenFree: true,
+      macronut: {
+        calorie: 14,
+        carboidrati: 6.70,
+        grassi: 4.5,
+        proteine: 2.8
+      }
+    },
+    {
+      name: "Zucchina",
+      phase: "carboidrati",
+      price: 0.70,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
+      glutenFree: true,
+      macronut: {
+        calorie: 11,
+        carboidrati: 4.9,
+        grassi: 0.9,
+        proteine: 5.20
+      }
+    },
+    {
+      name: "Finocchio",
+      phase: "carboidrati",
+      price: 1,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/finocchio.jpg?alt=media&token=e9116dbc-2238-4705-9911-68ba5503e551",
+      glutenFree: true,
+      macronut: {
+        calorie: 9,
+        carboidrati: 4.20,
+        grassi: 0,
+        proteine: 4.80
+      }
+    },
+    {
+      name: "Lattuga Iceberg",
+      phase: "carboidrati",
+      price: 0.70,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-iceberg.jpg?alt=media&token=2be9f4fc-6100-47c9-82c6-c658a6107e22",
+      glutenFree: true,
+      macronut: {
+        calorie: 14,
+        carboidrati: 2.97,
+        grassi: 0.14,
+        proteine: 0.9
+      }
+    },
     // per Proteine
     {
       name: "Albume d'uovo",
@@ -195,7 +300,7 @@ const laPuttega: RestaurantModel = {
       vegan: false,
       vegetarian: false,
       imageURI:
-        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/filetto.jpg?alt=media&token=95f7de24-2b3c-47ab-9f87-e0e885dd151e",
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/filetto.jpg?alt=media&token=d99346aa-312c-4840-b9cb-f825808ab6d8",
       frequencyAlert:
         "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
       macronut: {
@@ -541,6 +646,111 @@ const mas: RestaurantModel = {
         grassi: 2.58,
         proteine: 10.69,
       },
+    },
+    {
+      name: "Lattuga Romana",
+      phase: "carboidrati",
+      price: 0.60,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/lattuga-romana.jpg?alt=media&token=17d82468-ac68-4291-850b-e9f0f47ad033",
+      glutenFree: true,
+      macronut: {
+        calorie: 17,
+        carboidrati: 3.29,
+        grassi: 0.3,
+        proteine: 1.23
+      }
+    },
+    {
+      name: "Melanzana",
+      phase: "carboidrati",
+      price: 0.70,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/melanzana.jpg?alt=media&token=c94b196b-bcad-4c6c-9e1d-17f2db2440a4",
+      glutenFree: true,
+      macronut: {
+        calorie: 18,
+        carboidrati: 10,
+        grassi: 3.6,
+        proteine: 4.4
+      }
+    },
+    {
+      name: "Peperoni",
+      phase: "carboidrati",
+      price: 0.90,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/peperoni.jpg?alt=media&token=650c732d-70f9-447e-96f2-d11de72da282",
+      glutenFree: true,
+      macronut: {
+        calorie: 22,
+        carboidrati: 15.7,
+        grassi: 2.7,
+        proteine: 3.6
+      }
+    },
+    {
+      name: "Rucola",
+      phase: "carboidrati",
+      price: 0.55,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/rucola.jpg?alt=media&token=086cead4-b73b-4955-8d02-88dbb7ebbc52",
+      glutenFree: true,
+      macronut: {
+        calorie: 28,
+        carboidrati: 14.9,
+        grassi: 2.7,
+        proteine: 10.4
+      }
+    },
+    {
+      name: "Scarola",
+      phase: "carboidrati",
+      price: 0.9,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/scarola.jpg?alt=media&token=4077c21f-071d-4953-99d5-b8b0a0093ca2",
+      glutenFree: true,
+      macronut: {
+        calorie: 16,
+        carboidrati: 2.7,
+        grassi: 0.3,
+        proteine: 0.9
+      }
+    },
+    {
+      name: "Sedano",
+      phase: "carboidrati",
+      price: 1.10,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/sedano.jpg?alt=media&token=e022b7f3-d9b6-4218-bbdb-e8d277310e0e",
+      glutenFree: true,
+      macronut: {
+        calorie: 20,
+        carboidrati: 9,
+        grassi: 1.80,
+        proteine: 9.20
+      }
+    },
+    {
+      name: "Zucchine",
+      phase: "carboidrati",
+      price: 0.70,
+      vegan: true,
+      vegetarian: true,
+      imageURI: "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=be877d31-7eef-4560-a42f-0d1e5c06a464",
+      glutenFree: true,
+      macronut: {
+        calorie: 11,
+        carboidrati: 4.9,
+        grassi: 0.90,
+        proteine: 5.20
+      }
     },
     // per Proteine
     {
@@ -937,3 +1147,71 @@ const mas: RestaurantModel = {
 export const restaurants = [laPuttega, mas];
 
 export const restaurantsWrapper = { restaurants };
+
+export const exampleIngredients = [
+  {
+    name: "Riso Venere",
+    phase: "carboidrati",
+    price: 7.7,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso%20venere.jpg?alt=media&token=d8cbc4ee-b3a8-40fb-a2f9-517fd71d2a7e",
+    glutenFree: true,
+    macronut: {
+      calorie: 377,
+      carboidrati: 62.28,
+      grassi: 2,
+      proteine: 7.7,
+    },
+  },
+  {
+    name: "Riso integrale",
+    phase: "carboidrati",
+    price: 6,
+    vegan: true,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/riso%20integrale.jpg?alt=media&token=140206cf-081a-4623-8f05-e5356107a08d",
+    glutenFree: true,
+    macronut: {
+      calorie: 337,
+      carboidrati: 289.9,
+      grassi: 17.1,
+      proteine: 30,
+    },
+  },
+  // per Proteine
+  {
+    name: "Albume d'uovo",
+    phase: "proteine",
+    price: 2,
+    vegan: false,
+    vegetarian: true,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/albume.jpg?alt=media&token=5f9ed9a3-7513-43ab-a05b-917c824ac0ed",
+    macronut: {
+      calorie: 43,
+      carboidrati: 0.2,
+      grassi: 0,
+      proteine: 42.8,
+    },
+  },
+  {
+    name: "Filetto di vitello*",
+    phase: "proteine",
+    price: 7,
+    vegan: false,
+    vegetarian: false,
+    imageURI:
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/filetto.jpg?alt=media&token=d99346aa-312c-4840-b9cb-f825808ab6d8",
+    frequencyAlert:
+      "Attenzione! Ricorda che il CONSUMO SETTIMANALE RACCOMANDATO per le carni rosse (bovina, equina, suina e ovina) è di massimo 1 volta a settimana. In un programma alimentare equilibrato e volto alla salute, un elemento chiave è la varietà di alimenti consumati!",
+    macronut: {
+      calorie: 43,
+      carboidrati: 0.2,
+      grassi: 0,
+      proteine: 42.8,
+    },
+  },
+]

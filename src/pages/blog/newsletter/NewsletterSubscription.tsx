@@ -3,7 +3,6 @@ import { Button } from "@chakra-ui/button";
 import { Input } from "@chakra-ui/input";
 import { Box, Text } from "@chakra-ui/layout";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import { useToast } from "@chakra-ui/toast";
 
 interface NewsletterSubscriptionProps {}
@@ -15,26 +14,12 @@ const NewsletterSubscription: React.FC<NewsletterSubscriptionProps> = () => {
     email: string,
     userName: string
   }) => {
-    const { email, userName } = data;
-    axios.post("http://localhost:5000/ns-sub", {
-      email,
-      userName
-    }).then((res) => {
-      if (res.data.message === "successful") {
-        toast({
-          title: "Email Iscritta con successo!",
-          isClosable: true,
-          duration: 2000,
-          status: "success"
-        })
-      } else if (res.data.error === "user-already-subscribed") {
-        toast({
-          title: "Email già iscritta nel nostro sistema!",
-          isClosable: true,
-          duration: 2000,
-          status: "error"
-        })
-      }
+    toast({
+      title: `Email ${data.email}Iscritta con  successo!`,
+      description: `Salve! ${data.userName}`,
+      isClosable: true,
+      duration: 2000,
+      status: "success"
     })
   };
   return (
