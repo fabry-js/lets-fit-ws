@@ -4,8 +4,6 @@ import Stripe from "stripe";
 import dotenv from "dotenv";
 dotenv.config();
 
-import { addUserToNSCollection, removeUserFromNSCollection } from "./firebase";
-
 const stripe = new Stripe(
   "sk_test_51IJJPcIzkBXCvUW1usTx6HMp1Rh2bjoWM1TOyoA05BlP9qySrnUrQ8wjq1CCIEIJie6XjLvEJsYxZEbxP5Uo7GmD00EojT4de0",
   {
@@ -71,34 +69,6 @@ app.post("/create-payment-intent", async (req, res) => {
     console.log(`❌ Nessun Ingrediente, Richiesta chiusa.`)
   }
 });
-
-app.post("/ns-sub", async (req, res) => {
-  const { email, userName } = req.body;
-  console.log(`⚡ Nuova richiesta di Aggiunta nella Newsletter per conto di ${userName} | ${new Date()}`);
-  await addUserToNSCollection(email).then(() => {
-    res.send({
-      message: "successful"
-    });
-  }).catch((error) => {
-    res.send({
-      error
-    })
-  })
-});
-
-app.post("/ns-remove", async (req, res) => {
-  const { email } = req.body;
-  console.log(`⚡ Nuova richiesta di Rimozione dalla Newsletter ${new Date()}`);
-  await removeUserFromNSCollection(email).then(() => {
-    res.send({
-      message: "successful"
-    })
-  }).catch((error) => {
-    res.send({
-      error
-    })
-  })
-})
 
 app.listen(process.env.PORT || 5000, () =>
   console.log(
