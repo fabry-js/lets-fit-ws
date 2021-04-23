@@ -558,6 +558,51 @@ const laPuttega: RestaurantModel = {
     },
 
     {
+      name: "Acqua Naturale Fontalba 0.5L",
+      phase: "grassi",
+      price: 1,
+      vegan: true,
+      vegetarian: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/fontalba.png?alt=media&token=2c06ae43-2ed2-47b9-ab54-a584f51662df",
+      macronut: {
+        calorie: 0,
+        carboidrati: 0,
+        grassi: 0,
+        proteine: 0,
+      },
+    },
+    {
+      name: "Coca Cola Zero 0.5L",
+      phase: "grassi",
+      price: 2,
+      vegan: true,
+      vegetarian: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/coca-zero.jpg?alt=media&token=a1650588-c2bd-4e93-9b44-46c7f2ff104f",
+      macronut: {
+        calorie: 0,
+        carboidrati: 0,
+        grassi: 0,
+        proteine: 0,
+      },
+    },
+    {
+      name: "Fuze Tea Limone 0.5L",
+      phase: "grassi",
+      price: 1.7,
+      vegan: true,
+      vegetarian: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/fuze-limone.jpg?alt=media&token=f65a9ef5-81bd-41da-a358-fe5afc4accc1",
+      macronut: {
+        calorie: 0,
+        carboidrati: 10,
+        grassi: 0,
+        proteine: 0,
+      },
+    },
+    {
       name: "Olio Evo",
       phase: "grassi",
       price: 8,
@@ -1083,7 +1128,52 @@ const mas: RestaurantModel = {
         proteine: 0.88,
       },
     },
-    // per Menu,
+    {
+      name: "Acqua Naturale Fontalba 0.5L",
+      phase: "grassi",
+      price: 1,
+      vegan: true,
+      vegetarian: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/fontalba.png?alt=media&token=2c06ae43-2ed2-47b9-ab54-a584f51662df",
+      macronut: {
+        calorie: 0,
+        carboidrati: 0,
+        grassi: 0,
+        proteine: 0,
+      },
+    },
+    {
+      name: "Coca Cola Zero 0.5L",
+      phase: "grassi",
+      price: 2,
+      vegan: true,
+      vegetarian: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/coca-zero.jpg?alt=media&token=a1650588-c2bd-4e93-9b44-46c7f2ff104f",
+      macronut: {
+        calorie: 0,
+        carboidrati: 0,
+        grassi: 0,
+        proteine: 0,
+      },
+    },
+    {
+      name: "Fuze Tea Limone 0.5L",
+      phase: "grassi",
+      price: 1.7,
+      vegan: true,
+      vegetarian: true,
+      imageURI:
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/fuze-limone.jpg?alt=media&token=f65a9ef5-81bd-41da-a358-fe5afc4accc1",
+      macronut: {
+        calorie: 0,
+        carboidrati: 10,
+        grassi: 0,
+        proteine: 0,
+      },
+    },
+    // per Menu
     {
       name: "Busiate con cubetti di pesce spada e melanzane ",
       imageURI:
