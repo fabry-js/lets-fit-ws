@@ -8,27 +8,27 @@ import MenuPronto from "../fasi/MenuPronto";
 const FasiTabs = () => {
   return (
     <Tabs variant="soft-rounded" orientation="vertical" colorScheme="whatsapp">
-        <TabList>
-          <Tab>Carboidrati</Tab>
-          <Tab>Proteine</Tab>
-          <Tab>Grassi</Tab>
-          <Tab>Piatti Pronti</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <FaseCarboidrati />
-          </TabPanel>
-          <TabPanel>
-            <FaseProteine />
-          </TabPanel>
-          <TabPanel>
-            <FaseGrassi />
-          </TabPanel>
-          <TabPanel>
-            <MenuPronto />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
+      <TabList>
+        <Tab>Carboidrati</Tab>
+        <Tab>Proteine</Tab>
+        <Tab>Grassi</Tab>
+        <Tab>Piatti Pronti</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel>
+          <FaseCarboidrati />
+        </TabPanel>
+        <TabPanel>
+          <FaseProteine />
+        </TabPanel>
+        <TabPanel>
+          <FaseGrassi />
+        </TabPanel>
+        <TabPanel>
+          <MenuPronto />
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
   );
 };
 

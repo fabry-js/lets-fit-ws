@@ -16,8 +16,6 @@ import { UserContext } from "../../contextes/AuthProvider";
 import VetrinaProteine from "./categorie/VetrinaProteine";
 import VetrinaGrassi from "./categorie/VetrinaGrassi";
 import VetrinaVerdure from "./categorie/VetrinaVerdure";
-import { __createRestaurants } from "../../utils/firebase";
-import { restaurantsWrapper } from "../../utils/restaurantCreator";
 
 interface VetrinaProps {}
 
@@ -27,7 +25,6 @@ const Vetrina: React.FC<VetrinaProps> = () => {
   return (
     <>
       <TopNavBar />
-      <Button onClick={() => __createRestaurants(restaurantsWrapper)}>Nuovo Ordine</Button>
       <Box p="4">
         <Tabs colorScheme="green" orientation="horizontal">
           <TabList>
