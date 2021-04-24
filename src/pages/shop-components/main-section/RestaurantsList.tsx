@@ -31,7 +31,7 @@ const RestaurantsList = () => {
   });
   return (
     <div>
-      <SimpleGrid columns={4} columnGap="3">
+      <SimpleGrid columns={[1, 3]} columnGap="3">
         {classicoRestaurants &&
           classicoRestaurants.map((ristoranti: any, _id) => {
             return ristoranti.restaurants.map((ristorante: any, id: number) => {

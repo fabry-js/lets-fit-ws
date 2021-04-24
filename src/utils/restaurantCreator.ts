@@ -628,7 +628,7 @@ const laPuttega: RestaurantModel = {
     {
       name: "Insalata di quinoa con ceci e zucchine",
       phase: "menu",
-      price: 9.50,
+      price: 9.5,
       vegan: true,
       vegetarian: true,
       glutenFree: true,
@@ -640,7 +640,7 @@ const laPuttega: RestaurantModel = {
         grassi: 28,
         proteine: 24,
       },
-      plateDescription: `80 g di quinoa - 50 g di ceci secchi (circa 150 g di ceci lessati) - 150 g di zucchine`
+      plateDescription: `80 g di quinoa - 50 g di ceci secchi (circa 150 g di ceci lessati) - 150 g di zucchine`,
     },
     {
       name: "Spiedini di pollo e zucchine grigliate con pane tostato",
@@ -656,7 +656,7 @@ const laPuttega: RestaurantModel = {
         grassi: 22,
         proteine: 32,
       },
-      plateDescription: `80 g di pane integrale - 100 g di pollo - 200 g di zucchine`
+      plateDescription: `80 g di pane integrale - 100 g di pollo - 200 g di zucchine`,
     },
     {
       name: "Insalata di polpo e patate con olive e lattuga",
@@ -672,7 +672,7 @@ const laPuttega: RestaurantModel = {
         grassi: 29,
         proteine: 27,
       },
-      plateDescription: `200 g di polpo - 200 g di patate - 80 g di lattuga - 30 g di olive`
+      plateDescription: `200 g di polpo - 200 g di patate - 80 g di lattuga - 30 g di olive`,
     },
   ],
 };
