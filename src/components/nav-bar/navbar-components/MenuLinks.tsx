@@ -46,16 +46,18 @@ const MenuLinks = ({ isOpened }: any) => {
           ) : (
             ""
           )}
-          {actualUser && actualUser.emailVerified === true ? (
-            <MenuItem to="/shop">
-              <AiOutlineShopping /> Shop
-            </MenuItem>
-          ) : (
-            <MenuItem to="/registrazione">
-              <FiUserPlus />
-              Registrati
-            </MenuItem>
-          )}
+          <Box ml="60%">
+            {actualUser && actualUser.emailVerified === true ? (
+              <MenuItem to="/shop">
+                <AiOutlineShopping /> Shop
+              </MenuItem>
+            ) : (
+              <MenuItem to="/registrazione">
+                <FiUserPlus />
+                Registrati
+              </MenuItem>
+            )}
+          </Box>
         </Stack>
       </Box>
       <Carrello onDrawerClose={onClose} isDrawerOpen={isOpen} />

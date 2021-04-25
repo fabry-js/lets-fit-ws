@@ -1,36 +1,26 @@
 import React from "react";
-import { Container, Text } from "@chakra-ui/react";
+import { Image, Box, Flex, Spacer, Text, ScaleFade } from "@chakra-ui/react";
 
 const MainSection = () => {
   return (
-    <Container
-      className="container"
-      style={{ position: "relative", textAlign: "center" }}
-    >
-      <img
-        src="../res/mainsectiongif.gif"
-        alt=""
-        style={{
-          opacity: 0.15,
-          width: "100%",
-          height: "100%",
-        }}
-      />
-      <Text
-        fontSize="3xl"
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
-        fontWeight="bold"
-      >
-        EAT & FIT Semplice,
-        <br /> sano e con gusto, ovunque tu sia!
-      </Text>
-    </Container>
+    <ScaleFade in={true} initialScale={0.9}>
+      <Box p="5%">
+        <Flex>
+          <Box w="600px" p="6">
+            <Text fontSize="5xl" color="green" fontWeight="extrabold">
+              Eat & Fit
+            </Text>
+            <Text fontStyle="italic" fontSize="4xl" fontWeight="extrabold">
+              <br /> Semplice, sano e con gusto, ovunque tu sia!
+            </Text>
+          </Box>
+          <Spacer />
+          <Box>
+            <Image src="../res/mainsectiongif.gif" w="600px" />
+          </Box>
+        </Flex>
+      </Box>
+    </ScaleFade>
   );
 };
-
 export default MainSection;

@@ -7,6 +7,8 @@ import {
   TabPanels,
   TabPanel,
   Button,
+  SimpleGrid,
+  Text,
 } from "@chakra-ui/react";
 import { useHistory } from "react-router";
 import VetrinaCarboidrati from "./categorie/VetrinaCarboidrati";
@@ -15,7 +17,8 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../contextes/AuthProvider";
 import VetrinaProteine from "./categorie/VetrinaProteine";
 import VetrinaGrassi from "./categorie/VetrinaGrassi";
-import VetrinaVerdure from "./categorie/VetrinaVerdure";
+import VetrinaContorni from "./categorie/VetrinaContorni";
+import VetrinaBevande from "./categorie/VetrinaBevande";
 
 interface VetrinaProps {}
 
@@ -26,16 +29,35 @@ const Vetrina: React.FC<VetrinaProps> = () => {
     <>
       <TopNavBar />
       <Box p="4">
-        <Tabs colorScheme="green" orientation="horizontal">
+        <Tabs
+          colorScheme="green"
+          variant="soft-rounded"
+          orientation="horizontal"
+        >
           <TabList>
-            <Tab onClick={() => history.push("/vetrina")}>Carboidrati</Tab>
-            <Tab>Proteine</Tab>
-            <Tab>Grassi</Tab>
-            <Tab>Verdure</Tab>
-            <Link to={actualUser ? "/shop" : "/auth"}>
-              <Button>Nuovo Ordine</Button>
-            </Link>
+            <SimpleGrid columns={[2, 6]}>
+              <Tab onClick={() => history.push("/vetrina")}>Carboidrati</Tab>
+              <Tab>Proteine</Tab>
+              <Tab>Grassi</Tab>
+              <Tab>Contorni</Tab>
+              <Tab>Bevande</Tab>
+              <Link to={actualUser ? "/shop" : "/registrazione"}>
+                <Button>Nuovo Ordine</Button>
+              </Link>
+            </SimpleGrid>
           </TabList>
+          <Box p="2%">
+            <Text fontStyle="italic">
+              Registrati e scegli la fonte proteica, glucidica e il contorno tra
+              gli alimenti freschi e a Km zero proposti. Stabilisci la quantità
+              di grammi considerati a crudo per ogni ingrediente e l’App
+              calcolerà direttamente le Kcalorie totali e i macronutrienti
+              (carboidrati, proteine e grassi). Se hai difficoltà a creare il
+              tuo pasto faidate scegli il piatto dal menù stagionale studiato ed
+              elaborato dalla nostra nutrizionista, la dott.ssa Samanta Cattafi.
+              Il ristoratore provvederà alla consegna del tuo ordine.
+            </Text>
+          </Box>
           <TabPanels>
             <TabPanel>
               <VetrinaCarboidrati />
@@ -47,7 +69,10 @@ const Vetrina: React.FC<VetrinaProps> = () => {
               <VetrinaGrassi />
             </TabPanel>
             <TabPanel>
-              <VetrinaVerdure />
+              <VetrinaContorni />
+            </TabPanel>
+            <TabPanel>
+              <VetrinaBevande />
             </TabPanel>
           </TabPanels>
         </Tabs>

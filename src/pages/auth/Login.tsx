@@ -22,8 +22,8 @@ const Login = () => {
   const history = useHistory();
   const showLoggedSuccessfullyToast = () =>
     toast({
-      title: "Login Eseguito, Yee! 🐬",
-      description: "Ma è potentissimo!!",
+      title: "Login Eseguito con successo! 🐬",
+      description: "Fantastico!",
       status: "success",
       duration: 9000,
       isClosable: true,

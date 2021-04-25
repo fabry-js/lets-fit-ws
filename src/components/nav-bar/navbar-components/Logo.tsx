@@ -1,13 +1,18 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Logo = (props: any) => {
   return (
     <Box {...props}>
-      <Link to="/">
-        <img src="../../res/logo.png" alt="Let's Fit JA" />
-      </Link>
+      <SimpleGrid columns={[1, 2]}>
+        <Link to="/">
+          <Image src="../../res/navbar-logo.png" />
+        </Link>
+        <Text color="green" fontWeight="semibold" textTransform="uppercase">
+          Let's Fit JA
+        </Text>
+      </SimpleGrid>
     </Box>
   );
 };
