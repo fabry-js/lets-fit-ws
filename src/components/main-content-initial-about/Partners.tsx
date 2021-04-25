@@ -12,8 +12,12 @@ const Partners: React.FC<PartnersProps> = () => {
       </Text>
       <Wrap mt="2%" alignContent="center" display="grid" placeItems="center">
         <WrapItem>
-          <Avatar size="2xl" name="La Puttega" src="../res/la-puttega-logo.jpg"/>
-          <Avatar size="2xl" ml="4%" name="MAS" src="../res/mas-logo.jpg"/>
+          <Avatar
+            size="2xl"
+            name="La Puttega"
+            src="../res/la-puttega-logo.jpg"
+          />
+          <Avatar size="2xl" ml="4%" name="MAS" src="../res/mas-logo.jpg" />
         </WrapItem>
       </Wrap>
     </Box>

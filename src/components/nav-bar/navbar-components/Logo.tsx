@@ -7,9 +7,11 @@ const Logo = (props: any) => {
     <Box {...props}>
       <SimpleGrid columns={[1, 2]}>
         <Link to="/">
-          <Image src="../../res/navbar-logo.png"/>
+          <Image src="../../res/navbar-logo.png" />
         </Link>
-        <Text color="green" fontWeight="semibold" textTransform="uppercase">Let's Fit JA</Text>
+        <Text color="green" fontWeight="semibold" textTransform="uppercase">
+          Let's Fit JA
+        </Text>
       </SimpleGrid>
     </Box>
   );

@@ -47,16 +47,16 @@ const MenuLinks = ({ isOpened }: any) => {
             ""
           )}
           <Box ml="60%">
-          {actualUser && actualUser.emailVerified === true ? (
-            <MenuItem to="/shop">
-              <AiOutlineShopping /> Shop
-            </MenuItem>
-          ) : (
-            <MenuItem to="/registrazione">
-              <FiUserPlus />
-              Registrati
-            </MenuItem>
-          )}
+            {actualUser && actualUser.emailVerified === true ? (
+              <MenuItem to="/shop">
+                <AiOutlineShopping /> Shop
+              </MenuItem>
+            ) : (
+              <MenuItem to="/registrazione">
+                <FiUserPlus />
+                Registrati
+              </MenuItem>
+            )}
           </Box>
         </Stack>
       </Box>

@@ -62,7 +62,7 @@ const FaseBibite = () => {
     dispatch(
       addDrinkToCart({
         name,
-        price: finalPrice
+        price: finalPrice,
       })
     );
     return dispatch(
@@ -100,49 +100,35 @@ const FaseBibite = () => {
                   <Popover>
                     <PopoverTrigger>
                       <Button variant="ghost">
-                        {name} | €
-                        {price}
+                        {name} | €{price}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent>
                       <PopoverArrow />
                       <PopoverCloseButton />
-                      <PopoverHeader>
-                        Macronutrienti per 100g
-                      </PopoverHeader>
+                      <PopoverHeader>Macronutrienti per 100g</PopoverHeader>
                       <PopoverBody>
                         <List>
                           <ListItem>
-                            <Text fontSize="h1"></Text>Calorie:{" "}
-                            {calorie}
+                            <Text fontSize="h1"></Text>Calorie: {calorie}
                             kCal
                           </ListItem>
                           <ListItem>
-                            <Text fontSize="p"></Text>Carboidrati:{" "}
-                            {carboidrati}
+                            <Text fontSize="p"></Text>Carboidrati: {carboidrati}
                             g
                           </ListItem>
                           <ListItem>
-                            <Text fontSize="p"></Text>Proteine:{" "}
-                            {proteine}
-                            g
+                            <Text fontSize="p"></Text>Proteine: {proteine}g
                           </ListItem>
                           <ListItem>
-                            <Text fontSize="p"></Text>Grassi:{" "}
-                            {grassi}
-                            g
+                            <Text fontSize="p"></Text>Grassi: {grassi}g
                           </ListItem>
                         </List>
                       </PopoverBody>
                     </PopoverContent>
                   </Popover>
                   <Button
-                    onClick={() =>
-                      addIngredientToCart(
-                        ingredient,
-                        price
-                      )
-                    }
+                    onClick={() => addIngredientToCart(ingredient, price)}
                   >
                     <FaCartPlus />
                   </Button>

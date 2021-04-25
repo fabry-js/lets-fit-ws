@@ -1,8 +1,5 @@
 import React, { useRef } from "react";
-import {
-  Container,
-  Button,
-} from "@chakra-ui/react";
+import { Container, Button } from "@chakra-ui/react";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import HomeFooter from "../footer/HomeFooter";
 import SectionCard from "./SectionCard";
@@ -18,7 +15,12 @@ const MainInitialAbout = () => {
 
   return (
     <>
-      <Container ref={initialContainer} justifyContent="center" align="center" mt="-10%">
+      <Container
+        ref={initialContainer}
+        justifyContent="center"
+        align="center"
+        mt="-10%"
+      >
         <Button
           colorScheme="green"
           variant="outline"
