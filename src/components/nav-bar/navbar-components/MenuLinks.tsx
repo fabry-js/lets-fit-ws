@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Stack, Box, Text, Button, useDisclosure, Spacer } from "@chakra-ui/react";
+import { Stack, Box, Text, Button, useDisclosure } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
 import { FiUserPlus, FiEdit, FiShoppingCart } from "react-icons/fi";
