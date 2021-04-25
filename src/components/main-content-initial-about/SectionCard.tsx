@@ -18,7 +18,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
 }) => {
   return (
     <Box
-      p="2%"
+      p={["6%", "2%"]}
       bgColor={bgColor}
       borderRadius="4%"
       m="10% 3% 2% 3%"

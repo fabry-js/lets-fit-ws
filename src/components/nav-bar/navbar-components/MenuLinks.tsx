@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Stack, Box, Text, Button, useDisclosure } from "@chakra-ui/react";
+import { Stack, Box, Text, Button, useDisclosure, Spacer } from "@chakra-ui/react";
 import MenuItem from "./MenuItem";
 import { AiOutlineShopping, AiOutlineHome } from "react-icons/ai";
 import { FiUserPlus, FiEdit, FiShoppingCart } from "react-icons/fi";
@@ -46,6 +46,7 @@ const MenuLinks = ({ isOpened }: any) => {
           ) : (
             ""
           )}
+          <Box ml="60%">
           {actualUser && actualUser.emailVerified === true ? (
             <MenuItem to="/shop">
               <AiOutlineShopping /> Shop
@@ -56,6 +57,7 @@ const MenuLinks = ({ isOpened }: any) => {
               Registrati
             </MenuItem>
           )}
+          </Box>
         </Stack>
       </Box>
       <Carrello onDrawerClose={onClose} isDrawerOpen={isOpen} />
