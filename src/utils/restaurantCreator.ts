@@ -174,7 +174,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Broccoli",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.7,
       vegan: true,
       vegetarian: true,
@@ -190,7 +190,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Carciofi",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.7,
       vegan: true,
       vegetarian: true,
@@ -206,7 +206,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Cavolfiore",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.8,
       vegan: true,
       vegetarian: true,
@@ -222,7 +222,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Cetrioli",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.9,
       vegan: true,
       vegetarian: true,
@@ -238,7 +238,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Zucchina",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.7,
       vegan: true,
       vegetarian: true,
@@ -254,7 +254,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Finocchio",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 1,
       vegan: true,
       vegetarian: true,
@@ -270,7 +270,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Lattuga Iceberg",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.7,
       vegan: true,
       vegetarian: true,
@@ -566,7 +566,7 @@ const laPuttega: RestaurantModel = {
 
     {
       name: "Acqua Naturale Fontalba 0.5L",
-      phase: "grassi",
+      phase: "bibite",
       price: 1,
       vegan: true,
       vegetarian: true,
@@ -581,7 +581,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Coca Cola Zero 0.5L",
-      phase: "grassi",
+      phase: "bibite",
       price: 2,
       vegan: true,
       vegetarian: true,
@@ -596,7 +596,7 @@ const laPuttega: RestaurantModel = {
     },
     {
       name: "Fuze Tea Limone 0.5L",
-      phase: "grassi",
+      phase: "bibite",
       price: 1.7,
       vegan: true,
       vegetarian: true,
@@ -750,7 +750,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Lattuga Romana",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.6,
       vegan: true,
       vegetarian: true,
@@ -766,7 +766,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Melanzana",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.7,
       vegan: true,
       vegetarian: true,
@@ -782,7 +782,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Peperoni",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.9,
       vegan: true,
       vegetarian: true,
@@ -798,7 +798,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Rucola",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.55,
       vegan: true,
       vegetarian: true,
@@ -814,7 +814,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Scarola",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.9,
       vegan: true,
       vegetarian: true,
@@ -830,7 +830,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Sedano",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 1.1,
       vegan: true,
       vegetarian: true,
@@ -846,12 +846,12 @@ const mas: RestaurantModel = {
     },
     {
       name: "Zucchine",
-      phase: "carboidrati",
+      phase: "contorni",
       price: 0.7,
       vegan: true,
       vegetarian: true,
       imageURI:
-        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=be877d31-7eef-4560-a42f-0d1e5c06a464",
+        "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=7621173c-234e-43e5-afdf-961b9a628916",
       glutenFree: true,
       macronut: {
         calorie: 11,
@@ -1193,7 +1193,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Acqua Naturale Fontalba 0.5L",
-      phase: "grassi",
+      phase: "bibite",
       price: 1,
       vegan: true,
       vegetarian: true,
@@ -1208,7 +1208,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Coca Cola Zero 0.5L",
-      phase: "grassi",
+      phase: "bibite",
       price: 2,
       vegan: true,
       vegetarian: true,
@@ -1223,7 +1223,7 @@ const mas: RestaurantModel = {
     },
     {
       name: "Fuze Tea Limone 0.5L",
-      phase: "grassi",
+      phase: "bibite",
       price: 1.7,
       vegan: true,
       vegetarian: true,
@@ -1445,7 +1445,7 @@ export const exampleIngredients = [
   },
   {
     name: "Broccoli",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 0.7,
     vegan: true,
     vegetarian: true,
@@ -1461,7 +1461,7 @@ export const exampleIngredients = [
   },
   {
     name: "Carciofi",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 0.7,
     vegan: true,
     vegetarian: true,
@@ -1477,7 +1477,7 @@ export const exampleIngredients = [
   },
   {
     name: "Cavolfiore",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 0.8,
     vegan: true,
     vegetarian: true,
@@ -1493,7 +1493,7 @@ export const exampleIngredients = [
   },
   {
     name: "Cetrioli",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 0.9,
     vegan: true,
     vegetarian: true,
@@ -1509,12 +1509,12 @@ export const exampleIngredients = [
   },
   {
     name: "Zucchina",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 0.7,
     vegan: true,
     vegetarian: true,
     imageURI:
-      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=1bfd951e-aade-4897-a4a3-3c9f6ff4139a",
+      "https://firebasestorage.googleapis.com/v0/b/letsfitja-eatfit.appspot.com/o/zucchine.jpg?alt=media&token=7621173c-234e-43e5-afdf-961b9a628916",
     glutenFree: true,
     macronut: {
       calorie: 11,
@@ -1525,7 +1525,7 @@ export const exampleIngredients = [
   },
   {
     name: "Finocchio",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 1,
     vegan: true,
     vegetarian: true,
@@ -1541,7 +1541,7 @@ export const exampleIngredients = [
   },
   {
     name: "Lattuga Iceberg",
-    phase: "carboidrati",
+    phase: "contorni",
     price: 0.7,
     vegan: true,
     vegetarian: true,
@@ -1837,7 +1837,7 @@ export const exampleIngredients = [
 
   {
     name: "Acqua Naturale Fontalba 0.5L",
-    phase: "grassi",
+    phase: "bibite",
     price: 1,
     vegan: true,
     vegetarian: true,
@@ -1852,7 +1852,7 @@ export const exampleIngredients = [
   },
   {
     name: "Coca Cola Zero 0.5L",
-    phase: "grassi",
+    phase: "bibite",
     price: 2,
     vegan: true,
     vegetarian: true,
@@ -1867,7 +1867,7 @@ export const exampleIngredients = [
   },
   {
     name: "Fuze Tea Limone 0.5L",
-    phase: "grassi",
+    phase: "bibite",
     price: 1.7,
     vegan: true,
     vegetarian: true,

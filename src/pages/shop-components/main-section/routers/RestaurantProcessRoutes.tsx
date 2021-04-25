@@ -8,7 +8,7 @@ const RestaurantProcessRoutes = () => {
     <Switch>
       <Route path="/shop" exact component={RestaurantsList} />
       <Route path="/shop/menu-ristorante" component={MenuRistorante} />
-      <Route path="/shop/" component={FasiTabs} />
+      <Route path="/shop/fasi" component={FasiTabs} />
     </Switch>
   );
 };

@@ -7,19 +7,17 @@ import IngredientInfoCard from "../../shop-components/main-section/restaurant-co
 
 interface VetrinaProps {}
 
-const VetrinaVerdure: React.FC<VetrinaProps> = () => {
+const VetrinaContorni: React.FC<VetrinaProps> = () => {
   const vetrinaRef = _firestore
     .collection("/vetrina-ingredients")
-    .where("phase", "==", "carboidrati");
+    .where("phase", "==", "contorni");
   const [vetrinaIngredients] = useCollectionData<IngredientModel>(vetrinaRef);
-  const exF = vetrinaIngredients?.filter(
-    (ingredient) => ingredient.price <= 1.01
-  );
+
   return (
     <>
       <SimpleGrid columns={[1, 4]} columnGap="3">
-        {exF &&
-          exF.map((ingredient, index) => {
+        {vetrinaIngredients &&
+          vetrinaIngredients.map((ingredient, index) => {
             const { imageURI, name, price, vegetarian, vegan } = ingredient;
             return (
               <IngredientInfoCard
@@ -39,4 +37,4 @@ const VetrinaVerdure: React.FC<VetrinaProps> = () => {
   );
 };
 
-export default VetrinaVerdure;
+export default VetrinaContorni;

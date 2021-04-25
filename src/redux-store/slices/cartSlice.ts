@@ -24,6 +24,16 @@ const slice = createSlice({
         quantity,
       });
     },
+    addDrinkToCart: (items: any, action: PayloadAction<{
+      name: string,
+      price: number
+    }>) => {
+      const { name, price } = action.payload;
+      items.currentOrder.push({
+        name,
+        price
+      });
+    },
     removeItemByName: (
       items: any,
       action: PayloadAction<{ name: string; price: number }>
@@ -61,6 +71,7 @@ export const {
   updateCurentOrderRestaurantName,
   updateCurrentTotal,
   resetCart,
+  addDrinkToCart
 } = slice.actions;
 
 export default slice.reducer;

@@ -1,21 +1,37 @@
 import React from "react";
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
-import { useHistory } from "react-router-dom";
+import {
+  Button,
+  SimpleGrid,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
+import { useHistory, useLocation } from "react-router-dom";
 import Impostazioni from "./Impostazioni";
 import RestaurantProcessRoutes from "./main-section/routers/RestaurantProcessRoutes";
 import OrdiniRecenti from "./OrdiniRecenti";
 
 const NavigationAndShopWrapper = () => {
   const history = useHistory();
+  const { pathname } = useLocation();
   return (
     <>
       <Tabs p="4" variant="soft-rounded" colorScheme="green">
         <TabList>
-          <Tab onClick={() => history.push("/shop")}>Ordina</Tab>
-          <Tab>Ordini Recenti</Tab>
-          <Tab>Impostazioni</Tab>
+          <SimpleGrid columns={[2, 4]}>
+            <Tab onClick={() => history.push("/shop")}>Ordina</Tab>
+            <Tab>Ordini Recenti</Tab>
+            <Tab>Impostazioni</Tab>
+            <Button
+              disabled={pathname !== "/shop/menu-ristorante"}
+              onClick={() => history.push("/shop/fasi")}
+            >
+              Nuovo Ordine
+            </Button>
+          </SimpleGrid>
         </TabList>
-
         <TabPanels>
           <TabPanel>
             <RestaurantProcessRoutes />

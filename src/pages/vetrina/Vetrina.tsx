@@ -15,7 +15,8 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../contextes/AuthProvider";
 import VetrinaProteine from "./categorie/VetrinaProteine";
 import VetrinaGrassi from "./categorie/VetrinaGrassi";
-import VetrinaVerdure from "./categorie/VetrinaVerdure";
+import VetrinaContorni from "./categorie/VetrinaContorni";
+import VetrinaBevande from "./categorie/VetrinaBevande";
 
 interface VetrinaProps {}
 
@@ -26,12 +27,13 @@ const Vetrina: React.FC<VetrinaProps> = () => {
     <>
       <TopNavBar />
       <Box p="4">
-        <Tabs colorScheme="green" orientation="horizontal">
+        <Tabs colorScheme="green" variant="soft-rounded" orientation="horizontal">
           <TabList>
             <Tab onClick={() => history.push("/vetrina")}>Carboidrati</Tab>
             <Tab>Proteine</Tab>
             <Tab>Grassi</Tab>
-            <Tab>Verdure</Tab>
+            <Tab>Contorni</Tab>
+            <Tab>Bevande</Tab>
             <Link to={actualUser ? "/shop" : "/auth"}>
               <Button>Nuovo Ordine</Button>
             </Link>
@@ -47,7 +49,10 @@ const Vetrina: React.FC<VetrinaProps> = () => {
               <VetrinaGrassi />
             </TabPanel>
             <TabPanel>
-              <VetrinaVerdure />
+              <VetrinaContorni />
+            </TabPanel>
+            <TabPanel>
+              <VetrinaBevande />
             </TabPanel>
           </TabPanels>
         </Tabs>

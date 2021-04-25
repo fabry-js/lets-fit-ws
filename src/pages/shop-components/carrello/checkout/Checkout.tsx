@@ -79,6 +79,7 @@ const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
           description:
             "Ora non bisogna fare altro che aspettare, (...che fame che c'è!)",
           status: "success",
+          position: "top",
           duration: 9000,
           isClosable: true,
         });
