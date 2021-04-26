@@ -6,9 +6,9 @@ import NavigationAndShopWrapper from "./shop-components/NavigationAndShopWrapper
 
 const Shop = () => {
   const history = useHistory();
-  const { actualUser } = useContext(UserContext)
+  const { actualUser } = useContext(UserContext);
 
-  if(!actualUser) {
+  if (!actualUser) {
     history.goBack();
   }
 

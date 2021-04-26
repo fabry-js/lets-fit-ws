@@ -28,9 +28,6 @@ const MenuLinks = ({ isOpened }: any) => {
           <MenuItem to="/">
             <AiOutlineHome /> Home
           </MenuItem>
-          <MenuItem to="/contatti">
-            <RiContactsLine /> Contatti
-          </MenuItem>
           <MenuItem to="/blog">
             <FiEdit /> Blog
           </MenuItem>
@@ -46,18 +43,19 @@ const MenuLinks = ({ isOpened }: any) => {
           ) : (
             ""
           )}
-          <Box ml="60%">
-            {actualUser && actualUser.emailVerified === true ? (
-              <MenuItem to="/shop">
-                <AiOutlineShopping /> Shop
-              </MenuItem>
-            ) : (
-              <MenuItem to="/registrazione">
-                <FiUserPlus />
-                Registrati
-              </MenuItem>
-            )}
-          </Box>
+          {actualUser && actualUser.emailVerified === true ? (
+            <MenuItem to="/shop">
+              <AiOutlineShopping /> Shop
+            </MenuItem>
+          ) : (
+            <MenuItem to="/registrazione">
+              <FiUserPlus />
+              Registrati
+            </MenuItem>
+          )}
+          <MenuItem to="/contatti">
+            <RiContactsLine /> Contatti
+          </MenuItem>
         </Stack>
       </Box>
       <Carrello onDrawerClose={onClose} isDrawerOpen={isOpen} />

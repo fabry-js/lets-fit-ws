@@ -21,7 +21,7 @@ const Login = () => {
   const { actualUser } = useContext(UserContext);
   const history = useHistory();
 
-  if(actualUser) {
+  if (actualUser) {
     history.replace("/");
   }
 

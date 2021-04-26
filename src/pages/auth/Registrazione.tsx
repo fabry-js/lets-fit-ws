@@ -19,10 +19,10 @@ import { _auth } from "../../utils/firebase";
 import { UserContext } from "../../contextes/AuthProvider";
 
 const Registrazione = () => {
-  const { actualUser } = useContext(UserContext)
+  const { actualUser } = useContext(UserContext);
   const history = useHistory();
 
-  if(actualUser) {
+  if (actualUser) {
     history.replace("/");
   }
 
@@ -57,7 +57,6 @@ const Registrazione = () => {
       .catch(() => showAccountCouldNotBeCreatedToast());
   };
   const { register, handleSubmit } = useForm();
-
 
   return (
     <>

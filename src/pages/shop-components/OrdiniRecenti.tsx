@@ -10,7 +10,7 @@ interface OrdiniRecentiProps {}
 const OrdiniRecenti: React.FC<OrdiniRecentiProps> = () => {
   const ordiniRecentiRef = _firestore
     .collection("/orders")
-    .where("user", "==", _auth.currentUser?.email)
+    .where("user", "==", _auth.currentUser?.email);
 
   const [orders] = useCollectionData<RecentOrder>(ordiniRecentiRef);
 
@@ -24,7 +24,7 @@ const OrdiniRecenti: React.FC<OrdiniRecentiProps> = () => {
             restaurantName,
             totale,
             completed,
-            id
+            id,
           } = order;
           return (
             <RiepilogoCard

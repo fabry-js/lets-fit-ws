@@ -19,6 +19,7 @@ import VetrinaProteine from "./categorie/VetrinaProteine";
 import VetrinaGrassi from "./categorie/VetrinaGrassi";
 import VetrinaContorni from "./categorie/VetrinaContorni";
 import VetrinaBevande from "./categorie/VetrinaBevande";
+import VetrinaPiattiPronti from "./categorie/VetrinaPiattiPronti";
 
 interface VetrinaProps {}
 
@@ -35,12 +36,13 @@ const Vetrina: React.FC<VetrinaProps> = () => {
           orientation="horizontal"
         >
           <TabList>
-            <SimpleGrid columns={[2, 6]}>
+            <SimpleGrid columns={[2, 7]}>
               <Tab onClick={() => history.push("/vetrina")}>Carboidrati</Tab>
               <Tab>Proteine</Tab>
               <Tab>Grassi</Tab>
               <Tab>Contorni</Tab>
               <Tab>Bevande</Tab>
+              <Tab>Piatti Pronti</Tab>
               <Link to={actualUser ? "/shop" : "/registrazione"}>
                 <Button>Nuovo Ordine</Button>
               </Link>
@@ -73,6 +75,9 @@ const Vetrina: React.FC<VetrinaProps> = () => {
             </TabPanel>
             <TabPanel>
               <VetrinaBevande />
+            </TabPanel>
+            <TabPanel>
+              <VetrinaPiattiPronti />
             </TabPanel>
           </TabPanels>
         </Tabs>
