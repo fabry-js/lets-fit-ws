@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import { nanoid } from "nanoid";
 
 // https://stackoverflow.com/questions/48592656/firebase-auth-is-not-a-function
 
@@ -19,6 +20,8 @@ if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
 export const _auth = firebase.auth();
 
 export const _firestore = firebase.firestore();
+
+export const gAuthProvider = firebase.auth.GoogleAuthProvider;
 
 export const executeLogin = async (email: string, password: string) => {
   await _auth.signInWithEmailAndPassword(email, password);
@@ -50,6 +53,7 @@ export const sendOrder = async (order: Order) => {
         .add({
           ...order,
           completed: false,
+          id: nanoid(),
         })
         .then((_data) => resolve(true))
         .catch((_err) => {

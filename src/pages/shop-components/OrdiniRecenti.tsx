@@ -10,29 +10,27 @@ interface OrdiniRecentiProps {}
 const OrdiniRecenti: React.FC<OrdiniRecentiProps> = () => {
   const ordiniRecentiRef = _firestore
     .collection("/orders")
-    .orderBy("createdAt");
-  const [orders] = useCollectionData(ordiniRecentiRef);
+    .where("user", "==", _auth.currentUser?.email)
 
-  const filteredRecentOrders = orders?.filter(
-    (order: any) => order.user === _auth.currentUser?.email
-  );
+  const [orders] = useCollectionData<RecentOrder>(ordiniRecentiRef);
 
   return (
     <Box>
-      {filteredRecentOrders ? (
-        filteredRecentOrders.map((order: RecentOrder | any, id: number) => {
+      {orders && orders.length > 0 ? (
+        orders.map((order, index: number) => {
           const {
             allIngredients,
             paymentMethod,
             restaurantName,
             totale,
             completed,
+            id
           } = order;
           return (
             <RiepilogoCard
               allIngredients={allIngredients}
               id={id}
-              key={id}
+              key={index}
               method={paymentMethod}
               restaurantName={restaurantName}
               totale={totale}
@@ -41,7 +39,9 @@ const OrdiniRecenti: React.FC<OrdiniRecentiProps> = () => {
           );
         })
       ) : (
-        <Text>Qui non c'è nulla :&#40;</Text>
+        <Box p="2%">
+          <Text fontWeight="bold">Qui non c'è nulla :&#40;</Text>
+        </Box>
       )}
     </Box>
   );

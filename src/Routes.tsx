@@ -8,6 +8,7 @@ import PasswordDimenticata from "./pages/auth/PasswordDimenticata";
 import Blog from "./pages/blog/Blog";
 import Contatti from "./pages/Contatti";
 import Vetrina from "./pages/vetrina/Vetrina";
+import FourZeroFour from "./pages/FourZeroFour";
 
 const Routes = () => {
   return (
@@ -21,6 +22,7 @@ const Routes = () => {
         <Route path="/shop" component={Shop} />
         <Route path="/blog" component={Blog} />
         <Route path="/contatti" component={Contatti} />
+        <Route component={FourZeroFour} />
       </Switch>
     </Router>
   );

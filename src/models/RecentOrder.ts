@@ -16,4 +16,6 @@ export interface RecentOrder {
   paymentMethod: string;
   restaurantName: string;
   totale: number;
+  completed: boolean;
+  id: string;
 }
