@@ -13,7 +13,7 @@ import {
 import { FiArrowDown } from "react-icons/fi";
 
 interface RiepilogoCardProps {
-  id: number;
+  id: string;
   restaurantName: string;
   allIngredients: any[];
   totale: number;
@@ -32,7 +32,7 @@ const RiepilogoCard: React.FC<RiepilogoCardProps> = ({
   return (
     <>
       <Heading m="5" mb="0" as="h4" size="md">
-        Ordine #{id + 1} | {restaurantName}
+        Ordine {id} | {restaurantName}
       </Heading>
       <Accordion allowToggle>
         <AccordionItem borderRadius="2xl">

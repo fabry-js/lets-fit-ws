@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Button,
   Center,
@@ -16,13 +16,20 @@ import { useForm } from "react-hook-form";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import TopNavBar from "../../components/nav-bar/TopNavBar";
 import { executeLogin } from "../../utils/firebase";
+import { UserContext } from "../../contextes/AuthProvider";
 const Login = () => {
+  const { actualUser } = useContext(UserContext);
+  const history = useHistory();
+
+  if(actualUser) {
+    history.replace("/");
+  }
+
   const [showPasswordText, setShowPasswordText] = useState<boolean>(false);
   const toast = useToast();
-  const history = useHistory();
   const showLoggedSuccessfullyToast = () =>
     toast({
-      title: "Login Eseguito con successo! 🐬",
+      title: "Login Eseguito con successo! 🎉",
       description: "Fantastico!",
       status: "success",
       duration: 9000,
