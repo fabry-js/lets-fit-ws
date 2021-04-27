@@ -1,5 +1,5 @@
 import React from "react";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { _firestore } from "../../../utils/firebase";
@@ -17,6 +17,10 @@ const VetrinaCarboidrati: React.FC<VetrinaProps> = () => {
   );
   return (
     <>
+      <Text fontStyle="italic">
+        È raccomandato il consumo giornaliero ad ogni pasto principale di una
+        porzione di pane, pasta o altri cereali preferibilmente integrali
+      </Text>
       <SimpleGrid columns={[1, 4]} columnGap="3">
         {exF &&
           exF.map((ingredient, index) => {

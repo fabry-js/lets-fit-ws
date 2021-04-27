@@ -1,5 +1,5 @@
 import React from "react";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { _firestore } from "../../../utils/firebase";
@@ -15,6 +15,10 @@ const VetrinaContorni: React.FC<VetrinaProps> = () => {
 
   return (
     <>
+      <Text fontStyle="italic">
+        È raccomandato il consumo di 5 porzioni al giorno tra frutta e verdura.
+        Ricorda di rispettare sempre la stagionalità e la varietà!
+      </Text>
       <SimpleGrid columns={[1, 4]} columnGap="3">
         {vetrinaIngredients &&
           vetrinaIngredients.map((ingredient, index) => {

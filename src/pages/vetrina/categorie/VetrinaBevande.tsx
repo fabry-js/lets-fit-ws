@@ -1,5 +1,5 @@
 import React from "react";
-import { SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid, Text } from "@chakra-ui/react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { IngredientModel } from "../../../models/IngredientModel";
 import { _firestore } from "../../../utils/firebase";
@@ -15,6 +15,11 @@ const VetrinaBevande: React.FC<VetrinaProps> = () => {
 
   return (
     <>
+      <Text fontStyle="italic">
+        Ricorda di bere molto e a piccoli sorsi nell’arco della giornata! È
+        fondamentale favorire un bilancio idrico ottimale! Non esagerare con le
+        bibite gassate e zuccherate.
+      </Text>
       <SimpleGrid columns={[1, 4]} columnGap="3">
         {vetrinaIngredients &&
           vetrinaIngredients.map((ingredient, index) => {

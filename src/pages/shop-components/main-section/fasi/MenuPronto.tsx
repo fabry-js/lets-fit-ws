@@ -107,6 +107,13 @@ const MenuPronto = () => {
     <div>
       <Text fontSize="2xl">Piatti già pronti</Text>
       <TopHeaderCard />
+      <Text fontStyle="italic">
+        Migliora le tue abitudini alimentari, scegli tra i piatti unici
+        stagionali e della tradizione del territorio proposti. Le quantità si
+        riferiscono all’alimento crudo e fanno riferimento alle porzioni
+        standard indicate dai LARN (Livelli di Assunzione di Riferimento di
+        Nutrienti ed energia) IV Revisione.
+      </Text>
       <SimpleGrid columns={[1, 6]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(

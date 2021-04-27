@@ -107,6 +107,10 @@ const FaseContorni = () => {
     <div>
       <Text fontSize="2xl">Contorni</Text>
       <TopHeaderCard />
+      <Text fontStyle="italic">
+        È raccomandato il consumo di 5 porzioni al giorno tra frutta e verdura.
+        Ricorda di rispettare sempre la stagionalità e la varietà!
+      </Text>
       <SimpleGrid columns={[1, 4]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(

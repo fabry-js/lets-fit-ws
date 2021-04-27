@@ -21,7 +21,7 @@ const NavigationAndShopWrapper = () => {
       <Tabs p="4" variant="soft-rounded" colorScheme="green">
         <TabList>
           <SimpleGrid columns={[2, 4]}>
-            <Tab onClick={() => history.push("/shop")}>Ordina</Tab>
+            <Tab>Ordina</Tab>
             <Tab>Ordini Recenti</Tab>
             <Tab>Impostazioni</Tab>
             <Button
