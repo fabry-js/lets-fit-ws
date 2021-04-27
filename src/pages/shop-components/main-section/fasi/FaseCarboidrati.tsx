@@ -107,6 +107,10 @@ const FaseCarboidrati = () => {
     <div>
       <Text fontSize="2xl">Carboidrati</Text>
       <TopHeaderCard />
+      <Text fontStyle="italic">
+        È raccomandato il consumo giornaliero ad ogni pasto principale di una
+        porzione di pane, pasta o altri cereali preferibilmente integrali
+      </Text>
       <SimpleGrid columns={[1, 4]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(

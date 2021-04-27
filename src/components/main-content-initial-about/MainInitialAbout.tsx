@@ -42,7 +42,7 @@ const MainInitialAbout = () => {
         bgColor="orange.200"
         heading="Il Nostro Target 🎯"
         imageURL="../res/il-nostro-target.jpg"
-        paragraph={`L’idea di business dell’azienda nasce dalla necessità di aiutare tutti coloro che vogliono consumare un pasto sano ed equilibrato volto al fitness, durante la pausa lavoro, ma che purtroppo, a causa dei frenetici ritmi lavorativi sostenuti, hanno poco tempo a disposizione per prepararlo.`}
+        paragraph={`L’idea di business dell’azienda nasce dalla necessità di aiutare tutti coloro che vogliono consumare un pasto sano ed equilibrato durante la pausa lavoro, ma che purtroppo, a causa dei frenetici ritmi lavorativi sostenuti, hanno poco tempo a disposizione per prepararlo.`}
         scrollRef={ilNostroTargetSection}
       />
       {/**Il Problema */}
