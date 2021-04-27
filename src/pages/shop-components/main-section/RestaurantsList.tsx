@@ -119,7 +119,7 @@ const RestaurantsList = () => {
                         }
                       });
                     }}
-                    buttonLabel="Esplora"
+                    buttonLabel="Esplora menù"
                     indirizzo={address}
                   />
                 </Box>
