@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Box,
   Button,
@@ -13,10 +13,6 @@ import {
   PopoverHeader,
   PopoverTrigger,
   SimpleGrid,
-  Slider,
-  SliderFilledTrack,
-  SliderThumb,
-  SliderTrack,
   Text,
   useToast,
 } from "@chakra-ui/react";
@@ -26,48 +22,22 @@ import { getCurrentIngredients } from "../../../../redux-store/slices/ingredient
 import TopHeaderCard from "./fasi-components/TopHeaderCard";
 import { FaCartPlus } from "react-icons/fa";
 import {
-  addItemToCart,
+  addDrinkToCart,
   updateCurrentTotal,
 } from "../../../../redux-store/slices/cartSlice";
 
 const MenuPronto = () => {
   const ingredients = useSelector(getCurrentIngredients);
-
   const dispatch = useDispatch();
   const toast = useToast();
-
   const filteredByPhaseIngredients = ingredients.filter(
     (ingredient) => ingredient.phase === "menu"
   );
-
-  const [sliderQuantityValue, setSliderQuantityValue] = useState<any[]>(
-    filteredByPhaseIngredients.map((ingredient: IngredientModel) => ({
-      value: 100,
-      finalPrice: ingredient.price,
-      ...ingredient,
-    }))
-  );
-
-  const onToggleSlider = (
-    value: number,
-    ingrediente: any,
-    finalPrice: number,
-    index: number
-  ) => {
-    const temp = [...sliderQuantityValue];
-    temp.splice(index, 1, {
-      value,
-      finalPrice,
-      ...ingrediente,
-    });
-    setSliderQuantityValue(temp);
-  };
 
   let totale = 0;
 
   const addIngredientToCart = (
     ingredient: IngredientModel,
-    quantity: number,
     finalPrice: number
   ) => {
     const { name } = ingredient;
@@ -90,10 +60,9 @@ const MenuPronto = () => {
       isClosable: true,
     });
     dispatch(
-      addItemToCart({
+      addDrinkToCart({
         name,
         price: finalPrice,
-        quantity,
       })
     );
     return dispatch(
@@ -114,7 +83,7 @@ const MenuPronto = () => {
         standard indicate dai LARN (Livelli di Assunzione di Riferimento di
         Nutrienti ed energia) IV Revisione.
       </Text>
-      <SimpleGrid columns={[1, 6]} columnGap="3">
+      <SimpleGrid columns={[1, 4]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
@@ -138,89 +107,38 @@ const MenuPronto = () => {
                   <Popover>
                     <PopoverTrigger>
                       <Button variant="ghost">
-                        {name} | €
-                        {(
-                          (sliderQuantityValue[index].value * price) /
-                          100
-                        ).toFixed(1)}
+                        {name} | €{price}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent>
                       <PopoverArrow />
                       <PopoverCloseButton />
-                      <PopoverHeader>
-                        Macronutrienti per {sliderQuantityValue[index].value}g
-                      </PopoverHeader>
+                      <PopoverHeader>Macronutrienti per 100g</PopoverHeader>
                       <PopoverBody>
                         <List>
                           <ListItem>
-                            <Text fontSize="h1"></Text>Calorie:{" "}
-                            {(
-                              (calorie * sliderQuantityValue[index].value) /
-                              100
-                            ).toFixed(1)}{" "}
+                            <Text fontSize="h1"></Text>Calorie: {calorie}
                             kCal
                           </ListItem>
                           <ListItem>
-                            <Text fontSize="p"></Text>Carboidrati:{" "}
-                            {(
-                              (carboidrati * sliderQuantityValue[index].value) /
-                              100
-                            ).toFixed(1)}
+                            <Text fontSize="p"></Text>Carboidrati: {carboidrati}
                             g
                           </ListItem>
                           <ListItem>
-                            <Text fontSize="p"></Text>Proteine:{" "}
-                            {(
-                              (proteine * sliderQuantityValue[index].value) /
-                              100
-                            ).toFixed(1)}
-                            g
+                            <Text fontSize="p"></Text>Proteine: {proteine}g
                           </ListItem>
                           <ListItem>
-                            <Text fontSize="p"></Text>Grassi:{" "}
-                            {(
-                              (grassi * sliderQuantityValue[index].value) /
-                              100
-                            ).toFixed(1)}
-                            g
+                            <Text fontSize="p"></Text>Grassi: {grassi}g
                           </ListItem>
                         </List>
                       </PopoverBody>
                     </PopoverContent>
                   </Popover>
                   <Button
-                    onClick={() =>
-                      addIngredientToCart(
-                        ingredient,
-                        sliderQuantityValue[index].value,
-                        (price * sliderQuantityValue[index].value) / 100
-                      )
-                    }
+                    onClick={() => addIngredientToCart(ingredient, price)}
                   >
                     <FaCartPlus />
                   </Button>
-                  <Slider
-                    defaultValue={100}
-                    min={10}
-                    max={300}
-                    step={50}
-                    onChange={(value) =>
-                      onToggleSlider(
-                        value,
-                        ingredient,
-                        (price * sliderQuantityValue[index].value) / 100,
-                        index
-                      )
-                    }
-                  >
-                    <SliderTrack>
-                      <Box position="relative" right={10} />
-                      <SliderFilledTrack />
-                    </SliderTrack>
-                    <SliderThumb boxSize={6} />
-                  </Slider>
-                  <Text>Quantità: {sliderQuantityValue[index].value}g</Text>
                 </Box>
               );
             }

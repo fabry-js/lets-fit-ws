@@ -61,7 +61,7 @@ const Carrello: React.FC<CarrelloProps> = ({ isDrawerOpen, onDrawerClose }) => {
                     />
                   );
                 })}
-              {totale ? <Text>Subtotale: €{Math.floor(totale)}</Text> : ""}
+              {totale ? <Text>Subtotale: €{totale.toFixed(2)}</Text> : ""}
             </DrawerBody>
 
             <DrawerFooter>
