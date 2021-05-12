@@ -197,7 +197,7 @@ const FaseProteine = () => {
                     defaultValue={100}
                     min={10}
                     max={300}
-                    step={20}
+                    step={50}
                     onChange={(value) =>
                       onToggleSlider(
                         value,
