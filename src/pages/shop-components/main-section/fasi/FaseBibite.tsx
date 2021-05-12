@@ -77,7 +77,7 @@ const FaseBibite = () => {
       <Text fontSize="2xl">Bibite</Text>
       <TopHeaderCard />
       <Text fontStyle="italic">
-        Ricorda di bere molto e a piccoli sorsi nell’arco della giornata! È
+        Ricorda di bere molta acqua e a piccoli sorsi nell’arco della giornata! È
         fondamentale favorire un bilancio idrico ottimale! Non esagerare con le
         bibite gassate e zuccherate.
       </Text>

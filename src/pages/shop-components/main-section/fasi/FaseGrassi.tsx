@@ -107,17 +107,17 @@ const FaseGrassi = () => {
     <div>
       <Text fontSize="2xl">Grassi</Text>
       <TopHeaderCard />
+      <Text fontStyle="italic">
+        Tra i grassi da condimento, prediligi quelli di origine vegetale, da
+        aggiungere preferibilmente a crudo.
+      </Text>
       <SimpleGrid columns={[1, 4]} columnGap="3">
         {filteredByPhaseIngredients &&
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
               const { name, price, imageURI } = ingredient;
-              const {
-                calorie,
-                carboidrati,
-                grassi,
-                proteine,
-              } = ingredient.macronut;
+              const { calorie, carboidrati, grassi, proteine } =
+                ingredient.macronut;
               return (
                 <Box
                   p="2"
