@@ -116,8 +116,12 @@ const FaseGrassi = () => {
           filteredByPhaseIngredients.map(
             (ingredient: IngredientModel, index: number) => {
               const { name, price, imageURI } = ingredient;
-              const { calorie, carboidrati, grassi, proteine } =
-                ingredient.macronut;
+              const {
+                calorie,
+                carboidrati,
+                grassi,
+                proteine,
+              } = ingredient.macronut;
               return (
                 <Box
                   p="2"
