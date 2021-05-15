@@ -48,14 +48,18 @@ app.get("/", async (req, res) => {
 
 app.post("/track", async (req) => {
   console.log(`🏃‍♀️ Nuova richiesta di Tracking, feelslikegoogle`);
-  axios.post(
-    `https://maker.ifttt.com/trigger/lfja_t/with/key/f-NHVw9KeITH9nLMbbUH6Yd2hifSrOwGcuCWWnyuMpH
+  axios
+    .post(
+      `https://maker.ifttt.com/trigger/lfja_t/with/key/f-NHVw9KeITH9nLMbbUH6Yd2hifSrOwGcuCWWnyuMpH
       ?value1=${req.ip}
       &value2=${req.hostname}
       &value3=${req.headers["user-agent"]}
     `
-  );
-  console.log(`💦 Track fatto!`)
+    )
+    .catch((error) => {
+      console.log(`Errore! ${error.message} | ${error}`);
+    });
+  console.log(`💦 Track fatto!`);
 });
 
 app.post("/create-payment-intent", async (req, res) => {
