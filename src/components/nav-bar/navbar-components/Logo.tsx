@@ -9,7 +9,7 @@ const Logo = (props: any) => {
         <Link to="/">
           <Image src="../../res/navbar-logo.png" />
         </Link>
-        <Text color="green" fontWeight="semibold" textTransform="uppercase">
+        <Text color="green.500" fontWeight="semibold">
           Let's Fit JA
         </Text>
       </SimpleGrid>

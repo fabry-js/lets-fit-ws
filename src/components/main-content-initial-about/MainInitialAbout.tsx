@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Container, Button } from "@chakra-ui/react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import HomeFooter from "../footer/HomeFooter";
 import SectionCard from "./SectionCard";
 import { scrollIntoSection } from "./scrollIntoSection";
 import Partners from "./Partners";
@@ -72,7 +71,6 @@ const MainInitialAbout = () => {
         scrollRef={ilNostroServizioSection}
       />
       <Partners />
-      <HomeFooter initialRef={initialContainer} />
     </>
   );
 };

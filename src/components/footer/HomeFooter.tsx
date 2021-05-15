@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import Logo from "../nav-bar/navbar-components/Logo";
-import { Link } from "react-router-dom";
 
 interface HomeFooterProps {
   mt?: SpaceProps["mt"];
@@ -47,8 +46,7 @@ const HomeFooter = ({ initialRef, mt }: HomeFooterProps) => {
         >
           <Text>
             &copy; {new Date().getFullYear()} Let's Fit JA |{" "}
-            <a href="https://github.com/fabry-js"> Fabrizio Piperno </a>|
-            <Link to="/faq"> FAQ</Link>
+            <a href="https://github.com/fabry-js"> Fabrizio Piperno </a>
           </Text>
         </Stack>
         <ButtonGroup
