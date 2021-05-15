@@ -9,7 +9,7 @@ import Blog from "./pages/blog/Blog";
 import Contatti from "./pages/Contatti";
 import Vetrina from "./pages/vetrina/Vetrina";
 import FourZeroFour from "./pages/FourZeroFour";
-import FAQ from "./pages/FAQ";
+import HomeFooter from "./components/footer/HomeFooter";
 
 const Routes = () => {
   return (
@@ -23,9 +23,9 @@ const Routes = () => {
         <Route path="/shop" component={Shop} />
         <Route path="/blog" component={Blog} />
         <Route path="/contatti" component={Contatti} />
-        <Route path="/faq" component={FAQ} />
         <Route component={FourZeroFour} />
       </Switch>
+      <HomeFooter />
     </Router>
   );
 };
